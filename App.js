@@ -18,7 +18,7 @@ export default function App() {
         component={EventScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <FontAwesome5 name="map" size={20} color={color} />
+            <FontAwesome5 name="calendar" size={20} color={color} />
           ),
         }} />
         <Tab.Screen name="Theme" 
@@ -39,7 +39,7 @@ export default function App() {
         component={FAQScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <FontAwesome5 name="map" size={20} color={color} />
+            <FontAwesome5 name="question" size={20} color={color} />
           ),
         }} />
       </Tab.Navigator>
