@@ -31,6 +31,10 @@ export default function App() {
         <Tab.Screen name="Map" 
         component={MapScreen}
         options={{
+          headerTitle: "Explore Trondheim",
+          headerStyle: {
+            backgroundColor: "#2596BE",
+          },
           tabBarIcon: ({ color }) => (
             <FontAwesome5 name="map" size={20} color={color} />
           ),
