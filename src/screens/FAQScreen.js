@@ -1,10 +1,51 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import {StyleSheet, View } from 'react-native';
+import FAQComponent from '../components/FAQComponent';
 
 export default function FAQScreen () {
-  return (
-    <View>
-      <Text>FAQ screen!</Text>
-    </View>
-  )
+
+  const questions = [
+    {
+      title: "What is ISFiT?",
+      data: "The world's largest internation studnent festival?",
+      },
+      {
+      title: "When is ISFiT?",
+      data: "Febuary 2023!"
+      },
+      {
+      title: "When is ISFiT?",
+      data: "Febuary 2023!"
+      },
+  ];
+
+  renderAccordians=()=> {
+    const items = [];
+    for (item of questions) {
+        items.push(
+            <FAQComponent 
+                title = {item.title}
+                data = {item.data}
+            />
+        );
+    }
+    return items;
 }
+
+  return (
+    <View style={styles.container}>
+      { renderAccordians() }
+    </View>
+    );
+
+
+}
+
+const styles = StyleSheet.create({
+  container: {
+   flex:1,
+   paddingTop:2,
+   backgroundColor:'#1abc9c',
+   
+  }
+});
