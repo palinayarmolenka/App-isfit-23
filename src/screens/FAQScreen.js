@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View } from 'react-native';
+import {StyleSheet, View, ScrollView } from 'react-native';
 import FAQComponent from '../components/FAQComponent';
 
 export default function FAQScreen () {
@@ -14,9 +14,66 @@ export default function FAQScreen () {
       data: "Febuary 2023!"
       },
       {
-      title: "When is ISFiT?",
+      title: "Who is the leader of ISFiT?",
       data: "Febuary 2023!"
       },
+      {
+        title: "When is ISFiT?",
+        data: "Febuary 2023!"
+      },
+      {
+        title: "When is ISFiT?",
+        data: "Febuary 2023!"
+      },
+      {
+        title: "When is ISFiT?",
+        data: "Febuary 2023!"
+      },
+      {
+        title: "When is ISFiT?",
+        data: "Febuary 2023!"
+      },
+      {
+        title: "When is ISFiT?",
+        data: "Febuary 2023!"
+      },
+      {
+        title: "When is ISFiT?",
+        data: "Febuary 2023!"
+      },
+      {
+        title: "When is ISFiT?",
+        data: "Febuary 2023!"
+      },
+      {
+        title: "When is ISFiT?",
+        data: "Febuary 2023!"
+      },
+      {
+        title: "When is ISFiT?",
+        data: "Febuary 2023!"
+      },
+      {
+        title: "When is ISFiT?",
+        data: "Febuary 2023!"
+      },
+      {
+        title: "When is ISFiT?",
+        data: "Febuary 2023!"
+      },
+      {
+        title: "When is ISFiT?",
+        data: "Febuary 2023!"
+      },
+      {
+        title: "When is ISFiT?",
+        data: "Febuary 2023!"
+      },
+      {
+        title: "When is ISFiT?",
+        data: "Febuary 2023!"
+      },
+
   ];
 
   renderAccordians=()=> {
@@ -33,9 +90,9 @@ export default function FAQScreen () {
 }
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       { renderAccordians() }
-    </View>
+    </ScrollView>
     );
 
 
@@ -45,7 +102,6 @@ const styles = StyleSheet.create({
   container: {
    flex:1,
    paddingTop:2,
-   backgroundColor:'#1abc9c',
-   
+   backgroundColor:'#37D275',
   }
 });
