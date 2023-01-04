@@ -67,7 +67,9 @@ const ArticleBox = (props) => {
                         }} source={props.logoBox} />
                     </View>
                     <View style={styles.overview}>
-                        <Text style={{ fontSize: titleSize(props.title), fontFamily: "Montserrat_700Bold", paddingBottom: height * 0.01 }}>{props.title}</Text>
+                        <Text style={{ fontSize: titleSize(props.title), 
+                            // fontFamily: "Montserrat_700Bold", 
+                            paddingBottom: height * 0.01 }}>{props.title}</Text>
                         <Text style={styles.infoText}>{props.shortInfo}</Text>
                     </View>
                 </View>
@@ -91,7 +93,7 @@ const titleSize = (title) => {
 
 
 
-styles = StyleSheet.create({
+const styles = StyleSheet.create({
     overview: {
         paddingTop: height * 0.015,
         flexDirection: "column",
@@ -105,8 +107,8 @@ styles = StyleSheet.create({
         alignSelf: "center",
     },
     infoText: {
-        fontSize: 15,
-        fontFamily: "Montserrat_300Light"
+        fontSize: 15 
+        // fontFamily: "Montserrat_300Light"
     }
 });
 

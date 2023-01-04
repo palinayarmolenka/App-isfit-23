@@ -3,6 +3,8 @@ import { Text, View, Image, StyleSheet, Dimensions } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
 import { attractionMarkers } from "../assets/attractionMarkers";
 import { useNavigation } from "@react-navigation/native";
+import MarkerInfo from "../components/MarkerInfo";
+
 
 const width = Dimensions.get("screen").width;
 const height = Dimensions.get("screen").height;
@@ -33,8 +35,8 @@ export default function MapScreen () {
             //when navigating to new page; key, logo and information parameters are passed with the navigation.
             onCalloutPress={() =>
               navigation.navigate('MarkerInfoScreen', {
-                screen: 'Map',
-                params: { itemId: m.key, itemPicture: m.logo, itemInformation: m.information, itemPhotographer: m.description }
+                screen: 'MarkerInfoScreen',
+                params: { itemId: m.key, itemPicture: m.logo, itemInformation: m.information, itemPhotographer: m.shortDescription }
               },
               )}
           >

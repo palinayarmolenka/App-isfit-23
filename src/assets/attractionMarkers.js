@@ -3,6 +3,7 @@ export const attractionMarkers = [
         key: 'Antikvariatet',
         title: 'Antikvariatet',
         shortDescription: "Hello",
+        description: 'Knut A Rosvold, from snl.no/lade',
         info: 'MarkerInfo',
         information: "In the middle of magical Bakklandet, you can find Antikvariatet, which is probably the most cozy café and bar in Trondheim. You can sit inside surrounded by books looking out on the river, or outside covered in blankets under the heat lamps. Antikvariatet has more kinds of beers than you can imagine, cute cups of coffee (with free refills), and plenty of board games.",
         latLong: {

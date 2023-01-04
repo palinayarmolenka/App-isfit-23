@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
         paddingTop: height * 0.04,
     },
     textStyle: {
-        fontFamily: "Montserrat_300Light",
+        // fontFamily: "Montserrat_300Light",
         textAlign: 'left',
         paddingTop: height * 0.02,
         margin: width * 0.053,

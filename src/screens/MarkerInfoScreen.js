@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Dimensions, ScrollView } from "react-native";
+import { View, Dimensions, ScrollView, Text } from "react-native";
 import MarkerInfo from "../components/MarkerInfo";
 import Header from "../components/Header";
 
@@ -13,8 +13,9 @@ const MarkerInfoScreen = ({ route, navigation }) => {
 
   return (
     <View style={{ flex: 1 }}>
-      <Header headerType="SidePage" headerText={itemId} onPress={() => navigation.navigate("Map")} />
+
       <ScrollView>
+      <Text>AAA: {route.itemPhotographer}- {itemId} TODO</Text>
         <MarkerInfo
           key={itemId}
           text={itemId}

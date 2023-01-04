@@ -16,7 +16,7 @@ const UrlCheck = (link, title) => {
                 <Text style={{
                     fontSize: 15,
                     color: "black",
-                    fontFamily: "Montserrat_700Bold",
+                    // fontFamily: "Montserrat_700Bold",
                     marginHorizontal: width * 0.04,
                     textDecorationLine: 'underline',
                     marginBottom: height * 0.05,
@@ -30,7 +30,7 @@ const UrlCheck = (link, title) => {
                 <Text style={{
                     fontSize: 15,
                     color: "black",
-                    fontFamily: "Montserrat_700Bold",
+                    // fontFamily: "Montserrat_700Bold",
                     marginHorizontal: width * 0.04,
                     textDecorationLine: 'underline',
                     marginBottom: height * 0.05,
@@ -94,25 +94,25 @@ const styles = StyleSheet.create({
         fontSize: 15,
         marginHorizontal: width * 0.04,
         marginVertical: height * 0.03,
-        fontFamily: "Montserrat_300Light",
+        // fontFamily: "Montserrat_300Light",
     },
     AuthortextStyle: {
         lineHeight: 20,
         fontSize: 15,
         marginLeft: width * 0.04,
         marginTop: height * 0.03,
-        fontFamily: "Montserrat_300Light",
+        // fontFamily: "Montserrat_300Light",
     },
     boldtextStyle: {
         lineHeight: 20,
         fontSize: 15,
         marginHorizontal: width * 0.04,
         marginTop: height * 0.03,
-        fontFamily: "Montserrat_700Bold",
+        // fontFamily: "Montserrat_700Bold",
     },
     titleText: {
         fontSize: 18,
-        fontFamily: "Montserrat_700Bold",
+        // fontFamily: "Montserrat_700Bold",
         paddingHorizontal: width * 0.01
     },
     titleView: {
@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
     magazineText: {
         fontSize: 15,
         color: "black",
-        fontFamily: "Montserrat_700Bold",
+        // fontFamily: "Montserrat_700Bold",
         marginHorizontal: width * 0.04,
         marginBottom: height * 0.05
     },

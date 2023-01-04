@@ -23,7 +23,7 @@ const Header = (props) => {
             <Text style={{
               fontSize: titleSize(props.headerText),
               alignSelf: "center",
-              fontFamily: "Montserrat_700Bold",
+              // fontFamily: "Montserrat_700Bold",
               color: "white",
               paddingTop: height * 0.02,
             }} >{props.headerText}</Text>
@@ -103,14 +103,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     fontSize: 40,
     color: "#FFFF",
-    fontFamily: 'BillyOhio',
+    // fontFamily: 'BillyOhio',
   },
   articleText: {
     alignSelf: "center",
     paddingTop: height * 0.02,
-    fontSize: 40,
+    fontSize: 30,
     color: "#F1EDE2",
-    fontFamily: 'BillyOhio',
+    // fontFamily: 'BillyOhio',
   },
   iconHome: {
     paddingLeft: width * 0.1,

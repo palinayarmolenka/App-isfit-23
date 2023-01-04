@@ -5,82 +5,85 @@ import FAQComponent from '../components/FAQComponent';
 export default function FAQScreen () {
 
   const questions = [
-    {
-      title: "What is ISFiT?",
-      data: "The world's largest internation studnent festival?",
+      {
+        key:1,
+        title: "What is ISFiT?",
+        data: "The world's largest internation studnent festival?",
       },
       {
-      title: "When is ISFiT?",
-      data: "Febuary 2023!"
-      },
-      {
-      title: "Who is the leader of ISFiT?",
-      data: "Febuary 2023!"
-      },
-      {
+        key:2,
         title: "When is ISFiT?",
         data: "Febuary 2023!"
       },
-      {
-        title: "When is ISFiT?",
-        data: "Febuary 2023!"
-      },
-      {
-        title: "When is ISFiT?",
-        data: "Febuary 2023!"
-      },
-      {
-        title: "When is ISFiT?",
-        data: "Febuary 2023!"
-      },
-      {
-        title: "When is ISFiT?",
-        data: "Febuary 2023!"
-      },
-      {
-        title: "When is ISFiT?",
-        data: "Febuary 2023!"
-      },
-      {
-        title: "When is ISFiT?",
-        data: "Febuary 2023!"
-      },
-      {
-        title: "When is ISFiT?",
-        data: "Febuary 2023!"
-      },
-      {
-        title: "When is ISFiT?",
-        data: "Febuary 2023!"
-      },
-      {
-        title: "When is ISFiT?",
-        data: "Febuary 2023!"
-      },
-      {
-        title: "When is ISFiT?",
-        data: "Febuary 2023!"
-      },
-      {
-        title: "When is ISFiT?",
-        data: "Febuary 2023!"
-      },
-      {
-        title: "When is ISFiT?",
-        data: "Febuary 2023!"
-      },
-      {
-        title: "When is ISFiT?",
-        data: "Febuary 2023!"
-      },
+      // {
+      // title: "Who is the leader of ISFiT?",
+      // data: "Febuary 2023!"
+      // },
+      // {
+      //   title: "When is ISFiT?",
+      //   data: "Febuary 2023!"
+      // },
+      // {
+      //   title: "When is ISFiT?",
+      //   data: "Febuary 2023!"
+      // },
+      // {
+      //   title: "When is ISFiT?",
+      //   data: "Febuary 2023!"
+      // },
+      // {
+      //   title: "When is ISFiT?",
+      //   data: "Febuary 2023!"
+      // },
+      // {
+      //   title: "When is ISFiT?",
+      //   data: "Febuary 2023!"
+      // },
+      // {
+      //   title: "When is ISFiT?",
+      //   data: "Febuary 2023!"
+      // },
+      // {
+      //   title: "When is ISFiT?",
+      //   data: "Febuary 2023!"
+      // },
+      // {
+      //   title: "When is ISFiT?",
+      //   data: "Febuary 2023!"
+      // },
+      // {
+      //   title: "When is ISFiT?",
+      //   data: "Febuary 2023!"
+      // },
+      // {
+      //   title: "When is ISFiT?",
+      //   data: "Febuary 2023!"
+      // },
+      // {
+      //   title: "When is ISFiT?",
+      //   data: "Febuary 2023!"
+      // },
+      // {
+      //   title: "When is ISFiT?",
+      //   data: "Febuary 2023!"
+      // },
+      // {
+      //   title: "When is ISFiT?",
+      //   data: "Febuary 2023!"
+      // },
+      // {
+      //   title: "When is ISFiT?",
+      //   data: "Febuary 2023!"
+      // },
 
   ];
 
-  renderAccordians=()=> {
+  const renderAccordians=()=> {
     const items = [];
     for (item of questions) {
         items.push(
             <FAQComponent 
+                key={item.key}
                 title = {item.title}
                 data = {item.data}
             />

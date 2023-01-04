@@ -9,6 +9,28 @@ import MapScreen from './src/screens/MapScreen';
 import ThemeScreen from './src/screens/ThemeScreen';
 import FAQScreen from './src/screens/FAQScreen';
 import InformationScreen from './src/screens/InformationScreen';
+import MarkerInfoScreen from './src/screens/MarkerInfoScreen';
+
+const MapsStack = createStackNavigator();
+//Make to have a visible tabbar on these screens
+function MapsStackScreen() {
+  return (
+    <MapsStack.Navigator screenOptions={{ headerShown: false }}>
+      <MapsStack.Screen name="MapsScreen" component={MapScreen} options={{
+          headerTitle: (props) => <LogoTitle {...props} />,
+          headerLeft: () => (
+            <Button
+              onPress={() => MapsStack.na}
+              title="Info"
+              color="#F68D1E"
+            />
+          ),
+        }}
+      />
+      <MapsStack.Screen name="MarkerInfoScreen" component={MarkerInfoScreen} />
+    </MapsStack.Navigator>
+  );
+}
 
 const Tab = createBottomTabNavigator();
 
@@ -31,7 +53,7 @@ function HomeTabs() {
         ),
       }} />
       <Tab.Screen name="Map" 
-      component={MapScreen}
+      component={MapsStackScreen}
       options={{
         headerTitle: "Explore Trondheim",
         headerStyle: {
@@ -61,7 +83,7 @@ const MainStack = createStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <MainStack.Navigator headerMode="none">
+      <MainStack.Navigator screenOptions={{ headerShown: false }}>
         <MainStack.Screen name="HomeTabs" component={HomeTabs} />
         <MainStack.Screen name="Info" component={InformationScreen} />
         <MainStack.Screen name="Show" component={EventScreen} />
