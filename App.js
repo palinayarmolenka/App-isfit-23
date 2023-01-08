@@ -56,6 +56,7 @@ function HomeTabs() {
       component={MapsStackScreen}
       options={{
         headerTitle: "Explore Trondheim",
+        headerTintColor: "#FFFF",
         headerStyle: {
           backgroundColor: "#2596BE",
         },
