@@ -2,7 +2,6 @@ import React from "react";
 import { View, Dimensions, ScrollView, Text, TouchableOpacity } from "react-native";
 import { Ionicons } from '@expo/vector-icons';
 import MarkerInfo from "../components/MarkerInfo";
-import Header from "../components/Header";
 
 const width = Dimensions.get("screen").width;
 const height = Dimensions.get("screen").height;

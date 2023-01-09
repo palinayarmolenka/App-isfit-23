@@ -3,7 +3,6 @@ import { Text, View, Image, ScrollView, StyleSheet, Dimensions, TouchableOpacity
 import MapView, { Marker } from 'react-native-maps';
 import { attractionMarkers } from "../assets/attractionMarkers";
 import { useNavigation } from "@react-navigation/native";
-import Ionicons from 'react-native-vector-icons/Ionicons';
 
 
 const width = Dimensions.get("screen").width;
@@ -16,6 +15,54 @@ export default function MapScreen () {
     <View style={{
       flex: 1,
     }}>
+      <View style={{backgroundColor: "#2A122C", paddingLeft: 10, paddingTop: 8}}>
+        <Text style={{color: "#FFFFFF", fontSize: 18}}>Filter:</Text>
+      </View>
+      <View style={{height: 55, backgroundColor: "#2A122C"}}>
+        <ScrollView horizontal={true} style={{paddingTop: 4}}>
+          <TouchableOpacity style={styles.blueFilterButton}
+          onPress>
+            <Text>Trondheim 101</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.redFilterButton}>
+            <Text>Help</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.orangeFilterButton}>
+            <Text>Cafés to relax in</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.orangeFilterButton}>
+            <Text>Places to eat</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.orangeFilterButton}>
+            <Text>Places to drink</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.greenFilterButton}>
+            <Text>Fresh air</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.greenFilterButton}>
+            <Text>Activity for the body and soul</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.pinkFilterButton}>
+            <Text>Boutiques & Vintage shopping</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.purpleFilterButton}>
+            <Text>Museums</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.yellowFilterButton}>
+            <Text>Party places</Text>
+          </TouchableOpacity>
+        </ScrollView>
+      </View>
+
       <MapView style={{
         flex: 1,
       }}
@@ -43,35 +90,10 @@ export default function MapScreen () {
           </Marker>
         )}
       </MapView>
-      <ScrollView
-        horizontal
-        scrollEventThrottle={1}
-        showsHorizontalScrollIndicator={false}
-        height={50}
-        style={styles.scroll}
-        contentContainerStyle={{paddingRight: 20}}
-      >
-
-        <TouchableOpacity style={styles.itemAll}>
-          <Ionicons size={15} name='options-outline'>  Tout</Ionicons>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.itemRestaurant} onPress={onlyRestaurant}>
-          <Ionicons size={15} name='restaurant-outline'>  Restaurant</Ionicons>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.itemHotel}>
-          <Ionicons size={15} name='bed-outline'>  Hôtel</Ionicons>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.itemCommerce}>
-          <Ionicons size={15} name='cart-outline'>  Commerce</Ionicons>
-        </TouchableOpacity>
-
-      </ScrollView>
     </View>
   )
 }
+
 
 const styles = StyleSheet.create({
   mapStyle: {
@@ -90,5 +112,75 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
     width: width * 0.8,
     height: width * 0.12,
+  },
+  redFilterButton: {
+    alignSelf: "flex-start",
+    elevation: 4,
+    backgroundColor: "#FF7B7B",
+    borderColor: "#A70000",
+    borderRadius: 50,
+    borderWidth: 2,
+    paddingVertical: 11,
+    paddingHorizontal: 15,
+  },
+  blueFilterButton: {
+    alignSelf: "flex-start",
+    elevation: 4,
+    backgroundColor: "#7CD1ED",
+    borderColor: "#0197CC",
+    borderRadius: 50,
+    borderWidth: 2,
+    paddingVertical: 11,
+    paddingHorizontal: 15,
+  },
+  orangeFilterButton: {
+    alignSelf: "flex-start",
+    elevation: 4,
+    backgroundColor: "#FFAD33",
+    borderColor: "#F78D1F",
+    borderRadius: 50,
+    borderWidth: 2,
+    paddingVertical: 11,
+    paddingHorizontal: 15,
+  },
+  greenFilterButton: {
+    alignSelf: "flex-start",
+    elevation: 4,
+    backgroundColor: "#56BC72",
+    borderColor: "#37894E",
+    borderRadius: 50,
+    borderWidth: 2,
+    paddingVertical: 11,
+    paddingHorizontal: 15,
+  },
+  purpleFilterButton: {
+    alignSelf: "flex-start",
+    elevation: 4,
+    backgroundColor: "#B77FB9",
+    borderColor: "#99499C",
+    borderRadius: 50,
+    borderWidth: 2,
+    paddingVertical: 11,
+    paddingHorizontal: 15,
+  },
+  pinkFilterButton: {
+    alignSelf: "flex-start",
+    elevation: 4,
+    backgroundColor: "#F087AA",
+    borderColor: "#E63872",
+    borderRadius: 50,
+    borderWidth: 2,
+    paddingVertical: 11,
+    paddingHorizontal: 15,
+  },
+  yellowFilterButton: {
+    alignSelf: "flex-start",
+    elevation: 4,
+    backgroundColor: "#F0BD69",
+    borderColor: "#EAA22A",
+    borderRadius: 50,
+    borderWidth: 2,
+    paddingVertical: 11,
+    paddingHorizontal: 15,
   },
 });

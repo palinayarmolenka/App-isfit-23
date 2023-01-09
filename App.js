@@ -58,7 +58,7 @@ function HomeTabs() {
         headerTitle: "Explore Trondheim",
         headerTintColor: "#FFFF",
         headerStyle: {
-          backgroundColor: "#2596BE",
+          backgroundColor: "#99499C",
         },
         tabBarIcon: ({ color }) => (
           <FontAwesome5 name="map" size={20} color={color} />

@@ -23,5 +23,18 @@ export const attractionMarkers = [
             latitude: 63.430971,
             longitude: 10.427253,
         },
-    }
+    },
+    {
+        key: 'tro0',
+        title: 'Nidarosdomen',
+        shortDescription: "Trondheim's cathedral",
+        description: 'description',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/kuhaugen.jpg"),
+        information: "Nidarosomen is Trondheim's cathedral. The construction starten in 1070 and the cathedral was finished in 1300. In 1868, after several fires, the cathedral was in a dire state. It was decided to rebuild and the work has been ongoing for the past 150 years. 30 people are still working on rebuilding Nidarosdomen today. Nidarodomen was at one point an as important pilgrim destination as Jerusalem. Today you can go to see the impressive outside of Nidarosdomen at any time. Opening hours to go inside are 9 am to 2 pm Monday to Friday, 9 am to 1 pm on Saturday and 1 pm to 4 pm on Sunday. To get the full experience you can also go on a guided tour that you can book online at (link)",
+        latLong: {
+            latitude: 63.42694324580425,
+            longitude: 10.396958956033895,
+        },  
+    },
 ];
