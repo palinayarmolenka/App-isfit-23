@@ -1,7 +1,8 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, ScrollView } from 'react-native';
 import * as rssParser from "react-native-rss-parser";
+import { clickProps } from 'react-native-web/dist/cjs/modules/forwardedProps';
+import EventBox from '../components/EventBox';
 
 export default function EventScreen () {
 
@@ -25,9 +26,10 @@ export default function EventScreen () {
         rss.items.map((item) => {
           data.push({
             title: item.title,
-            desciption: item.description,
+            description: item.description,
             date: item.published,
-            link: item.links[0].url
+            link: item.links[0].url,
+            image: item.image
           })
         })
       })
@@ -40,18 +42,16 @@ export default function EventScreen () {
   }, [])
 
   return (
-    <View>
-      <Text>Event screen!asfoihaoigfhioahf</Text>
-      {samfundetEvents.map((event, index) => {
-        return (
-          <View key={index}>
-            <Text>{event.title}</Text>
-            <Text>{event.desciption}</Text>
-            <Text>{event.date}</Text>
-            <Text>{event.link}</Text>
-          </View>
-        )
-      })}
-    </View>
+    <ScrollView>
+      {samfundetEvents.map((event, index) => 
+        <EventBox
+          title = {event.title}
+          date = {event.date}
+          link = {event.link}
+          image = {event.image}
+        />
+       
+        )}
+    </ScrollView>
   )
 }
