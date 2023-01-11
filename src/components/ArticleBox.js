@@ -18,7 +18,7 @@ const boxSize = () => {
 //sets correct image height based on height of mobile
 const imageHeight = () => {
     if (height > 800) {
-        return 0.11;
+        return 0.13;
     }
     else {
         return 0.14;
@@ -49,21 +49,18 @@ const ArticleBox = (props) => {
                     height: height * boxSize(),
                     flexDirection: "row",
                     justifyContent: "space-between",
-                    marginBottom: height * 0.007,
+                    marginBottom: height * 0.002,
                     marginTop: height * 0.007,
                     marginLeft: width * 0.02,
                     marginRight: width * 0.02,
                     borderRadius: 5,
-                    shadowColor: 'grey',
-                    shadowOffset: { width: 0, height: 2 },
-                    shadowOpacity: 0.8,
-                    shadowRadius: 2,
                     elevation: 1,
                 }}>
                     <View style={styles.pictureView}>
                         <Image style={{
                             width: height * imageHeight(),
                             height: height * imageHeight(),
+                            borderRadius: 5,
                         }} source={props.logoBox} />
                     </View>
                     <View style={styles.overview}>
@@ -100,10 +97,10 @@ const styles = StyleSheet.create({
         flex: 1, //To keep text inside window flex 1 has to be set right after the first container
     },
     pictureView: {
-        paddingTop: height * 0.015,
-        paddingLeft: width * 0.017,
-        paddingRight: width * 0.017,
-        paddingBottom: height * 0.015,
+        paddingTop: 0,
+        paddingLeft: 0,
+        paddingRight: width * 0.020,
+        paddingBottom: 0,
         alignSelf: "center",
     },
     infoText: {

@@ -67,6 +67,10 @@ function HomeTabs() {
       <Tab.Screen name="FAQ" 
       component={FAQScreen}
       options={{
+        headerTintColor: "#FFFFFF",
+        headerStyle: {
+          backgroundColor: "#0197CC",
+        },
         tabBarIcon: ({ color }) => (
           <FontAwesome5 name="question" size={20} color={color} />
         ),

@@ -143,7 +143,7 @@ export default function FAQScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 2,
-    backgroundColor: '#37D275',
+    paddingTop: 0,
+    backgroundColor: '#0197CC',
   }
 });

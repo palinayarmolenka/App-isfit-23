@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
         paddingLeft:25,
         paddingRight:18,
         alignItems:'center',
-        backgroundColor: '#ececec',
+        backgroundColor: '#daf6fe',
     },
     parentHr:{
         height:1,
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
         width:'100%'
     },
     child:{
-        backgroundColor: '#C7C7C7',
+        backgroundColor: '#f2fcff',
         padding:16,
     }
     
