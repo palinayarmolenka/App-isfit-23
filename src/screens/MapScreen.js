@@ -18,6 +18,11 @@ export default function MapScreen () {
       </View>
       <View style={{height: 55, backgroundColor: "#2A122C"}}>
         <ScrollView horizontal={true} style={{paddingTop: 4}}>
+
+        <TouchableOpacity style={styles.darkPurpleFilterButton}>
+            <Text>Favorite places</Text>
+          </TouchableOpacity>
+
           <TouchableOpacity style={styles.blueFilterButton}
           onPress={() => filterByKey(0,10)}>
             <Text>Trondheim 101</Text>
@@ -96,7 +101,7 @@ function filterByKey(startIndex, endIndex) {
           itemId: m.key, itemTitle: m.title, itemPicture: m.logo, itemInformation: m.information, itemPhotographer: m.photographer
         },
       )}>
-        <Image style={styles.image} source={require("../assets/exploreTrondheim.png")} />
+        <Image style={styles.image} source={require("../assets/ExploreTrondheim/ExploreTRDMarkerW.png")} />
     </Marker>
   )
 }
@@ -117,8 +122,8 @@ const styles = StyleSheet.create({
   },
   image: {
     resizeMode: "contain",
-    width: width * 0.8,
-    height: width * 0.12,
+    width: width * 0.1,
+    height: width * 0.1,
   },
   redFilterButton: {
     alignSelf: "flex-start",
@@ -185,6 +190,16 @@ const styles = StyleSheet.create({
     elevation: 4,
     backgroundColor: "#F0BD69",
     borderColor: "#EAA22A",
+    borderRadius: 50,
+    borderWidth: 2,
+    paddingVertical: 11,
+    paddingHorizontal: 15,
+  },
+  darkPurpleFilterButton: {
+    alignSelf: "flex-start",
+    elevation: 4,
+    backgroundColor: "#99499C",
+    borderColor: "#C5A2CC",
     borderRadius: 50,
     borderWidth: 2,
     paddingVertical: 11,

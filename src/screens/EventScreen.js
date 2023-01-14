@@ -45,6 +45,7 @@ export default function EventScreen () {
     <ScrollView>
       {samfundetEvents.map((event, index) => 
         <EventBox
+          key = {index}
           title = {event.title}
           date = {event.date}
           link = {event.link}

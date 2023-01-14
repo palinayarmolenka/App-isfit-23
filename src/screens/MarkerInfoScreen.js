@@ -1,6 +1,6 @@
 import React from "react";
-import { View, Dimensions, ScrollView, Text, TouchableOpacity } from "react-native";
-import { Ionicons } from '@expo/vector-icons';
+import { View, Dimensions, ScrollView, Text, TouchableOpacity, Alert } from "react-native";
+import { Ionicons, FontAwesome5 } from '@expo/vector-icons';
 import MarkerInfo from "../components/MarkerInfo";
 
 const width = Dimensions.get("screen").width;
@@ -13,11 +13,18 @@ const MarkerInfoScreen = ({ route, navigation }) => {
 
   return (
     <View style={{ flex: 1 }}>
-      <TouchableOpacity onPress={() => navigation.navigate("MapsScreen")}>
-            <View>
-              <Ionicons name="ios-arrow-back" size={40} color="#3939" />
-            </View>
-      </TouchableOpacity>
+      <ScrollView horizontal={true}>
+        <TouchableOpacity onPress={() => navigation.navigate("MapsScreen")}>
+          <View>
+            <Ionicons name="ios-arrow-back" size={40} color="#3939" />
+          </View>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => Alert.alert(itemTitle + " was added to favorite places!")} style={{paddingLeft: width * 0.8}}>
+          <View>
+            <Ionicons name="ios-arrow-back" size={40} color="#3939" />
+          </View>
+        </TouchableOpacity>
+      </ScrollView>
       <ScrollView>
       <Text>
         <MarkerInfo
