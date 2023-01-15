@@ -4,6 +4,7 @@ import { Marker } from 'react-native-maps';
 import { attractionMarkers } from "../assets/attractionMarkers";
 import { useNavigation } from "@react-navigation/native";
 import MapOnly from '../components/MapOnly';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const width = Dimensions.get("screen").width;
 const height = Dimensions.get("screen").height;
@@ -30,8 +31,9 @@ export default class MapScreen extends Component{
         <View style={{height: 55, backgroundColor: "#2A122C"}}>
           <ScrollView horizontal={true} style={{paddingTop: 4}}>
   
-          <TouchableOpacity style={styles.darkPurpleFilterButton}>
-              <Text>Favorite places</Text>
+          <TouchableOpacity style={styles.darkPurpleFilterButton}
+          onPress={() => this.setState({filterKey: "Favorites"})}>
+              <Text>Favorites</Text>
             </TouchableOpacity>
   
             <TouchableOpacity style={styles.blueFilterButton}

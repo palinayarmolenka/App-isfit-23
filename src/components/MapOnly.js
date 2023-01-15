@@ -3,6 +3,7 @@ import { Text, View, Image, ScrollView, StyleSheet, Dimensions, TouchableOpacity
 import MapView, { Marker } from 'react-native-maps';
 import { attractionMarkers } from "../assets/attractionMarkers";
 import { useNavigation } from "@react-navigation/native";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const width = Dimensions.get("screen").width;
 const height = Dimensions.get("screen").height;
@@ -24,10 +25,21 @@ export default function MapOnly ({filterKey}) {
   )
 }
 
-
 function filterByKey(filterKey) {
   const navigation = useNavigation();
-  var filteredMarkersList = attractionMarkers.filter(x => x.filterKey == filterKey)
+  var filteredMarkersList;
+  if (filterKey == "Favorites"){ 
+    var favoriteKeys = []
+    let storedFavorites = getData()
+    if (storedFavorites != null){
+      favoriteKeys = storedFavorites
+      console.log(favoriteKeys)
+    }
+    filteredMarkersList = attractionMarkers.filter(x => favoriteKeys.includes(x.key))
+  } 
+  else{
+    filteredMarkersList = attractionMarkers.filter(x => x.filterKey == filterKey)
+  }
     return filteredMarkersList.map((m, i) =>
     <Marker
       coordinate={m.latLong}
@@ -45,6 +57,34 @@ function filterByKey(filterKey) {
   )
 }
 
+// Example 1
+const getData2 = async () => {
+  try {
+    const jsonValue = await AsyncStorage.getItem("@ISFiTApp23_Favorites")
+    console.log(jsonValue)
+    return jsonValue != null ? JSON.parse(jsonValue) : null;
+  } catch(e) {
+    console.log(e)
+    return null
+  }
+}
+
+// Example 2
+const getData = () => {
+  try {
+    AsyncStorage.getItem("@ISFiTApp23_Favorites")
+    .then(value => {
+      if (value != null){
+        return JSON.parse(value)
+      }else{
+        return null
+      }
+    })
+  } catch (error) {
+    console.log(error)
+    return null
+  }
+}
 
 const styles = StyleSheet.create({
   mapStyle: {
