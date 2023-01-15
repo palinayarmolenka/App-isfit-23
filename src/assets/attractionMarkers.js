@@ -5,6 +5,7 @@
 export const attractionMarkers = [
     {
         key: 0,
+        filterKey: "Trondheim",
         title: 'Nidarosdomen',
         shortDescription: "Trondheim's cathedral",
         photographer: 'From: NTNU Pensjonist Home',
@@ -19,6 +20,7 @@ export const attractionMarkers = [
     },
     {
         key: 1,
+        filterKey: "Help",
         title: 'Old Town Bridge (Gamle Bybro)',
         shortDescription: "The portal of happiness",
         photographer: 'Jan Ove Iversen - Trøndelag Reiseliv',
@@ -30,7 +32,8 @@ export const attractionMarkers = [
             longitude: 10.401548564418203,
         },   
     },{
-        key: 2,
+        key: 2,        
+        filterKey: "Help",
         title: 'Studentersamfundet',
         shortDescription: "The big, round, red house",
         photographer: 'From: Samfundet',
@@ -43,6 +46,7 @@ export const attractionMarkers = [
         },   
     },{
         key: 3,
+        filterKey: "Trondheim",
         title: 'Solsiden',
         shortDescription: "Restaurants, bars and shopping",
         photographer: 'From: Per Einar Olsen Photography',
@@ -55,6 +59,7 @@ export const attractionMarkers = [
         },   
     },{
         key: 4,
+        filterKey: "Trondheim",
         title: 'Torvet',
         shortDescription: "The heart of the city center",
         photographer: 'From: Store norske leksikon',
@@ -67,6 +72,7 @@ export const attractionMarkers = [
         },   
     },{
         key: 5,
+        filterKey: "Trondheim",
         title: 'Bicycle Lift',
         shortDescription: "Trampe, the bicycle lift",
         photographer: 'From: Sven-Erik Knoff',
@@ -79,6 +85,7 @@ export const attractionMarkers = [
         },   
     },{
         key: 6,
+        filterKey: "Trondheim",
         title: 'Kristiansten Fortress',
         shortDescription: "Trondheim's own castle",
         photographer: 'From: Visit Trondheim',
@@ -91,6 +98,7 @@ export const attractionMarkers = [
         },   
     },{
         key: 7,
+        filterKey: "Trondheim",
         title: 'Tyholttårnet',
         shortDescription: "The spinning restuarant",
         photographer: 'From: Hotels.com',
@@ -103,6 +111,7 @@ export const attractionMarkers = [
         },   
     },{
         key: 8,
+        filterKey: "Trondheim",
         title: 'ISFiT footsteps',
         shortDescription: "Walk of Peace for Student Peace Prize winners",
         photographer: 'From: Frøy Elisabeth Hamstad',
@@ -115,6 +124,7 @@ export const attractionMarkers = [
         },   
     },{
         key: 9,
+        filterKey: "Trondheim",
         title: 'Bakklandet',
         shortDescription: "Trondheim's 'old town'",
         photographer: 'From: Explore Trøndelag',
@@ -127,6 +137,7 @@ export const attractionMarkers = [
         },   
     },{
         key: 10,
+        filterKey: "Trondheim",
         title: 'Hovedbygningen aka. Hogwarts',
         shortDescription: "Trondheim's Hogwarts",
         photographer: 'From: NTNU Pensjonist Home',
@@ -139,6 +150,7 @@ export const attractionMarkers = [
         },    
     },{
         key: 11,
+        filterKey: "Trondheim",
         title: 'Emergency Room',
         shortDescription: "Open 24 hours a day. Contact number: +4773969580. Call 113 in case of emergency.",
         photographer: 'From: NidarosAvis',
@@ -151,6 +163,7 @@ export const attractionMarkers = [
         },     
     },{
         key: 12,
+        filterKey: "Trondheim",
         title: 'ISFiT-help Trafon',
         shortDescription: "ISFiT information, help and guidence.",
         photographer: 'From: Byantikvaren i Trondheim',
@@ -163,6 +176,7 @@ export const attractionMarkers = [
         },     
     },{
         key: 13,
+        filterKey: "Trondheim",
         title: 'Sexual Assault Refferal Centre',
         shortDescription: "Open 24 hours a day. Contact number: +4772571212.",
         photographer: 'From: GuleSider',
@@ -175,6 +189,7 @@ export const attractionMarkers = [
         },     
     },{
         key: 14,
+        filterKey: "Trondheim",
         title: 'Police station',
         shortDescription: "Contact number: +4773899090. Call 112 in case of emergency.",
         photographer: 'From: HuBar at Wikipedia',
@@ -187,6 +202,7 @@ export const attractionMarkers = [
         },     
     },{
         key: 15,
+        filterKey: "Trondheim",
         title: 'Farmacy',
         shortDescription: "Open untill 12 pm everyday.",
         photographer: 'From: NidarosAvis',

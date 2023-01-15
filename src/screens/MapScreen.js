@@ -1,109 +1,87 @@
-import React, { useState } from 'react';
-import { Text, View, Image, ScrollView, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
-import MapView, { Marker } from 'react-native-maps';
+import React, { Component, useState } from 'react';
+import { Text, View, Image, ScrollView, StyleSheet, Dimensions, TouchableOpacity, Alert } from 'react-native';
+import { Marker } from 'react-native-maps';
 import { attractionMarkers } from "../assets/attractionMarkers";
 import { useNavigation } from "@react-navigation/native";
+import MapOnly from '../components/MapOnly';
 
 const width = Dimensions.get("screen").width;
 const height = Dimensions.get("screen").height;
 
-export default function MapScreen () {
+export default class MapScreen extends Component{
 
-  return (
-    <View style={{
-      flex: 1,
-    }}>
-      <View style={{backgroundColor: "#2A122C", paddingLeft: 10, paddingTop: 8}}>
-        <Text style={{color: "#FFFFFF", fontSize: 18}}>Filter:</Text>
-      </View>
-      <View style={{height: 55, backgroundColor: "#2A122C"}}>
-        <ScrollView horizontal={true} style={{paddingTop: 4}}>
-
-        <TouchableOpacity style={styles.darkPurpleFilterButton}>
-            <Text>Favorite places</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.blueFilterButton}
-          onPress={() => filterByKey(0,10)}>
-            <Text>Trondheim 101</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.redFilterButton} 
-          onPress={() => filterByKey(11,15)}>
-            <Text>Help</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.orangeFilterButton}>
-            <Text>Cafés to relax in</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.orangeFilterButton}>
-            <Text>Places to eat</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.orangeFilterButton}>
-            <Text>Places to drink</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.greenFilterButton}>
-            <Text>Fresh air</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.greenFilterButton}>
-            <Text>Activity for the body and soul</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.pinkFilterButton}>
-            <Text>Boutiques & Vintage shopping</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.purpleFilterButton}>
-            <Text>Museums</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.yellowFilterButton}>
-            <Text>Party places</Text>
-          </TouchableOpacity>
-        </ScrollView>
-      </View>
-
-      <MapView style={{
-        flex: 1,
-      }}
-      initialRegion = {{
-        latitude: 63.421615,
-        longitude: 10.395053,
-        latitudeDelta: 0.040,
-        longitudeDelta: 0.05
-      }}> 
-      {filterByKey(0,10)}
-      </MapView>
-    </View>
-  )
-}
-
-
-function filterByKey(startIndex, endIndex) {
-  const navigation = useNavigation();
-  var filteredMarkersList = []
-  for(let i = startIndex; i <= endIndex; i+=1) {
-    filteredMarkersList.push(attractionMarkers[i])
+  constructor(props) {
+      super(props);
+      this.state = { 
+        data: props.data,
+        filterKey: "Trondheim"
+      }
   }
-    return filteredMarkersList.map((m, i) =>
-    <Marker
-      coordinate={m.latLong}
-      title={m.title}
-      description={m.shortDescription}
-      key={`marker-${i}`}
-      //when navigating to new page; key, logo and information parameters are passed with the navigation.
-      onCalloutPress={() =>
-        navigation.navigate('MarkerInfoScreen', {
-          itemId: m.key, itemTitle: m.title, itemPicture: m.logo, itemInformation: m.information, itemPhotographer: m.photographer
-        },
-      )}>
-        <Image style={styles.image} source={require("../assets/ExploreTrondheim/ExploreTRDMarkerW.png")} />
-    </Marker>
-  )
+
+  render() {
+
+    return (
+      <View style={{
+        flex: 1,
+      }}>
+        <View style={{backgroundColor: "#2A122C", paddingLeft: 10, paddingTop: 8}}>
+          <Text style={{color: "#FFFFFF", fontSize: 18}}>Filter:</Text>
+        </View>
+        <View style={{height: 55, backgroundColor: "#2A122C"}}>
+          <ScrollView horizontal={true} style={{paddingTop: 4}}>
+  
+          <TouchableOpacity style={styles.darkPurpleFilterButton}>
+              <Text>Favorite places</Text>
+            </TouchableOpacity>
+  
+            <TouchableOpacity style={styles.blueFilterButton}
+            onPress={() => this.setState({filterKey: "Trondheim"})}>
+              <Text>Trondheim 101</Text>
+            </TouchableOpacity>
+  
+            <TouchableOpacity style={styles.redFilterButton} 
+            onPress={() => this.setState({filterKey: "Help"})}>
+              <Text>Help</Text>
+            </TouchableOpacity>
+  
+            <TouchableOpacity style={styles.orangeFilterButton}>
+              <Text>Cafés to relax in</Text>
+            </TouchableOpacity>
+  
+            <TouchableOpacity style={styles.orangeFilterButton}>
+              <Text>Places to eat</Text>
+            </TouchableOpacity>
+  
+            <TouchableOpacity style={styles.orangeFilterButton}>
+              <Text>Places to drink</Text>
+            </TouchableOpacity>
+  
+            <TouchableOpacity style={styles.greenFilterButton}>
+              <Text>Fresh air</Text>
+            </TouchableOpacity>
+  
+            <TouchableOpacity style={styles.greenFilterButton}>
+              <Text>Activity for the body and soul</Text>
+            </TouchableOpacity>
+  
+            <TouchableOpacity style={styles.pinkFilterButton}>
+              <Text>Boutiques & Vintage shopping</Text>
+            </TouchableOpacity>
+  
+            <TouchableOpacity style={styles.purpleFilterButton}>
+              <Text>Museums</Text>
+            </TouchableOpacity>
+  
+            <TouchableOpacity style={styles.yellowFilterButton}>
+              <Text>Party places</Text>
+            </TouchableOpacity>
+          </ScrollView>
+        </View>
+        <MapOnly filterKey={this.state.filterKey} >
+        </MapOnly>
+      </View>
+    )
+  }
 }
 
 

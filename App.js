@@ -16,17 +16,7 @@ const MapsStack = createStackNavigator();
 function MapsStackScreen() {
   return (
     <MapsStack.Navigator screenOptions={{ headerShown: false }}>
-      <MapsStack.Screen name="MapsScreen" component={MapScreen} options={{
-          headerTitle: (props) => <LogoTitle {...props} />,
-          headerLeft: () => (
-            <Button
-              onPress={() => MapsStack.na}
-              title="Info"
-              color="#F68D1E"
-            />
-          ),
-        }}
-      />
+      <MapsStack.Screen name="MapsScreen" component={MapScreen} />
       <MapsStack.Screen name="MarkerInfoScreen" component={MarkerInfoScreen} />
     </MapsStack.Navigator>
   );
