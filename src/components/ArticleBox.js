@@ -45,7 +45,7 @@ const ArticleBox = (props) => {
         })}>
             <View style={{ backgroundColor: "white" }}>
                 <View style={{
-                    backgroundColor: "#D4DBBD",
+                    backgroundColor: "white",
                     height: height * boxSize(),
                     flexDirection: "row",
                     justifyContent: "space-between",

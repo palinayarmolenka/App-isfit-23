@@ -39,7 +39,7 @@ const Header = (props) => {
     case "ArticleScreen": {
       return <View style={styles.ArticleHeader}>
         <View style={styles.textCentering}>
-          <Text style={styles.articleText}>Creating Knowledge</Text>
+          <Text style={styles.articleText}>POLARIZATION</Text>
         </View>
         <TouchableOpacity onPress={props.onPress} >
           <View style={styles.largeTouch}>
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     height: height * 0.14,
     flexDirection: "row",
-    backgroundColor: "#40B4A3",
+    backgroundColor: "#E63872",
   },
   homeText: {
     justifyContent: "center",
@@ -107,14 +107,14 @@ const styles = StyleSheet.create({
   },
   articleText: {
     alignSelf: "center",
-    paddingTop: height * 0.02,
+    paddingTop: height * 0.05,
     fontSize: 30,
     color: "#F1EDE2",
     // fontFamily: 'BillyOhio',
   },
   iconHome: {
     paddingLeft: width * 0.1,
-    paddingRight: width * 0.03
+    paddingRight: width * 0.03,   
   },
   textCentering: {
     position: 'absolute',
@@ -131,6 +131,7 @@ const styles = StyleSheet.create({
     paddingLeft: width / 20,
     backgroundColor: 'transparent',
     paddingRight: width / 3, //nice size for touchable back button
+    paddingTop: height * 0.05,
   },
 });
 

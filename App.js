@@ -48,6 +48,10 @@ function HomeTabs() {
       <Tab.Screen name="Theme" 
       component={ThemeScreen}
       options={{
+        headerTintColor: "#FFFF",
+        headerStyle: {
+          backgroundColor: "#F78D1F",
+        },
         tabBarIcon: ({ color }) => (
           <FontAwesome5 name="map" size={20} color={color} />
         ),
