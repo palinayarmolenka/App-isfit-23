@@ -79,13 +79,50 @@ export default class MapScreen extends Component{
             </TouchableOpacity>
           </ScrollView>
         </View>
-        <MapOnly filterKey={this.state.filterKey} >
+        <MapOnly markers={filterByKey(this.state.filterKey)} >
         </MapOnly>
       </View>
     )
   }
 }
 
+function filterByKey(filterKey) {
+  var filteredMarkersList = [];
+  if (filterKey == "Favorites"){ 
+    var favoriteKeys = []
+    console.log("Before calling getData")
+    const promise = getData2();
+    promise.then((storedFavorites) => {
+      favoriteKeys = storedFavorites
+      console.log(favoriteKeys)
+      filteredMarkersList = attractionMarkers.filter(x => favoriteKeys.includes(x.key))
+      return renderMarkers(filteredMarkersList)
+    })
+  } 
+  else{
+    filteredMarkersList = attractionMarkers.filter(x => x.filterKey == filterKey)
+  }
+  return renderMarkers(filteredMarkersList)
+}
+
+function renderMarkers(filteredMarkersList){
+  const navigation = useNavigation();
+  return filteredMarkersList.map((m, i) =>
+    <Marker
+      coordinate={m.latLong}
+      title={m.title}
+      description={m.shortDescription}
+      key={`marker-${i}`}
+      //when navigating to new page; key, logo and information parameters are passed with the navigation.
+      onCalloutPress={() =>
+        navigation.navigate('MarkerInfoScreen', {
+          itemId: m.key, itemTitle: m.title, itemPicture: m.logo, itemInformation: m.information, itemPhotographer: m.photographer
+        },
+      )}>
+        <Image style={styles.image} source={require("../assets/ExploreTrondheim/ExploreTRDMarkerW.png")} />
+    </Marker>
+  )
+}
 
 const styles = StyleSheet.create({
   mapStyle: {

@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Dimensions, ScrollView, Text, TouchableOpacity, Alert } from "react-native";
-import { Ionicons, FontAwesome5 } from '@expo/vector-icons';
+import { Ionicons, Feather } from '@expo/vector-icons';
 import MarkerInfo from "../components/MarkerInfo";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -23,7 +23,7 @@ const MarkerInfoScreen = ({ route, navigation }) => {
         <TouchableOpacity style={{paddingLeft: width * 0.8}}
         onPress={() => {storeData(itemId) ; Alert.alert(itemTitle + " was added to favorite places!")}}>
           <View>
-            <Ionicons name="ios-arrow-back" size={40} color="#3939" />
+            <Feather name="heart" size={40} color="#3939" />
           </View>
         </TouchableOpacity>
       </ScrollView>

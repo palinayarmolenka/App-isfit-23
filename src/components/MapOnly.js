@@ -26,21 +26,27 @@ export default function MapOnly ({filterKey}) {
 }
 
 function filterByKey(filterKey) {
-  const navigation = useNavigation();
-  var filteredMarkersList;
+  var filteredMarkersList = [];
   if (filterKey == "Favorites"){ 
     var favoriteKeys = []
-    let storedFavorites = getData()
-    if (storedFavorites != null){
+    console.log("Before calling getData")
+    const promise = getData2();
+    promise.then((storedFavorites) => {
       favoriteKeys = storedFavorites
       console.log(favoriteKeys)
-    }
-    filteredMarkersList = attractionMarkers.filter(x => favoriteKeys.includes(x.key))
+      filteredMarkersList = attractionMarkers.filter(x => favoriteKeys.includes(x.key))
+      return renderMarkers(filteredMarkersList)
+    })
   } 
   else{
     filteredMarkersList = attractionMarkers.filter(x => x.filterKey == filterKey)
   }
-    return filteredMarkersList.map((m, i) =>
+  return renderMarkers(filteredMarkersList)
+}
+
+function renderMarkers(filteredMarkersList){
+  const navigation = useNavigation();
+  return filteredMarkersList.map((m, i) =>
     <Marker
       coordinate={m.latLong}
       title={m.title}
@@ -60,8 +66,9 @@ function filterByKey(filterKey) {
 // Example 1
 const getData2 = async () => {
   try {
+    console.log("Start get data")
     const jsonValue = await AsyncStorage.getItem("@ISFiTApp23_Favorites")
-    console.log(jsonValue)
+    console.log("GetData= "+jsonValue)
     return jsonValue != null ? JSON.parse(jsonValue) : null;
   } catch(e) {
     console.log(e)
@@ -69,22 +76,6 @@ const getData2 = async () => {
   }
 }
 
-// Example 2
-const getData = () => {
-  try {
-    AsyncStorage.getItem("@ISFiTApp23_Favorites")
-    .then(value => {
-      if (value != null){
-        return JSON.parse(value)
-      }else{
-        return null
-      }
-    })
-  } catch (error) {
-    console.log(error)
-    return null
-  }
-}
 
 const styles = StyleSheet.create({
   mapStyle: {

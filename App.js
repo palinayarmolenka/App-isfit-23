@@ -31,6 +31,10 @@ function HomeTabs() {
       <Tab.Screen name="Events" 
       component={EventScreen}
       options={{
+        headerTintColor: "#FFFF",
+        headerStyle: {
+          backgroundColor: "#E63872",
+        },
         tabBarIcon: ({ color }) => (
           <FontAwesome5 name="calendar" size={20} color={color} />
         ),
