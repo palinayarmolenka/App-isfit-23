@@ -35,10 +35,11 @@ export default function EventScreen () {
       })
       const newDateArray = []
       data.map((item, index) => {
-        if (item.date.substring(8, 11) === "Feb") {
+        if (item.date.substring(8, 11) === "Feb" && item.date.substring(5, 7) >= 9 && item.date.substring(5, 7) <= 19) {
+          console.log(item.date.substring(17,19))
           newDateArray.push({
             ...item,
-            date: new Date("2023",  "JanFebMarAprMayJunJulAugSepOctNovDec".indexOf(item.date.substring(8, 11)) / 3, item.date.substring(5, 7))
+            date: new Date("2023",  "JanFebMarAprMayJunJulAugSepOctNovDec".indexOf(item.date.substring(8, 11)) / 3, item.date.substring(5, 7), item.date.substring(17,19), item.date.substring(20,22))
           })
         }
       })
@@ -47,10 +48,7 @@ export default function EventScreen () {
         return new Date(a.date) - new Date(b.date)
       })
 
-      newDateArray.map(item => {
-        console.log(item.date)
-      })
-      setSamfundetEvents(data)
+      setSamfundetEvents(newDateArray)
     }
 
   useEffect(() => {
