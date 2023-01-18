@@ -33,7 +33,23 @@ export default function EventScreen () {
           })
         })
       })
+      const newDateArray = []
+      data.map((item, index) => {
+        if (item.date.substring(8, 11) === "Feb") {
+          newDateArray.push({
+            ...item,
+            date: new Date("2023",  "JanFebMarAprMayJunJulAugSepOctNovDec".indexOf(item.date.substring(8, 11)) / 3, item.date.substring(5, 7))
+          })
+        }
+      })
 
+      newDateArray.sort((a, b) => {
+        return new Date(a.date) - new Date(b.date)
+      })
+
+      newDateArray.map(item => {
+        console.log(item.date)
+      })
       setSamfundetEvents(data)
     }
 
