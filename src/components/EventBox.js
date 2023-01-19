@@ -31,14 +31,17 @@ const EventBox = (props) => {
 
     
     const title = props.title;
-    let date = props.date.substring(0,11)
-    let time = props.date.substring(17,22);
+    let d = props.date;
+    let day = d.toString().substring(0,3);
+    let month = d.toString().substring(4,7);
+    let date = d.toString().substring(8,10);
+    let time = d.toString().substring(16,21);
     return (
         <TouchableOpacity onPress={() => Linking.openURL(props.link)}>
             <View style={{ backgroundColor: "white" }}>
                 <View style={{
                     height: height * boxSize(), //0.17 for small phones, 0.12 for large phones.
-                    backgroundColor: "#F1EDE2",
+                    backgroundColor: "#ECE7EC",
                     flexDirection: "row",
                     justifyContent: "space-between",
                     marginBottom: height * 0.007,
@@ -52,22 +55,14 @@ const EventBox = (props) => {
                     shadowRadius: 2,
                     elevation: 1,
                 }}>
-                    <View style={styles.pictureView}>
-                        <Image style={{
-                            resizeMode: 'cover',
-                            width: height * imageHeight(),
-                            height: height * imageHeight(),
-                        }} source={{ uri: props.image }} />
-                    </View>
-
                     <View style={styles.overview}>
-                        <Text style={{ fontSize: 17}}>{title}</Text>
+                        <Text style={{ fontSize: 17, margin: 5, marginTop:0}}>{title}</Text>
                         <View style={styles.buttons}>
                             <View style={styles.info}>
                                 <Text style={styles.infoText}>
-                                    {date}
+                                    {day} {date}. {month} {'\n'}
+                                    {time} CET 
                                 </Text>
-                                <Text style={styles.infoText}> {time} CET </Text>
                             </View>
                         </View>
                     </View>
@@ -137,7 +132,12 @@ styles = StyleSheet.create({
         flexDirection: "row",
     },
     infoText: {
+        flexDirection: "column",
         fontSize: 15,
+        marginLeft: 5,
+        marginTop: 0,
+        margin: 3
+
     }
 });
 

@@ -1,5 +1,6 @@
-import * as React from 'react';
-import { Text, View } from 'react-native';
+// import * as React from 'react';
+import React, {useRef, useEffect} from 'react';
+import { Text, View, StyleSheet, Animated, Easing } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from "@react-navigation/stack";
@@ -31,6 +32,11 @@ function HomeTabs() {
       <Tab.Screen name="Events" 
       component={EventScreen}
       options={{
+        headerTintColor: "#FFFF",
+        backgroundColor: "#2596BE",
+        headerStyle: {
+          backgroundColor: "#1164A3",
+        },
         tabBarIcon: ({ color }) => (
           <FontAwesome5 name="calendar" size={20} color={color} />
         ),
@@ -80,6 +86,51 @@ const MainStack = createStackNavigator();
 
 
 function App() {
+
+  const backgroundFade = useRef(new Animated.Value(0)).current;
+   const logoFade = useRef(new Animated.Value(0)).current;
+   const logoMovement = useRef(new Animated.Value(0)).current;
+   useEffect(() => {
+      Animated.timing(backgroundFade, {
+         toValue: 1,
+         duration: 2000,
+         useNativeDriver: true,
+      }).start();
+      Animated.timing(logoFade, {
+         toValue: 1,
+         duration: 2000,
+         useNativeDriver: true,
+      }).start();
+      setTimeout(() => {
+         Animated.timing(logoMovement, {
+               toValue: -250,
+               duration: 2000,
+               easing: Easing.inOut(Easing.exp),
+               useNativeDriver: true,
+         }).start();
+      }, 2250);
+   }, []);
+   const styles = StyleSheet.create({
+      container: {
+         flex: 1,
+         alignItems: 'center',
+         justifyContent: 'center',
+         backgroundColor: 'orange',
+         opacity: backgroundFade,
+      },
+      logo: {
+         color: 'white',
+         fontSize: 48,
+         fontWeight: 'bold',
+         opacity: logoFade,
+         transform: [{translateY: logoMovement}],
+      },
+   });
+  //  return (
+  //     <Animated.View style={styles.container}>
+  //        <Animated.Text style={styles.logo}>Logo</Animated.Text>
+  //     </Animated.View>
+  //  );
   return (
     <NavigationContainer>
       <MainStack.Navigator screenOptions={{ headerShown: false }}>
