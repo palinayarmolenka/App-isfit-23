@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { LayoutAnimation, Text, StyleSheet, TouchableOpacity, View } from "react-native";
+import { LayoutAnimation, Text, StyleSheet, TouchableOpacity, View, UIManager } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
 
 const styles = StyleSheet.create({
