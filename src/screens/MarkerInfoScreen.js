@@ -21,7 +21,7 @@ const MarkerInfoScreen = ({ route, navigation }) => {
           </View>
         </TouchableOpacity>
         <TouchableOpacity style={{paddingLeft: width * 0.8}}
-        onPress={() => {storeData(itemId) ; Alert.alert(itemTitle + " was added to favorite places!")}}>
+        onPress={() => {storeFavorites(itemId)}}>
           <View>
             <Feather name="heart" size={40} color="#3939" />
           </View>
@@ -43,30 +43,31 @@ const MarkerInfoScreen = ({ route, navigation }) => {
   );
 }
 
-const storeData = async (value) => {
+// TODO: refactor to be used to store favorite markers and events
+const storeFavorites = async (markerKey) => {
   try {
-    // need to getData here but cannot operate with Promises
-    var favorites = null
-    AsyncStorage.getItem('@ISFiTApp23_Favorites').then((res) => console.log(res))
-    if (favorites == null){
-      favorites = [value]
-    }
-    else{
-      favorites.push(value)
-    }
-    const jsonValue = JSON.stringify(favorites)
-    await AsyncStorage.setItem('@ISFiTApp23_Favorites', jsonValue)
+    getStoredFavorites()
+    .then((storedFavorites) => {
+
+      storedFavorites.push(markerKey)
+      const jsonValue = JSON.stringify(storedFavorites)
+      AsyncStorage.setItem('@ISFiTApp23_FavoriteMarkers', jsonValue)
+      .then(() => Alert.alert("Saved to favorite places!"))
+
+    })
   } catch (e) {
-    throw ("Unable to save favorites to device storage.")
+    console.log(e)
   }
 }
 
-const getData = async () => {
+// TODO: refactor to be used to store favorite markers and events
+const getStoredFavorites = async () => {
   try {
-    const jsonValue = await AsyncStorage.getItem('@ISFiTApp23_Favorites')
-    return jsonValue != null ? JSON.parse(jsonValue) : null;
+    const jsonValue = await AsyncStorage.getItem("@ISFiTApp23_FavoriteMarkers")
+    return jsonValue != null ? JSON.parse(jsonValue) : [];
   } catch(e) {
-    throw ("Unable to read favorites from device storage.")
+    console.log(e)
+    return []
   }
 }
 

@@ -1,21 +1,22 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import { Text, View, Image, ScrollView, StyleSheet, Dimensions, TouchableOpacity, Alert } from 'react-native';
-import { Marker } from 'react-native-maps';
 import { attractionMarkers } from "../assets/attractionMarkers";
-import { useNavigation } from "@react-navigation/native";
-import MapOnly from '../components/MapOnly';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import MapWithMarkers from '../components/MapWithMarkers';
 
 const width = Dimensions.get("screen").width;
 const height = Dimensions.get("screen").height;
+const defaultFilter = "Trondheim"
 
 export default class MapScreen extends Component{
 
+  
   constructor(props) {
       super(props);
       this.state = { 
         data: props.data,
-        filterKey: "Trondheim"
+        activeFilter: defaultFilter,
+        activeMarkers: attractionMarkers.filter(x => x.filterKey == defaultFilter)
       }
   }
 
@@ -32,17 +33,17 @@ export default class MapScreen extends Component{
           <ScrollView horizontal={true} style={{paddingTop: 4}}>
   
           <TouchableOpacity style={styles.darkPurpleFilterButton}
-          onPress={() => this.setState({filterKey: "Favorites"})}>
+          onPress={() => this.onFilterChange("Favorites")}>
               <Text>Favorites</Text>
             </TouchableOpacity>
   
             <TouchableOpacity style={styles.blueFilterButton}
-            onPress={() => this.setState({filterKey: "Trondheim"})}>
+            onPress={() => this.onFilterChange(defaultFilter)}>
               <Text>Trondheim 101</Text>
             </TouchableOpacity>
   
             <TouchableOpacity style={styles.redFilterButton} 
-            onPress={() => this.setState({filterKey: "Help"})}>
+            onPress={() => this.onFilterChange("Help")}>
               <Text>Help</Text>
             </TouchableOpacity>
   
@@ -79,49 +80,43 @@ export default class MapScreen extends Component{
             </TouchableOpacity>
           </ScrollView>
         </View>
-        <MapOnly markers={filterByKey(this.state.filterKey)} >
-        </MapOnly>
+        <MapWithMarkers markersArray={this.state.activeMarkers} >
+        </MapWithMarkers>
       </View>
     )
   }
-}
 
-function filterByKey(filterKey) {
-  var filteredMarkersList = [];
-  if (filterKey == "Favorites"){ 
-    var favoriteKeys = []
-    console.log("Before calling getData")
-    const promise = getData2();
-    promise.then((storedFavorites) => {
-      favoriteKeys = storedFavorites
-      console.log(favoriteKeys)
-      filteredMarkersList = attractionMarkers.filter(x => favoriteKeys.includes(x.key))
-      return renderMarkers(filteredMarkersList)
-    })
-  } 
-  else{
-    filteredMarkersList = attractionMarkers.filter(x => x.filterKey == filterKey)
+  onFilterChange(filter) {
+    var filteredMarkersList = [];
+    if (filter == "Favorites"){ 
+      getStoredFavorites()
+      .then((storedFavorites) => {
+        filteredMarkersList = attractionMarkers.filter(x => storedFavorites.includes(x.key))
+        this.setState({
+          activeFilter: filter,
+          activeMarkers: filteredMarkersList
+        })
+      })
+    } 
+    else{
+      filteredMarkersList = attractionMarkers.filter(x => x.filterKey == filter)
+      this.setState({
+        activeFilter: filter,
+        activeMarkers: filteredMarkersList
+      })
+    }
   }
-  return renderMarkers(filteredMarkersList)
 }
 
-function renderMarkers(filteredMarkersList){
-  const navigation = useNavigation();
-  return filteredMarkersList.map((m, i) =>
-    <Marker
-      coordinate={m.latLong}
-      title={m.title}
-      description={m.shortDescription}
-      key={`marker-${i}`}
-      //when navigating to new page; key, logo and information parameters are passed with the navigation.
-      onCalloutPress={() =>
-        navigation.navigate('MarkerInfoScreen', {
-          itemId: m.key, itemTitle: m.title, itemPicture: m.logo, itemInformation: m.information, itemPhotographer: m.photographer
-        },
-      )}>
-        <Image style={styles.image} source={require("../assets/ExploreTrondheim/ExploreTRDMarkerW.png")} />
-    </Marker>
-  )
+// TODO: refactor to be used to store favorite markers and events
+const getStoredFavorites = async () => {
+  try {
+    const jsonValue = await AsyncStorage.getItem("@ISFiTApp23_FavoriteMarkers")
+    return jsonValue != null ? JSON.parse(jsonValue) : [];
+  } catch(e) {
+    console.log(e)
+    return []
+  }
 }
 
 const styles = StyleSheet.create({
