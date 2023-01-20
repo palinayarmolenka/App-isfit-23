@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Text, View, ScrollView } from 'react-native';
+import { Text, View, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
 import * as rssParser from "react-native-rss-parser";
 import { clickProps } from 'react-native-web/dist/cjs/modules/forwardedProps';
 import EventBox from '../components/EventBox';
@@ -56,17 +56,53 @@ export default function EventScreen () {
   }, [])
 
   return (
-    <ScrollView>
-      {samfundetEvents.map((event, index) => 
-        <EventBox
-          key = {index}
-          title = {event.title}
-          date = {event.date}
-          link = {event.link}
-          image = {event.image}
-        />
-       
-        )}
-    </ScrollView>
+    <View>
+      <View style={styles.filterContainer}>
+    
+          <TouchableOpacity style={styles.filterButton}
+          onPress={() => this.setState({filterKey: "Favorites"})}>
+            <Text style={{alignSelf: 'center', fontSize: 15}}>All Events</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.filterButton}
+          onPress={() => this.setState({filterKey: "Favorites"})}>
+            <Text style={{alignSelf: 'center', fontSize: 15}}>Favorites</Text>
+          </TouchableOpacity>
+
+      </View>
+      <ScrollView>
+        {samfundetEvents.map((event, index) => 
+          <EventBox
+            key = {index}
+            title = {event.title}
+            date = {event.date}
+            link = {event.link}
+            image = {event.image}
+          />
+          )}
+      </ScrollView>
+    </View>
   )
 }
+
+const styles = StyleSheet.create({
+  filterButton: {
+    alignSelf: 'center',
+    elevation: 4,
+    backgroundColor: "#F78D1F",
+    borderColor: "#E63872",
+    borderRadius: 20,
+    borderWidth: 2,
+    paddingVertical: 11,
+    paddingHorizontal: 15,
+    width: 200,
+  },
+  filterContainer: {
+    height: 55, 
+    backgroundColor: "#FFFFFF", 
+    flexDirection: 'row', 
+    alignItems: 'stretch',
+    paddingTop: 2,
+    justifyContent: 'space-evenly'
+  }
+})

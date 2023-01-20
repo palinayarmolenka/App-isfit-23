@@ -4,7 +4,7 @@ import { Text, View, StyleSheet, Animated, Easing, backgroundFade, logoFade, log
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from "@react-navigation/stack";
-import { FontAwesome5 } from "@expo/vector-icons";
+import { FontAwesome5, Entypo, FontAwesome } from "@expo/vector-icons";
 import EventScreen from './src/screens/EventScreen';
 import MapScreen from './src/screens/MapScreen';
 import ThemeScreen from './src/screens/ThemeScreen';
@@ -35,10 +35,10 @@ function HomeTabs() {
         headerTintColor: "#FFFF",
         backgroundColor: "#2596BE",
         headerStyle: {
-          backgroundColor: "#1164A3",
+          backgroundColor: "#E63872",
         },
         tabBarIcon: ({ color }) => (
-          <FontAwesome5 name="calendar" size={20} color={color} />
+          <FontAwesome name="calendar" size={22} color={color} />
         ),
       }} />
       <Tab.Screen name="Theme" 
@@ -52,7 +52,7 @@ function HomeTabs() {
           <FontAwesome5 name="map" size={20} color={color} />
         ),
       }} />
-      <Tab.Screen name="Map" 
+      <Tab.Screen name="Explore" 
       component={MapsStackScreen}
       options={{
         headerTitle: "Explore Trondheim",
@@ -61,7 +61,7 @@ function HomeTabs() {
           backgroundColor: "#99499C",
         },
         tabBarIcon: ({ color }) => (
-          <FontAwesome5 name="map" size={20} color={color} />
+          <Entypo name="globe" size={23} color={color} />
         ),
       }} />
       <Tab.Screen name="FAQ" 

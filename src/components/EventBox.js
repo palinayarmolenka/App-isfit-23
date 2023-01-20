@@ -1,13 +1,14 @@
 import React from "react";
-import { Text, View, StyleSheet, Image, Dimensions, TouchableOpacity, Linking } from "react-native";
+import { Text, View, StyleSheet, Image, Dimensions, TouchableOpacity, Linking, Alert } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import { Feather, FontAwesome } from '@expo/vector-icons';
 
 const width = Dimensions.get("screen").width;
 const height = Dimensions.get("screen").height;
 
 const boxSize = () => {
     if (height > 800) {
-        return 0.13;
+        return 0.14;
     }
     else {
         return 0.17;
@@ -41,18 +42,14 @@ const EventBox = (props) => {
             <View style={{ backgroundColor: "white" }}>
                 <View style={{
                     height: height * boxSize(), //0.17 for small phones, 0.12 for large phones.
-                    backgroundColor: "#ECE7EC",
+                    backgroundColor: "#FCD8B4",
                     flexDirection: "row",
                     justifyContent: "space-between",
-                    marginBottom: height * 0.007,
-                    marginTop: height * 0.007,
+                    marginBottom: height * 0.004,
+                    marginTop: height * 0.004,
                     marginLeft: width * 0.02,
                     marginRight: width * 0.02,
-                    borderRadius: 5,
-                    shadowColor: 'grey',
-                    shadowOffset: { width: 0, height: 2 },
-                    shadowOpacity: 0.8,
-                    shadowRadius: 2,
+                    borderRadius: 10,
                     elevation: 1,
                 }}>
                     <View style={styles.overview}>
@@ -66,6 +63,12 @@ const EventBox = (props) => {
                             </View>
                         </View>
                     </View>
+
+                    <TouchableOpacity style={styles.starIcon} 
+                    onPress={() => Alert.alert(title+" was added to favorites!")}>
+                        <FontAwesome name={'star-o'} size={30} color="#E63872"/>
+                    </TouchableOpacity>
+
                 </View>
             </View>
         </TouchableOpacity >
@@ -116,16 +119,10 @@ styles = StyleSheet.create({
         paddingTop: height * 0.015,
         flexDirection: "column",
         flex: 1, //To keep text inside window flex 1 has to be set right after the first container
+        paddingLeft: 14,
     },
     info: {
         flexDirection: "column",
-    },
-    pictureView: {
-        alignSelf: "center",
-        paddingTop: height * 0.015,
-        paddingLeft: width * 0.017,
-        paddingRight: width * 0.017,
-        paddingBottom: height * 0.015,
     },
     buttons: {
         paddingTop: height * 0.01,
@@ -138,6 +135,10 @@ styles = StyleSheet.create({
         marginTop: 0,
         margin: 3
 
+    },
+    starIcon: {
+        alignSelf: 'center',
+        paddingRight: 10
     }
 });
 
