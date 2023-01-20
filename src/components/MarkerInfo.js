@@ -9,10 +9,10 @@ const MarkerInfo = (props) => {
     return <View >
         <View style={styles.headerContainer}>
             {/* find a better way to display location title  */}
-            <Text style={{ paddingLeft: width * 0.40, fontSize: 20 }}>{props.title}</Text> 
+            <Text style={styles.headerText}>{props.title}</Text> 
         </View>
         <View style={styles.imageContainer}>
-            <Image style={styles.image} source={props.bilde} />
+            {/* <Image style={styles.image} source={props.bilde} /> */}
             <Text style={{ paddingLeft: width * 0.05, fontSize: 12, fontStyle: "italic" }}>{props.photographer} </Text>
         </View>
         <View style={styles.textContainer}>
@@ -22,8 +22,8 @@ const MarkerInfo = (props) => {
 };
 const styles = StyleSheet.create({
     image: {
-        width: width * 0.9,
-        height: width * 0.7,
+        width: width * 0.8,
+        height: width * 0.8,
         alignSelf: 'center',
         borderRadius: 5
     },
@@ -32,11 +32,18 @@ const styles = StyleSheet.create({
         paddingTop: height * 0.04,
     },
     textContainer: {
-        paddingTop: height * 0.04,
+        paddingTop: height * 0.01,
         textAlign: "center",
     },
     headerContainer: {
-        paddingTop: 0
+        paddingTop: 0,
+        alignContent: 'center',
+    },
+    headerText: {
+        alignSelf: 'center',
+        paddingTop: height * 0.02,
+        fontSize: 20,
+        letterSpacing: 2
     },
     textStyle: {
         // fontFamily: "Montserrat_300Light",

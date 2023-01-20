@@ -1,6 +1,6 @@
 import React from "react";
-import { View, Dimensions, ScrollView, Text, TouchableOpacity, Alert } from "react-native";
-import { Ionicons, Feather } from '@expo/vector-icons';
+import { View, Dimensions, ScrollView, Text, TouchableOpacity, Alert, StyleSheet } from "react-native";
+import { FontAwesome, Feather } from '@expo/vector-icons';
 import MarkerInfo from "../components/MarkerInfo";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -14,30 +14,26 @@ const MarkerInfoScreen = ({ route, navigation }) => {
 
   return (
     <View style={{ flex: 1 }}>
-      <ScrollView horizontal={true}>
+      <View style={styles.topButtonContainer}>
         <TouchableOpacity onPress={() => navigation.navigate("MapsScreen")}>
-          <View>
-            <Ionicons name="ios-arrow-back" size={40} color="#3939" />
-          </View>
+          <Feather name="arrow-left" size={40} color="#3939" />
         </TouchableOpacity>
-        <TouchableOpacity style={{paddingLeft: width * 0.8}}
+        <TouchableOpacity style={{paddingTop: 4, paddingRight: 4}}
         onPress={() => {storeFavorites(itemId)}}>
-          <View>
-            <Feather name="heart" size={40} color="#3939" />
-          </View>
+            <FontAwesome name="heart-o" size={35} color="#3939"/>
         </TouchableOpacity>
-      </ScrollView>
+      </View>
       <ScrollView>
-      <Text>
-        <MarkerInfo
-          key={itemId}
-          title={itemTitle}
-          text={itemId}
-          bilde={itemPicture}
-          information={itemInformation}
-          photographer={itemPhotographer}
-        />
-      </Text>
+        <Text>
+          <MarkerInfo
+            key={itemId}
+            title={itemTitle}
+            text={itemId}
+            bilde={itemPicture}
+            information={itemInformation}
+            photographer={itemPhotographer}
+          />
+        </Text>
       </ScrollView>
     </View >
   );
@@ -71,5 +67,12 @@ const getStoredFavorites = async () => {
   }
 }
 
+const styles = StyleSheet.create({
+  
+  topButtonContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+})
 
 export default MarkerInfoScreen;
