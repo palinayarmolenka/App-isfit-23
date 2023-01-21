@@ -52,19 +52,23 @@ export default class MapScreen extends Component{
               <Text>Cafés to relax in</Text>
             </TouchableOpacity>
   
-            <TouchableOpacity style={styles.orangeFilterButton}>
+            <TouchableOpacity style={styles.orangeFilterButton}
+            onPress={() => this.onFilterChange("Eat")}>
               <Text>Places to eat</Text>
             </TouchableOpacity>
   
-            <TouchableOpacity style={styles.orangeFilterButton}>
+            <TouchableOpacity style={styles.orangeFilterButton}
+            onPress={() => this.onFilterChange("Drink")}>
               <Text>Places to drink</Text>
             </TouchableOpacity>
   
-            <TouchableOpacity style={styles.greenFilterButton}>
+            <TouchableOpacity style={styles.greenFilterButton}
+            onPress={() => this.onFilterChange("FreshAir")}>
               <Text>Fresh air</Text>
             </TouchableOpacity>
   
-            <TouchableOpacity style={styles.greenFilterButton}>
+            <TouchableOpacity style={styles.greenFilterButton}
+            onPress={() => this.onFilterChange("Activities")}>
               <Text>Activity for the body and soul</Text>
             </TouchableOpacity>
   
