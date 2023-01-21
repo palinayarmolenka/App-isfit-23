@@ -6,7 +6,7 @@
 // Drink: key 37-44
 // FreshAir: key 45-53
 // Activities: key 54-59
-
+// Shopping: key 60-67
 
 export const attractionMarkers = [
     {
@@ -786,11 +786,115 @@ export const attractionMarkers = [
         shortDescription: "Sauna with a view of the fjord",
         photographer: 'From: Havet Arena',
         info: 'MarkerInfo',
-        logo: require("../assets/ExploreTrondheim/Activities/"),
-        information: "HavetSauna.png",
+        logo: require("../assets/ExploreTrondheim/Activities/HavetSauna.png"),
+        information: "Havet is a sauna located at Lade; go and have a swim in the beatiful fjord of Trondheim! A session of 2.5 hours is NOK 195 for students (NOK 225 for non-students). There's also a bar where you can order a drink while sitting in the sauna with the fjord as your view. You can also book a kajak session trough Havet using this website: https://www.havetarena.no/kajakk-badstu . Opening hours are from 3 pm to 10 pm from Monday to Friday, 12 pm to 11 pm on Saturday and 11 am to 7 pm on Sunday. ",
         latLong: {
             latitude:   63.44182323112532, 
             longitude:    10.425089042327956,
+        },     
+    },{
+        key: 60,
+        filterKey: "Shopping",
+        title: 'Livid',
+        shortDescription: "Fair-trade clothing and quality vintage",
+        photographer: 'From: directmap',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Shopping/Livid.jpeg"),
+        information: "Livid Jeans is a store that manufactures their own products, but they also have a great vintage section with focus on prolonging the wear of clothes. Opening hours are from 10 am - 6 pm Monday through Saturday.",
+        latLong: {
+            latitude:   63.43368070746968, 
+            longitude:  10.39767506931152,
+        },     
+    },{
+        key: 61,
+        filterKey: "Shopping",
+        title: 'UFF',
+        shortDescription: "Many good pieces for a good price",
+        photographer: 'From: uffnorge.org',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Shopping/UFF.jpeg"),
+        information: "UFF is a great vintage shop situated in the middle of the pedestrian street 'Nordre Gate' in the city center. The store is based on donations  the shop is pretty big so there is a good chance to make som good findings here! The profit of the shop goes to the network 'Humana people to people' (FAIHPP) doing project in line with the UNs sustainable developmental goals in many different countries around the world. Opening hours are 10 am - 6 pm Monday through Saturday. ",
+        latLong: {
+            latitude:   63.432177069632225, 
+            longitude:  10.397613,
+        },     
+    },{
+        key: 62,
+        filterKey: "Shopping",
+        title: 'Fretex Arkivet',
+        shortDescription: "Fretex Arkivet",
+        photographer: 'From: fretex_arkivet_mollenberg instagram',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Shopping/Fretex_arkivet.png"),
+        information: "Fretex Arkivet is a vintage shop in walking distance from Solsiden. Here you find good quality pieces, and things that are trending.The profit goes to the Salvation Army. Opening hours are 10 am - 6 pm for weekdays, and 11 am - 6 pm on Saturdays.",
+        latLong: {
+            latitude:  63.433755972599485, 
+            longitude:  10.416059126983638 ,
+        },     
+    },{
+        key: 63,
+        filterKey: "Shopping",
+        title: 'Arven Vintage',
+        shortDescription: "High end vintage clothing",
+        photographer: 'From: Arven_vintage instagram',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Shopping/Arven_vintage.png"),
+        information: "Arven focuses on good quality pieces and designer jeans, mainly hand-picked from Italy. There are some really good finds here! The shop is located in an alley off the pedestrian street 'Nordre Gate' in the city center. Opening hours are 11 pm - 5 pm Monday through Saturday.",
+        latLong: {
+            latitude:   63.434075443491864,
+            longitude:   10.39727380408027,
+        },     
+    },{
+        key: 64,
+        filterKey: "Shopping",
+        title: 'Transit',
+        shortDescription: "Vintage furniture and cafe",
+        photographer: 'From: Transit Instagram',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Shopping/Transit.png"),
+        information: "Transit has vintage and retro furniture, smaller pieces of kitchen wear, mugs, books and boardgames. There is also a cafe in the same location so this contribute with a nice atmosphere for the shop. If you are interested in some different sourvernirs, check out Transit! Opening hours are from 10-18 Monday-Saturday, and 12-17 on Sundays.",
+        latLong: {
+            latitude: 63.43470996817755,  
+            longitude:  10.396856686508178 ,
+        },     
+    },{
+        key: 65,
+        filterKey: "Shopping",
+        title: 'Gaven',
+        shortDescription: "Creative home-made and beautiful ",
+        photographer: 'From: Gaven Facebook',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Shopping/Gaven.png"),
+        information: "Gaven, the 'The Present', is a cute shop found on Bakklandet that sells unique, hand-made products, including bars of soap, knitted mittens, jewlery and mugs. This shop is great to check out if you want a one-of-a-kind souvenir. Opening hours are 11 am - 5 pm Tuesday to Friday, and 11 am - 4 pm Saturday and Sunday.",
+        latLong: {
+            latitude:   63.42696111043888,
+            longitude:   10.403111712897497,
+        },     
+    },{
+        key: 66,
+        filterKey: "Shopping",
+        title: 'Sjokoladebutikken',
+        shortDescription: "Norwegian-made chocolate and candy ",
+        photographer: 'From: Sjokoladebutikken Facebook',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Shopping/sjokoladebutikken.png"),
+        information: "Sjokoladebutikken or 'The chocolate store', is situated in the city center and sells treats that are mainly produced in Norway. The store was established over 80 years ago. Here you can buy artisian chocolate and other sweets of the highest quality. The opening hours are from 10 am to 6 pm Monday through Saturday. ",
+        latLong: {
+            latitude:  63.43303532420909,  
+            longitude:  10.398996230688478,
+        },     
+    },{
+        key: 67,
+        filterKey: "Shopping",
+        title: 'Keiserens nye trær',
+        shortDescription: "Detailed home decor",
+        photographer: 'From: Keiserens nye trær Facebook',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Shopping/Keiserens_nye_trær.png"),
+        information: "'Keiserens nye' was founded in 2012, and the owners work towards putting togheter the best product selection for their customers. Many of you have traveld far to come to Trondheim, but if you have some exstra room in your luggage and you are looking for high quality interior, this is the place for you! Keiserens nye has everything from crockery to different textiles, candels and other smal bits and pices. Opening hours are 11 am - 7 pm Monday - Friday and 11 am - 4 pm Saturday. ",
+        latLong: {
+            latitude:   63.431792747404714, 
+            longitude:  10.407192642977938,
         },     
     }
 ];
