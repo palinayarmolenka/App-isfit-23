@@ -3,10 +3,12 @@ import { Text, View, ScrollView, TouchableOpacity, StyleSheet } from 'react-nati
 import * as rssParser from "react-native-rss-parser";
 import { clickProps } from 'react-native-web/dist/cjs/modules/forwardedProps';
 import EventBox from '../components/EventBox';
+import { staticEvents } from './data/staticEvents';
 
 export default function EventScreen () {
 
     const [samfundetEvents, setSamfundetEvents] = useState([])
+    const [samfundetGroups, setSamfundetGroups] = useState([])
 
     const getFeed = async () => {
       const data = []
@@ -33,6 +35,9 @@ export default function EventScreen () {
           })
         })
       })
+
+      data.push(...staticEvents)
+
       const newDateArray = []
       data.map((item, index) => {
         if (item.date.substring(8, 11) === "Feb" && item.date.substring(5, 7) >= 9 && item.date.substring(5, 7) <= 19) {
@@ -48,6 +53,24 @@ export default function EventScreen () {
       })
 
       setSamfundetEvents(newDateArray)
+
+      const groups = newDateArray.reduce((groups, item) => {
+        const date = item.date.toString().substring(0, 16)
+        if (!groups[date]) {
+          groups[date] = [];
+        }
+        groups[date].push(item)
+        return groups
+      }, {})
+
+      const groupArrays = Object.keys(groups).map((date) => {
+        return {
+          date,
+          events: groups[date]
+        }
+      })
+
+      setSamfundetGroups(groupArrays)
     }
 
   useEffect(() => {
@@ -70,15 +93,22 @@ export default function EventScreen () {
 
       </View>
       <ScrollView>
-        {samfundetEvents.map((event, index) => 
-          <EventBox
-            key = {index}
-            title = {event.title}
-            date = {event.date}
-            link = {event.link}
-            image = {event.image}
-          />
-          )}
+        {samfundetGroups.map((group, i) => {
+          return (
+            <View key={i}>
+              <Text style={styles.dateTitle}>{group.date}</Text>
+              {group.events.length > 0 && group.events.map((itm, j) => {
+                return (<EventBox 
+                  key={j}
+                  title={itm.title}
+                  date = {itm.date}
+                  link = {itm.link}
+                  image = {itm.image}
+                />)
+              })}
+            </View>
+          )
+        })}
       </ScrollView>
     </View>
   )
@@ -103,5 +133,11 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     paddingTop: 2,
     justifyContent: 'space-evenly'
+  },
+  dateTitle: {
+    fontSize: 20,
+    backgroundColor:"#FFFFFF",
+    paddingTop: 4,
+    paddingHorizontal: 15
   }
 })
