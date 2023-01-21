@@ -4,7 +4,8 @@
 // Cafes: key 16-23
 // Eat: key 24-36
 // Drink: key 37-44
-// FreshAir: key 45-
+// FreshAir: key 45-53
+// Activities: key 54-59
 
 
 export const attractionMarkers = [
@@ -712,6 +713,84 @@ export const attractionMarkers = [
         latLong: {
             latitude:    63.42685421041743, 
             longitude:    10.382454233865529,
+        },     
+    },{
+        key: 54,
+        filterKey: "Activities",
+        title: 'Grip Bouldering Sluppen',
+        shortDescription: "Bouldering and rope climbing",
+        photographer: 'From: GripSluppen',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Activities/GripSluppen.jpg"),
+        information: "The most popular bouldering center in Trondheim. With different types of routes and difficulties, it is perfect for all skill-levels. Price for students is NOK 110 and you can rent shoes for NOK 50. Opening hours: Monday and Wednesday from 7 am - 10 pm, Tuesday, Thursday, Friday from 8 am - 10 pm, Saturday 9 am - 8 pm and Sunday 9 am - 10 pm. For more bouldering centers in Trondheim, check this link: https://www.google.com/maps/search/buldring/@63.424013,10.4033938,12.71z.",
+        latLong: {
+            latitude:  63.39770171038482,
+            longitude:     10.395454330688167 ,
+        },     
+    },{
+        key: 55,
+        filterKey: "Activities",
+        title: 'Nidar Chocolate Factory',
+        shortDescription: "Factory outlet with chocolate",
+        photographer: 'From: Nidar',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Activities/NidarChocolateFactory.jpg"),
+        information: "Trondheim's own chocolate factory! Nidar is a chocolate company founded in Trondheim in 1912. In addition to guided tours on how they make their chocolate you can go to their factory outlet and buy their chocolate cheaper than anywhere else! Of course, the chocolate is of great Norwegian quality. Opening hours of store: Tuesday to Friday 10 am - 6 pm, Saturday 10 am - 3 pm.",
+        latLong: {
+            latitude:  63.4342630596159,
+            longitude:     10.457124871163977 ,
+        },     
+    },{
+        key: 56,
+        filterKey: "Activities",
+        title: 'Pirbadet Swimmingpool',
+        shortDescription: "Swimming with a view ",
+        photographer: 'From: Pirbadet',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Activities/Pirbadet.jpg"),
+        information: "Pirbadet is an indor swimming pool facility. They have multiple pools for various uses: a high temperature pool, a pool for swimming laps, several water slides, a wave pool, diving towers, an outdoor pool, plus saunas and a cafe. Pirbadet has a beautiful view of the fjord and Munkholmen. Opening hours are from 6.30 pm to 9 pm on Monday, Wednesday and Friday, noon to 9 pm on Tuesday and Thursday, and 9 am to 7 pm Saturday and Sunday.",
+        latLong: {
+            latitude:   63.44099673132686, 
+            longitude:    10.4013428,
+        },     
+    },{
+        key: 57,
+        filterKey: "Activities",
+        title: 'Ice Skating on Solsiden',
+        shortDescription: "Easy winter sports",
+        photographer: 'From: Visit Trondheim',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Activities/IceSkatinngSolsiden.jpg"),
+        information: "Every winter there is an open ice skating rink at Solsiden. You can borrow skates free of charce from Heidi's and go ice skating under the twinke lights. This is a great opportunity to try ice skating and you can combine it with lunch, dinner or a coffee at Solsiden. Opening hours for borrowing skates at Heidi's is: 5pm - 2am every day.",
+        latLong: {
+            latitude:   63.434376301939295, 
+            longitude:    10.411859570110131,
+        },     
+    },{
+        key: 58,
+        filterKey: "Activities",
+        title: 'Mini Golf at Trondheim Camping',
+        shortDescription: "Mini Golf with drinks",
+        photographer: 'From: Visit Trondheim',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Activities/TrondheimCampingMiniGolf.jpg"),
+        information: "Trondheim Camping is a cool place where you can play minigolf with your friends. The course is 13 holes, and you can play in teams up to 6 people for the prize of NOK 115 per person, and NOK 100 for students. They also serve alcoholic and non-alcholoic drinks. Trondheim Camping is open from 4 pm to 11 pm from Monday to Wednesday, 4 pm to 12 am on Thursday, 4 pm to 2 am on Friday, 12 pm to 2 am on Saturday and 12 pm to 9 pm on Sundays. ",
+        latLong: {
+            latitude:   63.43276109859068, 
+            longitude:    10.400885050279287,
+        },     
+    },{
+        key: 59,
+        filterKey: "Activities",
+        title: 'Havet Sauna and Swimming',
+        shortDescription: "Sauna with a view of the fjord",
+        photographer: 'From: Havet Arena',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Activities/"),
+        information: "HavetSauna.png",
+        latLong: {
+            latitude:   63.44182323112532, 
+            longitude:    10.425089042327956,
         },     
     }
 ];
