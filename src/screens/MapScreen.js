@@ -57,7 +57,8 @@ export default class MapScreen extends Component{
               <Text>Places to eat</Text>
             </TouchableOpacity>
   
-            <TouchableOpacity style={styles.orangeFilterButton}>
+            <TouchableOpacity style={styles.orangeFilterButton}
+            onPress={() => this.onFilterChange("Drink")}>
               <Text>Places to drink</Text>
             </TouchableOpacity>
   
