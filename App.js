@@ -40,6 +40,7 @@ function HomeTabs() {
         tabBarIcon: ({ color }) => (
           <FontAwesome name="calendar" size={22} color={color} />
         ),
+        tabBarActiveTintColor: "#E63872"
       }} />
       <Tab.Screen name="Theme" 
       component={ThemeScreen}
@@ -49,8 +50,9 @@ function HomeTabs() {
           backgroundColor: "#F78D1F",
         },
         tabBarIcon: ({ color }) => (
-          <FontAwesome5 name="map" size={20} color={color} />
+          <Entypo name="megaphone" size={23} color={color} />
         ),
+        tabBarActiveTintColor: "#99499C"
       }} />
       <Tab.Screen name="Explore" 
       component={MapsStackScreen}
@@ -63,8 +65,9 @@ function HomeTabs() {
         tabBarIcon: ({ color }) => (
           <Entypo name="globe" size={23} color={color} />
         ),
+        tabBarActiveTintColor: "#F78D1F"
       }} />
-      <Tab.Screen name="FAQ" 
+      <Tab.Screen name="Information" 
       component={FAQScreen}
       options={{
         headerTintColor: "#FFFFFF",
@@ -74,6 +77,7 @@ function HomeTabs() {
         tabBarIcon: ({ color }) => (
           <FontAwesome5 name="question" size={20} color={color} />
         ),
+        tabBarActiveTintColor: "#0197CC"
       }} />
     </Tab.Navigator>
     
