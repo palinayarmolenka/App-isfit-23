@@ -3,6 +3,7 @@
 // Help: key 11-15
 // Cafes: key 16-23
 // Eat: key 24-36
+// Drink: key 37-
 
 
 export const attractionMarkers = [
