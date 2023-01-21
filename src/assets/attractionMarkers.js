@@ -123,7 +123,7 @@ export const attractionMarkers = [
         shortDescription: "Walk of Peace for Student Peace Prize winners",
         photographer: 'From: Frøy Elisabeth Hamstad',
         info: 'MarkerInfo',
-        logo: require("../assets/ExploreTrondheim/Trondheim101/Isfitfootsteps.jpg"),
+        logo: require("../assets/ExploreTrondheim/Trondheim101/IsfitFootsteps.jpg"),
         information: "Walk of Peace is Trondheim’s “Walk of Fame”, but with memorial stones to honor laureates of the Student Peace Prize instead of movie stars. The Student Peace Prize has been awarded biannually since 1999 during ISFiT. It is awarded on behalf of all Norwegian students to a student or student organization working to promote peace, democracy and human rights. Check it out for a cool history lesson on past winners of The Student Peace Prize!",
         latLong: {
             latitude: 63.43241229822654,
@@ -227,7 +227,7 @@ export const attractionMarkers = [
         shortDescription: "Cozy, authentic and different",
         photographer: 'From: Trondheim city guide ',
         info: 'MarkerInfo',
-        logo: require("../assets/ExploreTrondheim/Cafes/Mormos_stue.jpeg"),
+        logo: require("../assets/ExploreTrondheim/Cafes/Mormors_stue.jpeg"),
         information: "Mormors Stue, or Grandmas Livingroom, is one of the favorite spots of both the local Trønder, and the students of Trondheim. The café is situated in an alley from the pedestrian street Thomas Angells gate in the city center. The interior is unique, and the building is protected by law, they have great pastries and a great atmosphere. It is really worth a visit! Opening hours are 10 am to 11:30 pm Monday to Saturday and 12 pm to 5 pm on Sundays. ",
         latLong: {
             latitude: 63.4328549734591,
@@ -500,7 +500,7 @@ export const attractionMarkers = [
         shortDescription: "Authentic and cozy bar",
         photographer: 'From: Den gode nabo',
         info: 'MarkerInfo',
-        logo: require("../assets/ExploreTrondheim/Drink/dengodenabo.JPG"),
+        logo: require("../assets/ExploreTrondheim/Drink/dengodenabo.jpg"),
         information: "Den Gode Nabo has since the 90s been one of the most popular pubs in Trondheim. The bar is located in Bakklandet right next to the touristic attraction Gamle bybro. Den Gode Nabo is a charming place with an amazing atmosphere and a variety of different beers, wines and drinks at every price level. If you end up visiting make sure to have look at all the walls which have many treasures that have been found in the walls when building the pub. Opening hours are: Thursday - Saturday 2 pm - 1 am and Sunday - Wednesday 4 pm to 1 am. Remember to ask for the student discount when buying beer.",
         latLong: {
             latitude: 63.42811078279945, 
