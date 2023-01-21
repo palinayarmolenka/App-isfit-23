@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     title:{
         fontSize: 14,
         fontWeight:'bold',
-        color: "#5E5E5E",
+        color: "#011F4B",
     },
     row:{
         flexDirection: 'row',
@@ -59,7 +59,7 @@ export default function FAQQuestion({ title, data, navigation }) {
                 <Icon 
                     name={expand ? 'keyboard-arrow-up' : 'keyboard-arrow-down'}
                     size={30}
-                    color='#5E5E5E'
+                    color='#011F4B'
                 />
             </TouchableOpacity>
             <View style={styles.parentHr} />
