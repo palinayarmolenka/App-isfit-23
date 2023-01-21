@@ -72,7 +72,8 @@ export default class MapScreen extends Component{
               <Text>Activity for the body and soul</Text>
             </TouchableOpacity>
   
-            <TouchableOpacity style={styles.pinkFilterButton}>
+            <TouchableOpacity style={styles.pinkFilterButton}
+            onPress={() => this.onFilterChange("Shopping")}>
               <Text>Boutiques & Vintage shopping</Text>
             </TouchableOpacity>
   
