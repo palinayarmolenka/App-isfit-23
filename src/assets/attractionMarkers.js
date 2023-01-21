@@ -2,7 +2,7 @@
 // Trondheim 101: key 0-10
 // Help: key 11-15
 // Cafes: key 16-23
-// Eat: key 24-
+// Eat: key 24-36
 
 
 export const attractionMarkers = [
@@ -14,7 +14,7 @@ export const attractionMarkers = [
         photographer: 'From: NTNU Pensjonist Home',
         info: 'MarkerInfo',
         // TODO: add pictures
-        // logo: require("../assets/ExploreTrondheim/Nidarosdomen.png"),
+        logo: require("../assets/ExploreTrondheim/Trondheim101/Nidarosdomen.png"),
         information: "Nidarosomen is Trondheim's cathedral. The construction starten in 1070 and the cathedral was finished in 1300. In 1868, after several fires, the cathedral was in a dire state. It was decided to rebuild and the work has been ongoing for the past 150 years. 30 people are still working on rebuilding Nidarosdomen today. Nidarodomen was at one point an as important pilgrim destination as Jerusalem. Today you can go to see the impressive outside of Nidarosdomen at any time. Opening hours to go inside are 9 am to 2 pm Monday to Friday, 9 am to 1 pm on Saturday and 1 pm to 4 pm on Sunday. To get the full experience you can also go on a guided tour that you can book online at (link)",
         latLong: {
             latitude: 63.42694324580425,
@@ -28,7 +28,7 @@ export const attractionMarkers = [
         shortDescription: "The portal of happiness",
         photographer: 'Jan Ove Iversen - Trøndelag Reiseliv',
         info: 'MarkerInfo',
-        // logo: require("../assets/ExploreTrondheim/Gamle_bybro.jpeg"),
+        logo: require("../assets/ExploreTrondheim/Trondheim101/Gamle_bybro.jpeg"),
         information: "The Old Town Bridge, or Gamle Bybro, is known as the portal of happiness. It is, togheter with Nidarosdomen and others, one of the most prominent characteristics of Trondheim. The building startet in 1681 and the bridge was finished in 1685. Since then it has been modifyed and repared many times. It is easily recognizable by its red color. If you cross the Old Town Bridge from the city, you can visit Bakklandet.",
         latLong: {
             latitude: 63.42823439633534,
@@ -41,7 +41,7 @@ export const attractionMarkers = [
         shortDescription: "The big, round, red house",
         photographer: 'From: Samfundet',
         info: 'MarkerInfo',
-        // logo: require("../assets/ExploreTrondheim/Studentersamfundet.jpg"),
+        logo: require("../assets/ExploreTrondheim/Trondheim101/Studentersamfundet.jpg"),
         information: "Studentersamfundet was founded in 1910 and is Norway's third largest student society. It is run by about 1700 volunteers. Studentersamfundet is a place for students to gather. There are restaurant, bars, clubs and stages. Every week Samfundet has many different events for students like political discussions, quizes or conserts. Enterance for non-members are NOK 100. Opening hours are 4 pm to 11 pm Sunday to Tuesday, 4 pm to 1 am Wednesday and Thursday, and 4 pm to 2 am Friday and Saturday.",
         latLong: {
             latitude: 63.42256260225783,
@@ -54,7 +54,7 @@ export const attractionMarkers = [
         shortDescription: "Restaurants, bars and shopping",
         photographer: 'From: Per Einar Olsen Photography',
         info: 'MarkerInfo',
-        // logo: require("../assets/ExploreTrondheim/Solsiden.jpg"),
+        logo: require("../assets/ExploreTrondheim/Trondheim101/Solsiden.jpg"),
         information: "Solsiden was originally a harbor where they made boats and ships. You can even still see some of the old cranes they used outside. At Solsiden you will find a shopping mall, but what Solsiden is most famous for is the nightlife with great restaurants and bars. At solsiden you can find anything from burgers to Mexican cuisine to Spanish tapas. If you are going out to eat or just to get a drink, Solsiden is the place for you. All the restaurants have individual opening hours, but from 12 pm to 12 am you will always find something that is open. Opening hours for the shopping mall is 9 am to 9 pm Monday to Friday and 9 am to 6 pm on Saturday.",
         latLong: {
             latitude: 63.43473774975684,
@@ -67,7 +67,7 @@ export const attractionMarkers = [
         shortDescription: "The heart of the city center",
         photographer: 'From: Store norske leksikon',
         info: 'MarkerInfo',
-        // logo: require("../assets/ExploreTrondheim/Torvet.jpg"),
+        logo: require("../assets/ExploreTrondheim/Trondheim101/Torvet.jpg"),
         information: "Torvet or Trondheim torv is the heart of the city center. As well as being a shopping mall, torvet is also a normal meeting point. Outside on the town square you find a tall statue of Olav Tryggvason, Trondheims founder. Farmers' markets and christmas markets often take place at torvet.",
         latLong: {
             latitude: 63.43040605827145,
@@ -80,7 +80,7 @@ export const attractionMarkers = [
         shortDescription: "Trampe, the bicycle lift",
         photographer: 'From: Sven-Erik Knoff',
         info: 'MarkerInfo',
-        // logo: require("../assets/ExploreTrondheim/Bicycle_lift.webp"),
+        logo: require("../assets/ExploreTrondheim/Trondheim101/Bicycle_lift.webp"),
         information: "You can find Trampe, the bicycle lift at Bakklandet. Trampe is one of a kind. When it was installed in 1993 it was the only bicycle lift in the whole world. Due to damage it was closed from 2010 untill 2013. Today up to five people can take the lift at the same time. It is free to use and is open every day from 7am - 8pm.",
         latLong: {
             latitude: 63.42809888435275,
@@ -93,7 +93,7 @@ export const attractionMarkers = [
         shortDescription: "Trondheim's own castle",
         photographer: 'From: Visit Trondheim',
         info: 'MarkerInfo',
-        // logo: require("../assets/ExploreTrondheim/Kristiansten.jpg"),
+        logo: require("../assets/ExploreTrondheim/Trondheim101/Kristiansten.jpg"),
         information: "Kristiansten fortress was built after the great fire in 1681. It was used to protect the city untill 1816. Today it is the best preserved fortress from the 17th century in Norway. It is well worth a visit if you are interested in history, or if you want to see the view of the city.",
         latLong: {
             latitude: 63.42694559169811,
@@ -106,8 +106,9 @@ export const attractionMarkers = [
         shortDescription: "The spinning restuarant",
         photographer: 'From: Hotels.com',
         info: 'MarkerInfo',
-        // logo: require("../assets/ExploreTrondheim/Tyholttårnet.webp"),
+        logo: require("../assets/ExploreTrondheim/Trondheim101/Tyholttårnet.webp"),
         information: "Tyholttårnet is a 120 meter high telecommunication and radio tower. What makes Tyholttårent so spesial however, is that there is a rotating restaurant, Egon, in the tower. The Restaurant only has glass walls so you will be able to enjoy a fantastic view of the entire city and its suburbs. It is definitely worth a visit. Opening hours are 10am - 11pm monday - thursday, 10am - 11:30pm friday - saturday, 11am - 10pm sunday. It might be a good idea to book a table, which you can do online at (link)",
+        //Link?
         latLong: {
             latitude: 63.42256990282549,
             longitude: 10.431941728836405,
@@ -119,7 +120,7 @@ export const attractionMarkers = [
         shortDescription: "Walk of Peace for Student Peace Prize winners",
         photographer: 'From: Frøy Elisabeth Hamstad',
         info: 'MarkerInfo',
-        // logo: require("../assets/ExploreTrondheim/Isfitfootsteps.jpg"),
+        logo: require("../assets/ExploreTrondheim/Trondheim101/Isfitfootsteps.jpg"),
         information: "Walk of Peace is Trondheim’s “Walk of Fame”, but with memorial stones to honor laureates of the Student Peace Prize instead of movie stars. The Student Peace Prize has been awarded biannually since 1999 during ISFiT. It is awarded on behalf of all Norwegian students to a student or student organization working to promote peace, democracy and human rights. Check it out for a cool history lesson on past winners of The Student Peace Prize!",
         latLong: {
             latitude: 63.43241229822654,
@@ -132,7 +133,7 @@ export const attractionMarkers = [
         shortDescription: "Trondheim's 'old town'",
         photographer: 'From: Explore Trøndelag',
         info: 'MarkerInfo',
-        // logo: require("../assets/ExploreTrondheim/Bakklandet.jpg"),
+        logo: require("../assets/ExploreTrondheim/Trondheim101/Bakklandet.jpg"),
         information: "Bakklandet is one of the most iconic places in Trondheim. Here you walk through beautiful wooden buildings, see the old town bridge and the bicycle lift. There is a lot of good restaurants, cute shops and nice cafees here! Bakklandet is Trondheims first suburb. Trondheim burned down in 1681, and today Bakklandet is the closest you get to see how Trondheim looked like in the 17th century. The area is full of history and perfect for a stroll.",
         latLong: {
             latitude: 63.4272212721215,
@@ -145,7 +146,7 @@ export const attractionMarkers = [
         shortDescription: "Trondheim's Hogwarts",
         photographer: 'From: NTNU Pensjonist Home',
         info: 'MarkerInfo',
-        // logo: require("../assets/ExploreTrondheim/Hovedbygget.jpg"),
+        logo: require("../assets/ExploreTrondheim/Trondheim101/Hovedbygget.jpg"),
         information: "Hovedbygningen is NTNU's main building and is a well known landmark in Trondheim. It was the first building made for the university in 1910 and it has a distinct medieval arcitecture style inside and outside, just like the cathedral Nidarosdomen, and also not unlike Hogwarts from Harry Potter! This is where the rector has her office and also where the most beautiful library for students at NTNU is located. Taking a picture outside on the steps is a staple when visiting Trondheim!",
         latLong: {
             latitude: 63.419552212006266,
@@ -158,7 +159,7 @@ export const attractionMarkers = [
         shortDescription: "Open 24 hours a day. Contact number: +4773969580. Call 113 in case of emergency.",
         photographer: 'From: NidarosAvis',
         info: 'MarkerInfo',
-        // logo: require("../assets/ExploreTrondheim/EmergencyRoom.jpg"),
+        logo: require("../assets/ExploreTrondheim/Help/EmergencyRoom.jpg"),
         information: "The Health center treats non-critical emergencies. Available doctors all day and night. Contact number: +4773969580. In case of serious emergency call 113.",
         latLong: {
             latitude: 63.421869100135986,
@@ -171,7 +172,7 @@ export const attractionMarkers = [
         shortDescription: "ISFiT information, help and guidence.",
         photographer: 'From: Byantikvaren i Trondheim',
         info: 'MarkerInfo',
-        // logo: require("../assets/ExploreTrondheim/ISFiT-help_Trafon.jpg"),
+        logo: require("../assets/ExploreTrondheim/Help/ISFiT-help_Trafon.jpg"),
         information: "Trafon functions as an information centre for participants and volunteers in ISFiT during the festival. Come here to get information if you are lost or wondering where you are supposed to be. Opening hours: 8 am - 2 am.",
         latLong: {
             latitude: 63.42103390310999,
@@ -184,7 +185,7 @@ export const attractionMarkers = [
         shortDescription: "Open 24 hours a day. Contact number: +4772571212.",
         photographer: 'From: GuleSider',
         info: 'MarkerInfo',
-        // logo: require("../assets/ExploreTrondheim/Voldtektsmottaket_St.Olavs_Hospital.jpg"),
+        logo: require("../assets/ExploreTrondheim/Help/Voldtektsmottaket_St.Olavs_Hospital.jpg"),
         information: "The Sexual Assault Refferal Centre offers services to children, women and men who have been exposed to or who are suspected of being exposed to abuse. You can come to the Centre unannounced after an incident, or book an appointment. Contact number: +4772571212.",
         latLong: {
             latitude: 63.420185755962365,
@@ -197,7 +198,7 @@ export const attractionMarkers = [
         shortDescription: "Contact number: +4773899090. Call 112 in case of emergency.",
         photographer: 'From: HuBar at Wikipedia',
         info: 'MarkerInfo',
-        // logo: require("../assets/ExploreTrondheim/Police_station.jpg"),
+        logo: require("../assets/ExploreTrondheim/Help/Police_station.jpg"),
         information: "Police station in Trondheim. Contact number: +4773899090. Call 112 in case of emergency.",
         latLong: {
             latitude: 63.436444037463765,
@@ -210,7 +211,7 @@ export const attractionMarkers = [
         shortDescription: "Open untill 12 pm everyday.",
         photographer: 'From: NidarosAvis',
         info: 'MarkerInfo',
-        // logo: require("../assets/ExploreTrondheim/Farmacy.jpg"),
+        logo: require("../assets/ExploreTrondheim/Help/Farmacy.jpg"),
         information: "Farmacy in Trondheim with the longest opening hours. For other farmacies, visit this link: (link)",
         latLong: {
             latitude: 63.43443706537041,
@@ -223,7 +224,7 @@ export const attractionMarkers = [
         shortDescription: "Cozy, authentic and different",
         photographer: 'From: Trondheim city guide ',
         info: 'MarkerInfo',
-        // logo: require("../assets/ExploreTrondheim/Mormos_stue.jpeg"),
+        logo: require("../assets/ExploreTrondheim/Cafes/Mormos_stue.jpeg"),
         information: "Mormors Stue, or Grandmas Livingroom, is one of the favorite spots of both the local Trønder, and the students of Trondheim. The café is situated in an alley from the pedestrian street Thomas Angells gate in the city center. The interior is unique, and the building is protected by law, they have great pastries and a great atmosphere. It is really worth a visit! Opening hours are 10 am to 11:30 pm Monday to Saturday and 12 pm to 5 pm on Sundays. ",
         latLong: {
             latitude: 63.4328549734591,
@@ -236,7 +237,7 @@ export const attractionMarkers = [
         shortDescription: "Plantbased, unpretentious and warm atmosphere",
         photographer: 'From: For Trondheim',
         info: 'MarkerInfo',
-        // logo: require("../assets/ExploreTrondheim/Cafe-Le-Frere.jpeg"),
+        logo: require("../assets/ExploreTrondheim/Cafes/Cafe-Le-Frere.jpeg"),
         information: "Café le Frère is an independent speciality coffee and tea house with a nice, unpretentious atmosphere, where they love their plants and chandeliers. The coffee they serve is roasted in the same building, and they focus on 'food for friends' with vegetarian and plant based dishes.There are also board games and books free to use! Openig hours are from 7 am - 5 pm during the weekdays, and 9 am to 4:30 pm on the weekends. ",
         latLong: {
             latitude: 63.43443116351986, 
@@ -249,7 +250,7 @@ export const attractionMarkers = [
         shortDescription: "Cozy cafe with great pastries ",
         photographer: 'From: Onkel Svanhild Instagram',
         info: 'MarkerInfo',
-        // logo: require("../assets/ExploreTrondheim/Onkel_Svanhild.png"),
+        logo: require("../assets/ExploreTrondheim/Cafes/Onkel_Svanhild.png"),
         information: "Onkel Svanhild, or 'Uncle Svanhild', is a selproclaimed 'bakekakeri' selling kakes and homemade buns with creative topping. They make everything fresh and the coffee is lovely, the atmosphere is nice and the place is really popular amongs the locals! They do have some lunch options as well if you dont want a sweet snack. Opening hours are 8 am to 4:30 Tuesday to Friday, and 9:30 am to 5 pm on Saturdays. It is closed on Sundays and Mondays.",
         latLong: {
             latitude: 63.433541485723225, 
@@ -262,7 +263,7 @@ export const attractionMarkers = [
         shortDescription: "Lots of space to study with a buffet",
         photographer: 'From: Café Ni Muser Instagram',
         info: 'MarkerInfo',
-        // logo: require("../assets/ExploreTrondheim/Cafe_Ni_Muser.png"),
+        logo: require("../assets/ExploreTrondheim/Cafes/Cafe_Ni_Muser.png"),
         information: "This café is located close to Nidarosomen, in a classy building with high ceilings. They have an à la carte menu, and also a lot of different buffets. Every weekday there is lunch buffet from 11 am to 3 pm, soup buffet every day from 3 pm to 9 pm. There is also Saturday buffet from 12 pm to 4 pm and a cake buffet on Sundays from 12 pm to 3 pm. They have really great coffee and some of the best cakes in the city. Opening hours are 11 am to 9 pm every day.",
         latLong: {
             latitude: 63.42754181547936, 
@@ -275,7 +276,7 @@ export const attractionMarkers = [
         shortDescription: "Cozy café by the library",
         photographer: 'From: Tripdadvisor, christophe-alain1969',
         info: 'MarkerInfo',
-        // logo: require("../assets/ExploreTrondheim/Sellanraa.jpeg"),
+        logo: require("../assets/ExploreTrondheim/Cafes/Sellanraa.jpeg"),
         information: "Sellanraa is a cozy café where you either can stop for a coffee and something sweet or eat a full lunch made from local products. They focus on great taste and good atmosphere. You can also pick up a good book while you are there. Opening hours are 10 am to 7 pm Monday to Saturday. You can not order food from the kitchen after 4 pm.",
         latLong: {
             latitude: 63.43075776923243, 
@@ -288,7 +289,7 @@ export const attractionMarkers = [
         shortDescription: "Retro reuse and the smell of coffee",
         photographer: 'From: Transit Instagram',
         info: 'MarkerInfo',
-        // logo: require("../assets/ExploreTrondheim/Transit.png"),
+        logo: require("../assets/ExploreTrondheim/Cafes/Transit.png"),
         information: "Transit is not just a café, it is also a vintage shop selling furniture and other small items. The shop is quite new and the interior is influenced by the reuse of fixed retro furniture. The coffee is great and the party too! Opening hours are 10 am to 6 pm Monday to Saturday and 12 pm to 5 pm on Sundays. ",
         latLong: {
             latitude: 63.43473155971509,
@@ -301,7 +302,7 @@ export const attractionMarkers = [
         shortDescription: "Best bread and buns in town",
         photographer: 'From: godtbroddronningensgate Instagram',
         info: 'MarkerInfo',
-        // logo: require("../assets/ExploreTrondheim/Godt_Brød.png"),
+        logo: require("../assets/ExploreTrondheim/Cafes/Godt_Brød.png"),
         information: "Godt brød, or 'good bread' is known for using organic ingredients and making delicious breads and buns. The atmosphere is chill and the café is beautiful. You can also grab the coffee and pastry to go if you want to explore the city. Opening hours are 7 am to 7 pm during the weekdays, 7 am to 6 pm on Saturdays and 8 am to 5 pm on Sundays. ",
         latLong: {
             latitude: 63.43217146462839, 
@@ -314,7 +315,7 @@ export const attractionMarkers = [
         shortDescription: "Really good quality coffee",
         photographer: 'From: Visit Trondheim Foto: MCKENNA STARCK',
         info: 'MarkerInfo',
-        // logo: require("../assets/ExploreTrondheim/Jacobsen_og_svart_kaffebrenneri.jpeg"),
+        logo: require("../assets/ExploreTrondheim/Cafes/Jacobsen_og_svart_kaffebrenneri.jpeg"),
         information: "This place is for the real coffee lover. 'Jacobsen and Black' is specializing in coffee and are run by dedicated people with a genuine interest in coffee. They roast their own coffee beans, and provide multiple other cafés with beans throughout Trondheim. They also have their own really nice café that is worth checking out! The café is located in the city center so it is easy to find. Opening hours are 9 am to 4 pm Monday to Saturday.  ",
         latLong: {
             latitude: 63.434480965916066, 
@@ -327,7 +328,7 @@ export const attractionMarkers = [
         shortDescription: "Sushi at cozy Bakklandet",
         photographer: 'From: Kristin Heggdal',
         info: 'MarkerInfo',
-        // logo: require("../assets/ExploreTrondheim/Sabrura.webp"),
+        logo: require("../assets/ExploreTrondheim/Eat/Sabrura.webp"),
         information: "Sushi buffet with a Norwegian twist! There are now multiple sushi restaurants in Trondheim, but the one in Bakklandet is especially cozy. Sabrura is most known for their cheap and very good sushi buffet, but you can also order regular sushi if you prefer that. Their lunch buffet open is untill 1 pm for NOK 199 in weekdays, and their dinner buffet from 1 pm for NOK 239 in the weekends.",
         latLong: {
             latitude: 63.42944553921505, 
@@ -340,7 +341,7 @@ export const attractionMarkers = [
         shortDescription: "Great burgers and reggae",
         photographer: 'From: Superhero Burger Instagram',
         info: 'MarkerInfo',
-        // logo: require("../assets/ExploreTrondheim/Superheroburger.png"),
+        logo: require("../assets/ExploreTrondheim/Eat/Superheroburger.png"),
         information: "Super Hero Burger has some of the best burgers in Trondheim, with something for every taste. The atmosphere is cool, and there are also possibilites for boardgames there. In addition, they have cheap beer! There are two locations, but as both are in the city center it is easy to get there.",
         latLong: {
             latitude: 63.43322822318681, 
@@ -353,7 +354,7 @@ export const attractionMarkers = [
         shortDescription: "Food and drinks",
         photographer: 'From: Cafe Løkkas instagram ',
         info: 'MarkerInfo',
-        // logo: require("../assets/ExploreTrondheim/CafeLøkka.png"),
+        logo: require("../assets/ExploreTrondheim/Eat/CafeLøkka.png"),
         information: " Located between Bakklandet and Solsiden is the atmospheric restaurant and bar Cafe Løkka. They have a lunch menu from 11 am to 2 pm with specialized sandwiches, and they also serve salads, nachos and burgers the entire day. They have a designated student burger that is cheaper than the others if you can show a valid student ID. They also have gluten free options. Opening hours are from 11 am to 12 am from Sunday to Thursday and 11 am to 2 am Friday and Saturday. Menu: https://www.cafelokka.no/#popup1",
         latLong: {
             latitude: 63.433947545660594, 
@@ -366,7 +367,7 @@ export const attractionMarkers = [
         shortDescription: "Run by volunteer students",
         photographer: 'From: Lychekjokkenogbar Instagram',
         info: 'MarkerInfo',
-        // logo: require("../assets/ExploreTrondheim/Lyche.png"),
+        logo: require("../assets/ExploreTrondheim/Eat/Lyche.png"),
         information: "Lyche is the restaurant at Studentersamfundet, and is run by volunteer students with an interest in food! All the profit from the restaurant goes to Studentersamfundet. Lyche is a meeting point for the students in Trondheim due to their cheap meals and good vibes. The menu changes regularly. The restaurant opens at 4 pm every day, the kithcen closes at 10 pm, and the restaurant turns into a bar in the weekends that is open until 2 am. They have gluten free options, ask the server. Menu: https://www.samfundet.no/lyche/menu",
         latLong: {
             latitude: 63.422688712938424, 
@@ -379,11 +380,115 @@ export const attractionMarkers = [
         shortDescription: "(Almost) Like in Italy",
         photographer: 'From: Una Pizzeria Instagram',
         info: 'MarkerInfo',
-        // logo: require("../assets/ExploreTrondheim/Una.png"),
+        logo: require("../assets/ExploreTrondheim/Eat/Una.png"),
         information: "Delicious Italian pizza and pasta located at Solsiden, in a rustic atmosphere. The restaurant is open from 11 am to 11 pm Monday to Saturday, and from 1 pm to 10 pm on Sunday. Menu: https://www.unapizzeria.no/no/meny",
         latLong: {
             latitude: 63.43536836136709, 
             longitude: 10.410421371163977,
+        },     
+    },{
+        key: 29,
+        filterKey: "Eat",
+        title: 'Grano',
+        shortDescription: "Autentic Italian for lunch or dinner",
+        photographer: 'From: Grano Trondheim Instagram',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Eat/Grano.png"),
+        information: "Grano is located in the city center and is an Italian restaurant known for their delicious pizzas. Their pizza is authentic Italian pizza and the atmosphere is really nice. They have lunch deals from Monday to Friday 11 am to 3 pm where you can buy a pizza for NOK 139 or a panini for NOK 95. Opening hours are 11 am to 11 pm Monday to Friday, 11 am to 11:30 pm on Saturday and 1 pm to 10 pm on Sunday.",
+        latLong: {
+            latitude: 63.43429826486199, 
+            longitude: 10.400411930161242,
+        },     
+    },{
+        key: 30,
+        filterKey: "Eat",
+        title: 'Frati',
+        shortDescription: "Wine, Pizza and Pasta",
+        photographer: 'From: Frati Restaurant Instagram',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Eat/Frati.png"),
+        information: "Frati is a nice restaurant located in the city center with a good atmosphere, and it serves great Italian cuisine. The restaurant is also connected to the bar ØX Tap Room, so there is the possibilite of ordering craft beer as well. Opening hours are from 11 am Monday to Saturday, and from 2 om on Sundays.",
+        latLong: {
+            latitude: 63.43087347604694,  
+            longitude: 10.39376385767204,
+        },     
+    },{
+        key: 31,
+        filterKey: "Eat",
+        title: 'Lille Skansen',
+        shortDescription: "Good view of Munkholmen",
+        photographer: 'From: Lille skansens instagram',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Eat/Lilleskansen.png"),
+        information: "Restaurant by the seaside at Skansen, with a beautifull view of the docks and Munkholmen. They focus on good quality ingredients and the meny adapts to the current season, and if you are not hungry you can stop by for a coffee or a snack and just enjoy the view. Opening hours are 11 am to 9 pm Monday to Saturday and 11 am to 19 pm on Sunday. Menu: https://www.lille-skansen.no/restaurant",
+        latLong: {
+            latitude: 63.4319527809443,  
+            longitude: 10.377866066932768 ,
+        },     
+    },{
+        key: 32,
+        filterKey: "Eat",
+        title: 'Indian Curry & Nepali Restaurant',
+        shortDescription: "Authentic Indian and Nepali",
+        photographer: 'From: alexlawi on Happy Cow',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Eat/IndianCurryandNepalirestaurant.jpeg"),
+        information: "This restaurant serves authentic Indian and Nepali food. The food is excellent and also very affordable. The restaurant is located a little outside of Trondheim's city center, but if you have been for a walk at Skansen or Ila you can stop by the restaurant on your way home. We do however recommend to order takeaway as the restaurant´s premises are not the coziest. Opening hours are 3 pm to 10 pm Monday and Wednesday to Friday and 12 pm to 10 pm Saturday and Sunday",
+        latLong: {
+            latitude: 63.42939777310504, 
+            longitude: 10.36466150132522,
+        },     
+    },{
+        key: 33,
+        filterKey: "Eat",
+        title: 'Edoramen',
+        shortDescription: "Ramen, ramen and ramen",
+        photographer: 'From: Visit Trondheim',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Eat/Edoramen.jpeg"),
+        information: "Edoramen combines Japanese tradition with Norwegian ingredients in a new and stylish restaurant. The restaurant is situated right outside the city center towards Lade, but it is easy to get there by foot or bus, with the closest bus stop being Ladeveien. Opening hours are 4 pm to 9 pm Wednesday to Sunday.",
+        latLong: {
+            latitude: 63.442319938662784, 
+            longitude:  10.43654132883602 ,
+        },     
+    },{
+        key: 34,
+        filterKey: "Eat",
+        title: 'Lager 11',
+        shortDescription: "Cozy street food",
+        photographer: 'From: Visit Trondheim',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Eat/Lager11StreetFood.jpeg"),
+        information: "Lager 11 is a new and fun concept for Trondheim, where they have joined together lots of different food stalls in an old warehouse and made it colorful and cozy. The food is great and there is something for every taste, from every corners of the world! The restaurant is a bit outside the city center but really worth the bus ride. The easiest way to get there is by taking bus numer 20 (Romolslia) from the city center to Sluppenveien 9. Opening hours are 4 pm to 11 pm Thursday and Friday, and 12 pm to 11 pm Saturday and Sunday.",
+        latLong: {
+            latitude: 63.397780284108336, 
+            longitude: 10.395717257672043  ,
+        },     
+    },{
+        key: 35,
+        filterKey: "Eat",
+        title: 'Selma',
+        shortDescription: "Organic, delicious pizza",
+        photographer: 'From: Selmas instagram ',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Eat/Selmapizza.png"),
+        information: "Selma is located on Solsiden, one of the most known places in Trondheim. The pizza is delicious and the toppings are fun and a bit different, so this is the place to go if you want to try a twist to Italian pizzas, although they do serve other dishes as well. Opening hours are 12 pm to 11 pm Monday and Tuesday, 12 pm to 1 am Wednesday to Saturday and 1 pm to 10 pm Sundays. Menu: https://selmabar.no/",
+        latLong: {
+            latitude: 63.43496675254836,  
+            longitude: 10.412003584655917 ,
+        },     
+    },{
+        key: 36,
+        filterKey: "Eat",
+        title: 'Byhaven Kafe',
+        shortDescription: "Oldfashioned Norwegian supper",
+        photographer: 'From: Selmas instagram ',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Eat/byhavenkafe.jpeg"),
+        information: "Byhaven Kafe is a cafe located on the third floor of the mall Byhaven. The cafe focuses on serving delicious 'husmannskost', which is traditional everyday dinners for Norwegians, but the meal of the day changes every week. If you are up for trying some traditional Norwegian supper, this is the place! Opening hours are the same as the mall, 9 am to 8 pm Monday to Friday and 10 am to 6 pm on Saturday.",
+        latLong: {
+            latitude: 63.43409983655455, 
+            longitude: 10.39650464603225  ,
         },     
     }
 ];
