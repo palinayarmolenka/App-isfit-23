@@ -12,7 +12,7 @@ const MarkerInfo = (props) => {
             <Text style={styles.headerText}>{props.title}</Text> 
         </View>
         <View style={styles.imageContainer}>
-            {/* <Image style={styles.image} source={props.bilde} /> */}
+            <Image style={styles.image} source={props.bilde} />
             <Text style={{ paddingLeft: width * 0.05, fontSize: 12, fontStyle: "italic" }}>{props.photographer} </Text>
         </View>
         <View style={styles.textContainer}>
