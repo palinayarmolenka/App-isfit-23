@@ -28,9 +28,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF'
   },
   dateTitle: {
-    fontSize: 17,
+    fontSize: 20,
     paddingTop: 4,
-    paddingHorizontal: 15
+    paddingBottom: 4,
+    paddingHorizontal: 15,
   }
 });
 
