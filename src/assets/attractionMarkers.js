@@ -7,6 +7,7 @@
 // FreshAir: key 45-53
 // Activities: key 54-59
 // Shopping: key 60-67
+// Museums: key 68-76
 
 export const attractionMarkers = [
     {
@@ -895,6 +896,123 @@ export const attractionMarkers = [
         latLong: {
             latitude:   63.431792747404714, 
             longitude:  10.407192642977938,
+        },     
+    },{
+        key: 68,
+        filterKey: "Museums",
+        title: 'Rockheim',
+        shortDescription: "Interactive Music Museum",
+        photographer: 'From: Rockheim',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Museums/Rockheim.jpg"),
+        information: "Rockheim is a museum displaying Norwegian music from different decades and genres through interactive exhibitions. To get there you have to cross the bridge over the railway tracks by Trondheim Central Station, and you will find Rockheim to your right. Admission for students is NOK 130. Opening hours are: Tuesday - Friday 10 am - 4 pm, Saturday - Sunday 11 am - 5 pm, Monday closed",
+        latLong: {
+            latitude:   63.438779291043886, 
+            longitude:  10.401958166932765,
+        },     
+    },{
+        key: 69,
+        filterKey: "Museums",
+        title: 'NTNU Vitenskapsmuseet/The University Museum',
+        shortDescription: "Animals and humans through the ages",
+        photographer: ' From: Mentz Indergaard, NTNU',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Museums/NTNU_Vitenskapsmuseet_The_University_Museum.jpg"),
+        information: "NTNU Vitenskapsmuseet or The University Museum has exhibitions where you can explore everything from medieval settlements, wildlife, the deep sea and even the future. The Department of Natural History at NTNU manages and contributes to the museum, so you can be sure of the quality of the exhibitions. The museum is located in central Trondheim and is within walking distance from Samfundet. Admission for students is NOK 70. Opening hours are: Tuesday - Friday 10 am - 4 pm, Saturday - Sunday 11 am - 4 pm.",
+        latLong: {
+            latitude:   63.429155979791815, 
+            longitude:  10.386409455819898,
+        },     
+    },{
+        key: 70,
+        filterKey: "Museums",
+        title: 'Medical Museum',
+        shortDescription: "Torture device or medical equipment?",
+        photographer: 'From: NMHM',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Museums/Medicinal_Museum.jpg"),
+        information: "A trip to the Medical Museum will really make you greatful that medical sciences has come further today. The exhibition consists of different equipment from different periodes for all types of diseases. You can find the Medical Museum at 'Kunnskapssenteret' at St. Olavs hospital on the 3rd floor. The museum is unsupervised and entrance is free. Opening hours are: Monday - Friday 6:30 am - 9 pm, Saturday - Sunday 8 am - 9 pm. ",
+        latLong: {
+            latitude:   63.420740504882524, 
+            longitude:  10.386888175395194,
+        },     
+    },{
+        key: 71,
+        filterKey: "Museums",
+        title: 'Sverresborg Folk Museum',
+        shortDescription: "Preserved buildings and objects from Trøndelag",
+        photographer: 'From: Sverresborg',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Museums/Sverresborg.jpg"),
+        information: "The mission of Sverresborg Folk Museum is to collect and preserve buildings and objects from the cultural area of Trøndelag. Here you will find indoor exhibitions that shows daily life in the region from the past 150 years. In the outdoor exhibition you can explore king Sverre's castle that dates back to 1183, the old town which consists of houses from the 18th century, some rural farmsteads and churches. To get to Sverresborg you can take bus 11 to Stavset from the city center and get off at the stop Trøndelag folkemuseum. Entrance for students is NOK 120. Opening hours are: Tuesday - Friday 10 am - 3 pm, Saturday - Sunday 11 am - 3 pm.",
+        latLong: {
+            latitude:   63.42129660847574, 
+            longitude:  10.356902,
+        },     
+    },{
+        key: 72,
+        filterKey: "Museums",
+        title: 'Trondheim Art Museum',
+        shortDescription: "2-in-1 Picture Gallery",
+        photographer: 'From: TripAdvisor',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Museums/Trondheim_Art_Museum.jpg"),
+        information: "",
+        latLong: {
+            latitude:   63.42758647485129, 
+            longitude:  10.3945689,
+        },     
+    },{
+        key: 73,
+        filterKey: "Museums",
+        title: 'Ringve Music Museum',
+        shortDescription: "Folk music museum",
+        photographer: 'From: Ringve Musikkmuseum',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Museums/Ringve_Music_Museum.jpg"),
+        information: "Ringve Music Museum offers several exhibitions on a wide range of musical themes. Exhibitions displayed at Ringve has a diverse selection from a huge collection of instruments. To ge to Ringve you can ether take bus 2 from the city center and get of at 'Ingemann Torps vei' or take bus 20 from the city center and get of at 'Ringve museum'. Admission for students is NOK 140. Opening hours are: Thuesday - Sunday 11 am - 4 pm.",
+        latLong: {
+            latitude:   63.447401438027086, 
+            longitude:  10.45461451349194,
+        },     
+    },{
+        key: 74,
+        filterKey: "Museums",
+        title: 'Salamander Night',
+        shortDescription: "Scary but worth it",
+        photographer: 'From: Visit Trondheim ',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Museums/salamandernatten.jpg"),
+        information: "Come in to a pitch black room and gradually see Kjell Erik Killi Olsens sculptures as your eyes gets used to the dark. You can find the Salamander Night in the basement of the bank Sparebank 1 in Søndre gate 2. Admission is free. Opening hours are: Monday - Friday 4 pm - 8 pm.",
+        latLong: {
+            latitude:  63.43100967560215, 
+            longitude:  10.399785671163977 ,
+        },     
+    },{
+        key: 75,
+        filterKey: "Museums",
+        title: 'K.U.K. Art Center',
+        shortDescription: "Young people's daring art.",
+        photographer: 'From: Trond Åm',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Museums/KUK_art_museum.jpg"),
+        information: "Art Center with focus on displaying young people's art. The exibitions are daring and challenges different views of the world. The place is called a meeting point for art and culture with 1000 square metres of art in 10 different galleries! Opening hours: Monday to Sunday 11 am to 6 pm. ",
+        latLong: {
+            latitude: 63.43239847401999,  
+            longitude:  10.402860428580471 ,
+        },     
+    },{
+        key: 76,
+        filterKey: "Museums",
+        title: 'The Archbishop\'s Palace',
+        shortDescription: "Three museums telling an important story.",
+        photographer: 'From: Nidarosdomen',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Museums/The_Archbishops_Palace.jpg"),
+        information: "Visit one of Trondheim’s most fascinating museums and see archaeological finds from the Archbishop’s Palace. Ever since the end of the 1100s, the Archbishop’s Palace has been an arena for important meetings and grand celebrations. There are three museums in the Archbishop’s Palace. The King’s Crown and the other coronation objects that represent the royal regalia of Norway are on display in the west wing. The Archbishop’s Palace Museum features original sculptures from Nidaros Cathedral, and tells the colourful history of the Archbishop’s Palace through archaeological discoveries found on the site. You will also find The Armoury Military Museum in the Archbishop’s Palace. Opening hours: Monday to Friday 10 am to 5 pm, Saturday 11 am - 3 pm and Sunday 12 pm - 4 pm.",
+        latLong: {
+            latitude:   63.425892690774, 
+            longitude:  10.396017742327956,
         },     
     }
 ];
