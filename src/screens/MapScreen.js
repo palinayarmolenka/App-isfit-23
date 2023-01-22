@@ -26,10 +26,7 @@ export default class MapScreen extends Component{
       <View style={{
         flex: 1,
       }}>
-        <View style={{backgroundColor: "#2A122C", paddingLeft: 10, paddingTop: 8}}>
-          <Text style={{color: "#FFFFFF", fontSize: 18}}>Filter:</Text>
-        </View>
-        <View style={{height: 55, backgroundColor: "#2A122C"}}>
+        <View style={{height: 55, backgroundColor: "#3a243b", paddingTop: 4}}>
           <ScrollView horizontal={true} style={{paddingTop: 4}}>
   
           <TouchableOpacity style={styles.darkPurpleFilterButton}
