@@ -1,6 +1,5 @@
-// import * as React from 'react';
-import React, {useRef, useEffect} from 'react';
-import { Text, View, StyleSheet, Animated, Easing, backgroundFade, logoFade, logoMovement } from 'react-native';
+import React, {useState, useEffect} from 'react';
+import { View, StyleSheet, Image, Dimensions } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from "@react-navigation/stack";
@@ -11,6 +10,9 @@ import ThemeScreen from './src/screens/ThemeScreen';
 import FAQScreen from './src/screens/FAQScreen';
 import InformationScreen from './src/screens/InformationScreen';
 import MarkerInfoScreen from './src/screens/MarkerInfoScreen';
+
+const width = Dimensions.get("screen").width;
+const height = Dimensions.get("screen").height;
 
 const MapsStack = createStackNavigator();
 //Make to have a visible tabbar on these screens
@@ -102,23 +104,65 @@ function App() {
   );
 }
 
+//Own splashscreen that renders for 2 sek.
+function SplashScreen(props) {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      props.setLoading(!props.loading);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+  return (
+    <View style={{ backgroundColor: "#99499C", flex: 1 }}>
+      <View>
+        <Image
+          style={styles.picture}
+          source={require("./src/assets/launch_screen.png")}
+        />
+      </View>
+    </View>
+  );
+}
+
+export default () => {
+  const [loading, setLoading] = useState(true);
+
+  if (loading) {
+    return <SplashScreen loading={loading} setLoading={setLoading}/>;
+  } else {
+    return (
+      <NavigationContainer>
+        <MainStack.Navigator screenOptions={{ headerShown: false }}>
+          <MainStack.Screen name="HomeTabs" component={HomeTabs} />
+          <MainStack.Screen name="Info" component={InformationScreen} />
+          <MainStack.Screen name="Show" component={EventScreen} options={{animationEnabled: true, forFade}}/>
+        </MainStack.Navigator>
+      </NavigationContainer>
+    );
+  }
+};
+
+
 const styles = StyleSheet.create({
-  container: {
-     flex: 1,
-     alignItems: 'center',
-     justifyContent: 'center',
-     backgroundColor: 'orange',
-     opacity: backgroundFade,
+  titletext: {
+    fontSize: 20,
+    color: "white",
+    fontWeight: "bold",
   },
-  logo: {
-     color: 'white',
-     fontSize: 48,
-     fontWeight: 'bold',
-     opacity: logoFade,
-     transform: [{translateY: logoMovement}],
+  randomText: {
+    paddingTop: height * 0.01,
+    fontSize: 16,
+    color: "white",
+  },
+  picture: {
+    alignSelf: "center",
+    margin: width * 0.6,
+    height: height * 0.26,
+    size: 2,
+    resizeMode: "contain", 
   },
 });
-export default App;
+// export default App;
 
 
 
