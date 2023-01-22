@@ -26,6 +26,11 @@ const styles = StyleSheet.create({
   },
   descriptionTextContainer: {
     backgroundColor: '#FFFFFF'
+  },
+  dateTitle: {
+    fontSize: 17,
+    paddingTop: 4,
+    paddingHorizontal: 15
   }
 });
 
@@ -48,21 +53,23 @@ export default function FAQScreen({ navigation }) {
           </TouchableOpacity>
         </View>
       </View>
-      {questions.map((question, index) => {
+      {questions.map((question, i) => {
         return (
-          <View>
-            <Text>{groups.category}</Text>
-            <FAQQuestion 
-              key={index}
-              category={question.category}
-              title={question.title}
-              data={question.data}
-              navigation={navigation}
-            />
+          <View key = {i}>
+            <Text style = {styles.dateTitle}>{question.category}</Text>
+            {question.questions.map((itm, j) => {
+              return (<FAQQuestion 
+                key={j}
+                title={itm.title}
+                data={itm.data}
+                navigation={navigation}
+              />)
+            })}
           </View>
         )
       })}
     </ScrollView>
   );
 }
+
 
