@@ -17,7 +17,7 @@ export const faqQuestions = [
     },
     {
       key: 3,
-      category: "Event",
+      category: "Help",
       title: "What to do if you have questions",
       data: "If you have any questions, please direct them to the volunteers with ISFiT t-shirts or call Trafoen. The staff at Samfundet cannot answer questions regarding the festival."
     },
@@ -59,79 +59,79 @@ export const faqQuestions = [
     },
     {
       key: 10,
-      category: "",
+      category: "Help",
       title: "Trafoen",
       data: "Location: Klæbuveien 1 \nPhysical opening hours: 08:00 - 23:00 \nTrafoen is the red square building between Samfundet and Gløshaugen. During the festival Trafoen will serve as your information central, and will be open all day. If you arrive on the 7th or 9th of February, you can check in at Trafoen and get your host information there."
     },
     {
       key: 11,
-      category: "",
+      category: "Help",
       title: "Handling the cold weather",
       data: "If your host is unable to lend you warm clothes, you can visit Trafoen. We will keep an emergency pile of warm clothing available for you. Remember to return everything you borrow by the end of the festival, both to your host and to Trafoen!"
     },
     {
       key: 12,
-      category: "",
+      category: "Help",
       title: "Help and someone to talk to",
       data: "If you need help or someone to talk to, contact Trafoen. We can put you in touch with a medic, a mental health professional, a priest, etc. Trafoen will also assist you with any other issue you may have."
     },
     {
       key: 13,
-      category: "",
+      category: "Transport",
       title: "Transport",
       data: "As a participant of ISFiT, you can travel with the line buses, night buses, and the tram for free in Trondheim. Information about the bus routes can be found in the AtB Reise app. The app can be downloaded from App Store for iPhone and Googlen Play Store for Android. Your wristband serves as your ticket. Note that the night buses only run during the weekend. On weekdays the latest buses go around 00:30 am, while on weekends (Friday and Saturday night) the last ones go around 03:00 am from Samfundet. You will be able to view the bus routes in real time in the app."
     },
     {
       key: 14,
-      category: "",
+      category: "Host",
       title: "Host",
       data: "All participants are signed up with a host for the festival, which will be your home for the entire festival. If you have any questions about your host, you can find the host team's phone number on isfit.org. Your host will also provide you with breakfast."
     },
     {
       key: 15,
-      category: "",
+      category: "Do's and dont's",
       title: "Drink the tap water",
       data: "The tap water is clean and safe to drink. Don't buy new water in the store every time you get thirsty, just refill a bottle. This will save money and the environment."
     },
     {
       key: 16,
-      category: "",
+      category: "Do's and dont's",
       title: "Pant your bottles",
       data: "If you have some empty bottles you don't need, don't throw them away. You can recycle them through a system we call panting. Using a machine found in most grocery stores, you can put in your bottles and cans and get some money for it. This is good for both the environment and your economy."
     },
     {
       key: 17,
-      category: "",
+      category: "Do's and dont's",
       title: "Put on a jacket",
       data: "February is a winter month, and the outside can be both cold and wet. Don't let this ruin your day, and dress accordingly."
     },
     {
       key: 18,
-      category: "",
+      category: "Do's and dont's",
       title: "Have fun and meet new people",
       data: "You are a participant at the biggest international student festival in the world, this is a unique opportunity to meet new and interesting friends from all around the world. So, enjoy yourself and have a great time."
     },
     {
       key: 19,
-      category: "",
+      category: "Do's and dont's",
       title: "Don't smoke indoors",
       data: "It is illegal to smoke inside any building, apartment, bar, club, pub, etc. If you want to smoke, you have to go outside on the street. Smoking indoors will lead to an expensive fine."
     },
     {
       key: 20,
-      category: "",
+      category: "Do's and dont's",
       title: "Don't throw toilet paper in the trash",
       data: "You can flush the toilet paper in the toilet in every house and public bathroom. Paper towels, napkins and tampons are not flushable and have to go in the trash."
     },
     {
       key: 21,
-      category: "",
+      category: "Ceremonies",
       title: "Walk of Peace",
       data: "On the 12th of February, the participants and volunteers of ISFiT gather for the Walk of Peace, a parade with torches through the city of Trondheim, leading up to the Student Peace Prize Ceremony. The walk goes from Samfundet to the venue of the Ceremony, Olavshallen. \nThe Walk of Peace is arranged to raise awareness for the the cause of DOXA Magazine and their work, as well as for world peace in general. Let's fill the streets of Trondheim with love, peace, and light."
     },
     {
       key: 22,
-      category: "",
+      category: "Emergency",
       title: "Emergency",
       data: "If there is an emergency you should call: \n113 for ambulance \n112 for police \n110 for fire department \n116 117 for Emergency Room \nIf you have and emergency, please contact Trafoen as well! \n\nThe hospital in Trondheim is located across the road from Studentersamfundet. If you have a smaller incident, contact the Emergency Room BEFORE you go there. The Emergency Room is located at the hospital and they don't have drop-in service. If you are in need of a bandaid or something similar, go to Trafoen."
     },
