@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
     right: 0,
     left: width - 30,
     backgroundColor: 'transparent',
+    resizeMode:'resize',
   },
   image: {
     resizeMode: "contain",

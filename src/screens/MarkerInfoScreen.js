@@ -13,14 +13,14 @@ const MarkerInfoScreen = ({ route, navigation }) => {
   const { itemId, itemTitle, itemPicture, itemInformation, itemPhotographer } = route.params;
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, backgroundColor: "#f9f5f9"}}>
       <View style={styles.topButtonContainer}>
         <TouchableOpacity onPress={() => navigation.navigate("MapsScreen")}>
-          <Feather name="arrow-left" size={40} color="#3939" />
+          <Feather name="arrow-left" size={40} color="#37894e" />
         </TouchableOpacity>
         <TouchableOpacity style={{paddingTop: 4, paddingRight: 4}}
         onPress={() => {storeFavorites(itemId)}}>
-            <FontAwesome name="heart-o" size={35} color="#3939"/>
+            <FontAwesome name="heart-o" size={35} color="#37894e"/>
         </TouchableOpacity>
       </View>
       <ScrollView>
