@@ -7,7 +7,6 @@ import { staticEvents } from './data/staticEvents';
 
 export default function EventScreen () {
 
-    const [samfundetEvents, setSamfundetEvents] = useState([])
     const [samfundetGroups, setSamfundetGroups] = useState([])
 
     const getFeed = async () => {
@@ -51,8 +50,6 @@ export default function EventScreen () {
       newDateArray.sort((a, b) => {
         return new Date(a.date) - new Date(b.date)
       })
-
-      setSamfundetEvents(newDateArray)
 
       const groups = newDateArray.reduce((groups, item) => {
         const date = item.date.toString().substring(0, 16)
