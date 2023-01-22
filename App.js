@@ -135,7 +135,7 @@ export default () => {
         <MainStack.Navigator screenOptions={{ headerShown: false }}>
           <MainStack.Screen name="HomeTabs" component={HomeTabs} />
           <MainStack.Screen name="Info" component={InformationScreen} />
-          <MainStack.Screen name="Show" component={EventScreen} options={{animationEnabled: true, forFade}}/>
+          <MainStack.Screen name="Show" component={EventScreen} />
         </MainStack.Navigator>
       </NavigationContainer>
     );
