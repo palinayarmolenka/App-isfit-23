@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     height: height * 0.14,
     flexDirection: "row",
-    backgroundColor: "#E63872",
+    backgroundColor: "#99499C",
     fontSize: 20,
   },
   articleText: {

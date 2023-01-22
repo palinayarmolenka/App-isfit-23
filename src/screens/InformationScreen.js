@@ -13,9 +13,9 @@ const InformationScreen = ({ navigation, route }) => {
     const { itemTitle, itemPicture, itemInfo, logoInfo, } = route.params.params;
 
 
-    return <View style={{ flex: 1 }}>
+    return <View style={{ flex: 1, backgroundColor: "#e2d0e5" }}>
         <Header title="Info" onPress={() => navigation.navigate("Theme")} headerType="ArticleScreen" />
-        <ScrollView >
+        <ScrollView>
             <View style={styles.titleView}>
                 <Text style={styles.titleText} boldtextStyle>{itemTitle}</Text>
             </View>
