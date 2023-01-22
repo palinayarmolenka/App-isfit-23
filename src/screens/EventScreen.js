@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly'
   },
   dateTitle: {
-    fontSize: 20,
+    fontSize: 17,
     backgroundColor:"#FFFFFF",
     paddingTop: 4,
     paddingHorizontal: 15

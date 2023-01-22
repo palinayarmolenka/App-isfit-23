@@ -44,12 +44,15 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         paddingTop: height * 0.02,
         fontSize: 24,
-        letterSpacing: 1
+        letterSpacing: 1,
+        fontWeight: '500'
     },
     textStyle: {
         textAlign: 'left',
         paddingTop: height * 0.02,
         margin: width * 0.053,
+        fontSize: 15,
+        fontWeight: '300'
     }
 });
 

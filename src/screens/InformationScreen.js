@@ -17,7 +17,7 @@ const InformationScreen = ({ navigation, route }) => {
         <Header title="Info" onPress={() => navigation.navigate("Theme")} headerType="ArticleScreen" />
         <ScrollView>
             <View style={styles.titleView}>
-                <Text style={styles.titleText} boldtextStyle>{itemTitle}</Text>
+                <Text style={styles.titleText}>{itemTitle}</Text>
             </View>
             <Image style={styles.picture} source={itemPicture} />
             <Text style={{ paddingLeft: width * 0.1, fontSize: 12, fontStyle: "italic" }}>{logoInfo}</Text>
@@ -30,25 +30,15 @@ const InformationScreen = ({ navigation, route }) => {
 const styles = StyleSheet.create({
     textStyle: {
         lineHeight: 20,
-        fontSize: 15,
+        fontSize: 17,
         marginHorizontal: width * 0.04,
         marginVertical: height * 0.03,
-    },
-    AuthortextStyle: {
-        lineHeight: 20,
-        fontSize: 15,
-        marginLeft: width * 0.04,
-        marginTop: height * 0.03,
-    },
-    boldtextStyle: {
-        lineHeight: 20,
-        fontSize: 15,
-        marginHorizontal: width * 0.04,
-        marginTop: height * 0.03,
+        fontWeight:'300'
     },
     titleText: {
         fontSize: 20,
         paddingHorizontal: width * 0.01,
+        fontWeight:'500'
     },
     titleView: {
         alignItems: "center",

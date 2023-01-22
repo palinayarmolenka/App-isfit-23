@@ -61,8 +61,8 @@ const ArticleBox = (props) => {
                     </View>
                     <View style={styles.overview}>
                         <Text style={{ fontSize: titleSize(props.title), 
-                            paddingBottom: height * 0.01 }}>{props.title}</Text>
-                        <Text style={{fontSize: 15, fontStyle:'italic'}}>{props.shortInfo}</Text>
+                            paddingBottom: height * 0.01, fontWeight:'500'}}>{props.title}</Text>
+                        <Text style={{fontSize: 15, fontStyle:'italic', fontWeight:'200'}}>{props.shortInfo}</Text>
                     </View>
                 </View>
             </View>

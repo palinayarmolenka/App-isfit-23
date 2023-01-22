@@ -1,26 +1,17 @@
 import React from "react";
 import { Text, View, StyleSheet, Image, Dimensions, TouchableOpacity, Linking, Alert } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { Feather, FontAwesome } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
 
 const width = Dimensions.get("screen").width;
 const height = Dimensions.get("screen").height;
 
 const boxSize = () => {
     if (height > 800) {
-        return 0.14;
+        return 0.13;
     }
     else {
         return 0.17;
-    }
-}
-
-const imageHeight = () => {
-    if (height > 800) {
-        return 0.11;
-    }
-    else {
-        return 0.14;
     }
 }
 
@@ -29,8 +20,6 @@ const EventBox = (props) => {
     //makes navigation in EventBox, used to navigate to event information page
     const navigation = useNavigation();
 
-
-    
     const title = props.title;
     let d = props.date;
     let day = d.toString().substring(0,3);
@@ -42,7 +31,7 @@ const EventBox = (props) => {
             <View style={{ backgroundColor: "white" }}>
                 <View style={{
                     height: height * boxSize(), //0.17 for small phones, 0.12 for large phones.
-                    backgroundColor: "#FCD8B4",
+                    backgroundColor: "#e5e0f0",
                     flexDirection: "row",
                     justifyContent: "space-between",
                     marginBottom: height * 0.004,
@@ -53,7 +42,7 @@ const EventBox = (props) => {
                     elevation: 1,
                 }}>
                     <View style={styles.overview}>
-                        <Text style={{ fontSize: 17, margin: 5, marginTop:0}}>{title}</Text>
+                        <Text style={{ fontSize: 18, margin: 5, marginTop: 3, fontWeight:'450'}}>{title}</Text>
                         <View style={styles.buttons}>
                             <View style={styles.info}>
                                 <Text style={styles.infoText}>
@@ -64,10 +53,9 @@ const EventBox = (props) => {
                         </View>
                     </View>
 
-                    <TouchableOpacity style={styles.starIcon} 
-                    onPress={() => Alert.alert(title+" was added to favorites!")}>
-                        <FontAwesome name={'star-o'} size={30} color="#E63872"/>
-                    </TouchableOpacity>
+                    <View style={styles.icon}>
+                        <MaterialIcons name={'keyboard-arrow-right'} size={30} color="#E63872"/>
+                    </View>
 
                 </View>
             </View>
@@ -75,46 +63,8 @@ const EventBox = (props) => {
     );
 };
 
-//Check for wrong format in title
-const titleFormat = (title) => {
-    for (var i = 0; i < title.length; i++) {
-        if (title[i] == "/") {
-            return title.substring(0, i);
-        }
-        else if (title[i] == ":") {
-            if (title[i + 1] == " ") {
-                return title.substring(i + 2, title.length);
-            }
-            else {
-                return title.substring(i + 1, title.length);
-            }
-        }
-    }
-    return title;
-};
 
-//change size of title if it is to long, and if the phone is higher that 800.
-const titleSize = (title) => {
-    if (title.length > 50) {
-        return 10; //small text to make sure it doest move the text out of the event box
-    }
-    if (title.length > 30) {
-        return 12;
-    }
-    else if (title.length > 25) {
-        return 14;
-    } else if (title.length > 22 || height > 800) {
-        return 17;
-    }
-    else if (title.length > 16) {
-        return 18
-    }
-    else {
-        return 20;
-    }
-};
-
-styles = StyleSheet.create({
+const styles = StyleSheet.create({
     overview: {
         paddingTop: height * 0.015,
         flexDirection: "column",
@@ -133,10 +83,11 @@ styles = StyleSheet.create({
         fontSize: 15,
         marginLeft: 5,
         marginTop: 0,
-        margin: 3
+        margin: 3,
+        fontWeight:'300'
 
     },
-    starIcon: {
+    icon: {
         alignSelf: 'center',
         paddingRight: 10
     }

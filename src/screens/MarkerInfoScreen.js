@@ -80,7 +80,7 @@ const MarkerInfoScreen = ({ route, navigation }) => {
               await removeFavorites(itemId);
             }}
           >
-            <FontAwesome name="heart" size={35} color="#3939" />
+            <FontAwesome name="heart" size={35} color="#37894e" />
           </TouchableOpacity>
         ) : (
           <TouchableOpacity
@@ -89,7 +89,7 @@ const MarkerInfoScreen = ({ route, navigation }) => {
               await storeFavorites(itemId);
             }}
           >
-            <FontAwesome name="heart-o" size={35} color="#3939" />
+            <FontAwesome name="heart-o" size={35} color="#37894e" />
           </TouchableOpacity>
         )}
       </View>
