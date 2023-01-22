@@ -8,6 +8,7 @@
 // Activities: key 54-59
 // Shopping: key 60-67
 // Museums: key 68-76
+// Party: key 77-83
 
 export const attractionMarkers = [
     {
@@ -1013,6 +1014,97 @@ export const attractionMarkers = [
         latLong: {
             latitude:   63.425892690774, 
             longitude:  10.396017742327956,
+        },     
+    },{
+        key: 77,
+        filterKey: "Party",
+        title: 'Studentersamfundet',
+        shortDescription: "Student Society of Trondheim",
+        photographer: 'From: Studentersamfundet Instagram',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Party/Studentersamfundet.png"),
+        information: "Studentersamfundet has several bars and nightclubs. If you are looking to have some beers in chill surroundings, you can go to Daglighallen or Edgar. If you wanna have drinks or maybe even some shots you can take a trip to Strossa or Selskapssiden. In Bodegaen and Klubben there are DJs, so this is the perfect place to let loose and have some fun. Storsalen will host a lot of the events during ISFiT, but is also a great place to dance with lots of people. Samfundet is open from 4 pm - 11 pm Sunday-Tuesday, and Wednesday and Thursday 4 pm - 1 am and Saturday it's open until 2 am.",
+        latLong: {
+            latitude:  63.42342094018467, 
+            longitude:  10.394720337137839,
+        },     
+    },{
+        key: 78,
+        filterKey: "Party",
+        title: 'Tyven',
+        shortDescription: "Chill, good wine, backyard",
+        photographer: 'From : Tyven Facebook',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Party/Tyven.jpeg"),
+        information: "Tyven is a selfproclaimed music bar with good wine. They have a cozy interior and a really good and chill atmosphere, the backyard is nicely done with lots of fun colors! They have multiple singature cocktails, make really good alcohol free ones as well. They aim to have a lot of live music, and there is also a photobooth here! Opening hours are 6 pm - 1:30 am Tuesday to Thursday, and 6 pm - 2:30 am Friday to Sunday.  ",
+        latLong: {
+            latitude:  63.43197906962644, 
+            longitude:  10.393472742327955,
+        },     
+    },{
+        key: 79,
+        filterKey: "Party",
+        title: 'TAG',
+        shortDescription: "Stylish and clean with a dancefloor",
+        photographer: 'From : TAG Instagram',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Party/TAG.png"),
+        information: "TAG is the perfect place for a night out; head to the bar or enjoy a dinner with good friends. There is a bar on the first floor where you can sit down to have some drinks/beers with your friends, and then in the basement there is a dance floor where you are guaranteed a good time. Opening hours are 11 am - 11 pm from Monday to Thursday, and 11 am - 2:30 am on Friday and Saturday.",
+        latLong: {
+            latitude:  63.43291356782251, 
+            longitude:  10.39858122883602,
+        },     
+    },{
+        key: 80,
+        filterKey: "Party",
+        title: 'Downtown',
+        shortDescription: "Popular nightclub in Trondheim.",
+        photographer: 'From : Downtown Instagram ',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Party/Downtown.png"),
+        information: "Downtown, or DT as it is commonly reffered to, is a popular student nightclub. It has a total of eight bars in different sections for different types of music. This is a great place to let loose and have fun with your friends. DT is open from 10 pm - 2:30 am Thursday to Saturday. ",
+        latLong: {
+            latitude:  63.434301166647515, 
+            longitude:  10.396909601852142,
+        },     
+    },{
+        key: 81,
+        filterKey: "Party",
+        title: 'Circus',
+        shortDescription: "Rock music and cheap beer",
+        photographer: 'From: Nicelocal',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Party/Circus.png"),
+        information: "Circus is a fun club with lots of cool decorations. This bar has some of the cheapest beer in Trondheim, which attracts lots of students. This is a perfect place to dance to rock music and meet some locals.",
+        latLong: {
+            latitude:  63.43318696046151,
+            longitude:   10.397541099999998,
+        },     
+    },{
+        key: 82,
+        filterKey: "Party",
+        title: 'Barmuda',
+        shortDescription: "The most famous Cava Sunday in Trondheim",
+        photographer: 'From: Barmuda Instagram',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Party/Barmuda.png"),
+        information: "Barmuda is known for their Cava Sunday, which is the perfect place for students to go to get some cheap Cava and meet some new people on Sundays. They have a DJ set-up with good party music. Barmuda is also a fun bar during the other days of the week, and it's located at Solsiden, next to a lot of other nice restaurants and bars, so it's a perfect place to explore. Barmuda is open from 1 pm - 2 am on Saturday and Sunday, and 4 pm - 2 am on Tuesday to Friday.",
+        latLong: {
+            latitude:  63.43451983312366, 
+            longitude:  10.412403363499847,
+        },     
+    },{
+        key: 83,
+        filterKey: "Party",
+        title: 'Lokal bar ',
+        shortDescription: "Directily translated: The Local Bar",
+        photographer: 'From : A u k i - Official',
+        info: 'MarkerInfo',
+        logo: require("../assets/ExploreTrondheim/Party/Lokal_bar.jpeg"),
+        information: "Lokal Bar is the perfect place to go with your friends. They have a cocktailbar, beer bar and a stage where you find DJs, bands and other artist that create an amazing vibe. Take a look at their website: https://www.lokal.bar/omoss  to see what events they have, and who's performing on stage. The bars are open from 7 pm - 1:30 am on Monday to Thursday, and 7 pm - 2:30 am on Friday and Saturday. The stage is open on Friday and Saturday from 10 pm - 2:30 am.",
+        latLong: {
+            latitude:  63.432285465614, 
+            longitude:  10.398527886508063,
         },     
     }
 ];

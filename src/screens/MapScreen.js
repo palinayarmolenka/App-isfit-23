@@ -82,7 +82,8 @@ export default class MapScreen extends Component{
               <Text>Museums</Text>
             </TouchableOpacity>
   
-            <TouchableOpacity style={styles.yellowFilterButton}>
+            <TouchableOpacity style={styles.yellowFilterButton}
+            onPress={() => this.onFilterChange("Party")}>
               <Text>Party places</Text>
             </TouchableOpacity>
           </ScrollView>
