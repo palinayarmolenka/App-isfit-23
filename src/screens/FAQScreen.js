@@ -32,6 +32,9 @@ const styles = StyleSheet.create({
 export default function FAQScreen({ navigation }) {
 
   const [questions, setQuestions] = useState(faqQuestions)
+
+  const groups = [];
+  questions.forEach(a => groups.push(a.category))
   
   return (
     <ScrollView style={styles.container}>
@@ -48,7 +51,7 @@ export default function FAQScreen({ navigation }) {
       {questions.map((question, index) => {
         return (
           <View>
-            <Text>{question.category}</Text>
+            <Text>{groups.category}</Text>
             <FAQQuestion 
               key={index}
               category={question.category}
