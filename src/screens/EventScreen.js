@@ -76,19 +76,6 @@ export default function EventScreen () {
 
   return (
     <View>
-      <View style={styles.filterContainer}>
-    
-          <TouchableOpacity style={styles.filterButton}
-          onPress={() => this.setState({filterKey: "Favorites"})}>
-            <Text style={{alignSelf: 'center', fontSize: 15}}>All Events</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.filterButton}
-          onPress={() => this.setState({filterKey: "Favorites"})}>
-            <Text style={{alignSelf: 'center', fontSize: 15}}>Favorites</Text>
-          </TouchableOpacity>
-
-      </View>
       <ScrollView>
         {samfundetGroups.map((group, i) => {
           return (
@@ -112,17 +99,6 @@ export default function EventScreen () {
 }
 
 const styles = StyleSheet.create({
-  filterButton: {
-    alignSelf: 'center',
-    elevation: 4,
-    backgroundColor: "#F78D1F",
-    borderColor: "#E63872",
-    borderRadius: 20,
-    borderWidth: 2,
-    paddingVertical: 11,
-    paddingHorizontal: 15,
-    width: 200,
-  },
   filterContainer: {
     height: 55, 
     backgroundColor: "#FFFFFF", 
