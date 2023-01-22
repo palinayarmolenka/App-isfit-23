@@ -77,7 +77,7 @@ export default function EventScreen () {
   return (
     <View>
       <ScrollView>
-        {samfundetGroups.map((group, i) => {
+        {samfundetGroups.map((group, i) => { // From here on!!
           return (
             <View key={i}>
               <Text style={styles.dateTitle}>{group.date}</Text>

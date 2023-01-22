@@ -33,8 +33,8 @@ export default function FAQScreen({ navigation }) {
 
   const [questions, setQuestions] = useState(faqQuestions)
 
-  const groups = [];
-  questions.forEach(a => groups.push(a.category))
+
+
   
   return (
     <ScrollView style={styles.container}>
