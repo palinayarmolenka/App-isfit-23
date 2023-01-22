@@ -36,16 +36,12 @@ const ArticleBox = (props) => {
                 itemInfo: props.info,
                 itemTitle: props.title,
                 logoInfo: props.logoInfo,
-                extraText: props.extraText,
-                url: props.url,
-                boldText: props.boldText,
                 shortInfo: props.shortInfo,
-                author: props.author
             }
         })}>
             <View style={{ backgroundColor: "white" }}>
                 <View style={{
-                    backgroundColor: "white",
+                    backgroundColor: "#FDE8D2",
                     height: height * boxSize(),
                     flexDirection: "row",
                     justifyContent: "space-between",
@@ -65,9 +61,8 @@ const ArticleBox = (props) => {
                     </View>
                     <View style={styles.overview}>
                         <Text style={{ fontSize: titleSize(props.title), 
-                            // fontFamily: "Montserrat_700Bold", 
                             paddingBottom: height * 0.01 }}>{props.title}</Text>
-                        <Text style={styles.infoText}>{props.shortInfo}</Text>
+                        <Text style={{fontSize: 15, fontStyle:'italic'}}>{props.shortInfo}</Text>
                     </View>
                 </View>
             </View>
@@ -102,10 +97,6 @@ const styles = StyleSheet.create({
         paddingRight: width * 0.020,
         paddingBottom: 0,
         alignSelf: "center",
-    },
-    infoText: {
-        fontSize: 15 
-        // fontFamily: "Montserrat_300Light"
     }
 });
 
