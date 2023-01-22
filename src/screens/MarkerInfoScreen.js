@@ -68,10 +68,10 @@ const MarkerInfoScreen = ({ route, navigation }) => {
   }, []);
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, backgroundColor: "#f9f5f9"}}>
       <View style={styles.topButtonContainer}>
         <TouchableOpacity onPress={() => navigation.navigate("MapsScreen")}>
-          <Feather name="arrow-left" size={40} color="#3939" />
+          <Feather name="arrow-left" size={40} color="#37894e" />
         </TouchableOpacity>
         {isFavorite ? (
           <TouchableOpacity

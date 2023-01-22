@@ -8,7 +8,6 @@ const height = Dimensions.get("screen").height;
 const MarkerInfo = (props) => {
     return <View >
         <View style={styles.headerContainer}>
-            {/* find a better way to display location title  */}
             <Text style={styles.headerText}>{props.title}</Text> 
         </View>
         <View style={styles.imageContainer}>
@@ -37,16 +36,17 @@ const styles = StyleSheet.create({
     },
     headerContainer: {
         paddingTop: 0,
+        paddingLeft: width * 0.05,
+        paddingRight: width * 0.05,
         alignContent: 'center',
     },
     headerText: {
         alignSelf: 'center',
         paddingTop: height * 0.02,
-        fontSize: 20,
-        letterSpacing: 2
+        fontSize: 24,
+        letterSpacing: 1
     },
     textStyle: {
-        // fontFamily: "Montserrat_300Light",
         textAlign: 'left',
         paddingTop: height * 0.02,
         margin: width * 0.053,
