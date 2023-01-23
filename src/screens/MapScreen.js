@@ -29,7 +29,7 @@ export default class MapScreen extends Component{
         <View style={{height: 55, backgroundColor: "#3a243b", paddingTop: 4}}>
           <ScrollView horizontal={true} style={{paddingTop: 4}}>
   
-          <TouchableOpacity style={styles.darkPurpleFilterButton}
+          <TouchableOpacity style={styles.purpleFilterButton}
           onPress={() => this.onFilterChange("Favorites")}>
               <Text>Favorites</Text>
             </TouchableOpacity>
@@ -211,15 +211,5 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     paddingVertical: 11,
     paddingHorizontal: 15,
-  },
-  darkPurpleFilterButton: {
-    alignSelf: "flex-start",
-    elevation: 4,
-    backgroundColor: "#99499C",
-    borderColor: "#C5A2CC",
-    borderRadius: 50,
-    borderWidth: 2,
-    paddingVertical: 11,
-    paddingHorizontal: 15,
-  },
+  }
 });
