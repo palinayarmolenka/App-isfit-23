@@ -18,9 +18,8 @@ export const attractionMarkers = [
         shortDescription: "Trondheim's cathedral",
         photographer: 'From: NTNU Pensjonist Home',
         info: 'MarkerInfo',
-        // TODO: add pictures
         logo: require("../assets/ExploreTrondheim/Trondheim101/Nidarosdomen.png"),
-        information: "Nidarosomen is Trondheim's cathedral. The construction starten in 1070 and the cathedral was finished in 1300. In 1868, after several fires, the cathedral was in a dire state. It was decided to rebuild and the work has been ongoing for the past 150 years. 30 people are still working on rebuilding Nidarosdomen today. Nidarodomen was at one point an as important pilgrim destination as Jerusalem. Today you can go to see the impressive outside of Nidarosdomen at any time. Opening hours to go inside are 9 am to 2 pm Monday to Friday, 9 am to 1 pm on Saturday and 1 pm to 4 pm on Sunday. To get the full experience you can also go on a guided tour that you can book online at (link)",
+        information: "Nidarosomen is Trondheim's cathedral. The construction starten in 1070 and the cathedral was finished in 1300. In 1868, after several fires, the cathedral was in a dire state. It was decided to rebuild and the work has been ongoing for the past 150 years. 30 people are still working on rebuilding Nidarosdomen today. Nidarodomen was at one point an as important pilgrim destination as Jerusalem. Today you can go to see the impressive outside of Nidarosdomen at any time. Opening hours to go inside are 9 am to 2 pm Monday to Friday, 9 am to 1 pm on Saturday and 1 pm to 4 pm on Sunday. To get the full experience you can also go on a guided tour that you can book online at nidarosdomen.no",
         latLong: {
             latitude: 63.42694324580425,
             longitude: 10.396958956033895,
@@ -112,7 +111,7 @@ export const attractionMarkers = [
         photographer: 'From: Hotels.com',
         info: 'MarkerInfo',
         logo: require("../assets/ExploreTrondheim/Trondheim101/Tyholttårnet.webp"),
-        information: "Tyholttårnet is a 120 meter high telecommunication and radio tower. What makes Tyholttårent so spesial however, is that there is a rotating restaurant, Egon, in the tower. The Restaurant only has glass walls so you will be able to enjoy a fantastic view of the entire city and its suburbs. It is definitely worth a visit. Opening hours are 10am - 11pm monday - thursday, 10am - 11:30pm friday - saturday, 11am - 10pm sunday. It might be a good idea to book a table, which you can do online at (link)",
+        information: "Tyholttårnet is a 120 meter high telecommunication and radio tower. What makes Tyholttårent so spesial however, is that there is a rotating restaurant, Egon, in the tower. The Restaurant only has glass walls so you will be able to enjoy a fantastic view of the entire city and its suburbs. It is definitely worth a visit. Opening hours are 10am - 11pm monday - thursday, 10am - 11:30pm friday - saturday, 11am - 10pm sunday. It might be a good idea to book a table, which you can do online at egon.no/booking",
         //Link?
         latLong: {
             latitude: 63.42256990282549,
@@ -178,7 +177,7 @@ export const attractionMarkers = [
         photographer: 'From: Byantikvaren i Trondheim',
         info: 'MarkerInfo',
         logo: require("../assets/ExploreTrondheim/Help/ISFiT-help_Trafon.jpg"),
-        information: "Trafon functions as an information centre for participants and volunteers in ISFiT during the festival. Come here to get information if you are lost or wondering where you are supposed to be. Opening hours: 8 am - 2 am.",
+        information: "Physical opening times: 08:00-23:00\rYou can always contact us on the phone, 24/7.\rPhome number: +47 934 33 141\r\rTrafon functions as an information centre for participants and volunteers in ISFiT during the festival. Come here to get information if you are lost or wondering where you are supposed to be.",
         latLong: {
             latitude: 63.42103390310999,
             longitude: 10.398810596290305,
@@ -217,7 +216,7 @@ export const attractionMarkers = [
         photographer: 'From: NidarosAvis',
         info: 'MarkerInfo',
         logo: require("../assets/ExploreTrondheim/Help/Farmacy.jpg"),
-        information: "Farmacy in Trondheim with the longest opening hours. For other farmacies, visit this link: (link)",
+        information: "Farmacy in Trondheim with the longest opening hours. For other farmacies, visit google.com/maps/search/apotek",
         latLong: {
             latitude: 63.43443706537041,
             longitude: 10.413655139286032,
@@ -360,7 +359,7 @@ export const attractionMarkers = [
         photographer: 'From: Cafe Løkkas instagram ',
         info: 'MarkerInfo',
         logo: require("../assets/ExploreTrondheim/Eat/CafeLøkka.png"),
-        information: " Located between Bakklandet and Solsiden is the atmospheric restaurant and bar Cafe Løkka. They have a lunch menu from 11 am to 2 pm with specialized sandwiches, and they also serve salads, nachos and burgers the entire day. They have a designated student burger that is cheaper than the others if you can show a valid student ID. They also have gluten free options. Opening hours are from 11 am to 12 am from Sunday to Thursday and 11 am to 2 am Friday and Saturday. Menu: https://www.cafelokka.no/#popup1",
+        information: " Located between Bakklandet and Solsiden is the atmospheric restaurant and bar Cafe Løkka. They have a lunch menu from 11 am to 2 pm with specialized sandwiches, and they also serve salads, nachos and burgers the entire day. They have a designated student burger that is cheaper than the others if you can show a valid student ID. They also have gluten free options. Opening hours are from 11 am to 12 am from Sunday to Thursday and 11 am to 2 am Friday and Saturday. Find the menu: cafelokka.no/#popup1",
         latLong: {
             latitude: 63.433947545660594, 
             longitude: 10.408645114848806 ,
@@ -373,7 +372,7 @@ export const attractionMarkers = [
         photographer: 'From: Lychekjokkenogbar Instagram',
         info: 'MarkerInfo',
         logo: require("../assets/ExploreTrondheim/Eat/Lyche.png"),
-        information: "Lyche is the restaurant at Studentersamfundet, and is run by volunteer students with an interest in food! All the profit from the restaurant goes to Studentersamfundet. Lyche is a meeting point for the students in Trondheim due to their cheap meals and good vibes. The menu changes regularly. The restaurant opens at 4 pm every day, the kithcen closes at 10 pm, and the restaurant turns into a bar in the weekends that is open until 2 am. They have gluten free options, ask the server. Menu: https://www.samfundet.no/lyche/menu",
+        information: "Lyche is the restaurant at Studentersamfundet, and is run by volunteer students with an interest in food! All the profit from the restaurant goes to Studentersamfundet. Lyche is a meeting point for the students in Trondheim due to their cheap meals and good vibes. The menu changes regularly. The restaurant opens at 4 pm every day, the kithcen closes at 10 pm, and the restaurant turns into a bar in the weekends that is open until 2 am. They have gluten free options, ask the server. Find the menu: samfundet.no/lyche/menu",
         latLong: {
             latitude: 63.422688712938424, 
             longitude: 10.395297130192889 ,
@@ -386,7 +385,7 @@ export const attractionMarkers = [
         photographer: 'From: Una Pizzeria Instagram',
         info: 'MarkerInfo',
         logo: require("../assets/ExploreTrondheim/Eat/Una.png"),
-        information: "Delicious Italian pizza and pasta located at Solsiden, in a rustic atmosphere. The restaurant is open from 11 am to 11 pm Monday to Saturday, and from 1 pm to 10 pm on Sunday. Menu: https://www.unapizzeria.no/no/meny",
+        information: "Delicious Italian pizza and pasta located at Solsiden, in a rustic atmosphere. The restaurant is open from 11 am to 11 pm Monday to Saturday, and from 1 pm to 10 pm on Sunday. Find the menu: unapizzeria.no/no/meny",
         latLong: {
             latitude: 63.43536836136709, 
             longitude: 10.410421371163977,
@@ -425,7 +424,7 @@ export const attractionMarkers = [
         photographer: 'From: Lille skansens instagram',
         info: 'MarkerInfo',
         logo: require("../assets/ExploreTrondheim/Eat/Lilleskansen.png"),
-        information: "Restaurant by the seaside at Skansen, with a beautifull view of the docks and Munkholmen. They focus on good quality ingredients and the meny adapts to the current season, and if you are not hungry you can stop by for a coffee or a snack and just enjoy the view. Opening hours are 11 am to 9 pm Monday to Saturday and 11 am to 19 pm on Sunday. Menu: https://www.lille-skansen.no/restaurant",
+        information: "Restaurant by the seaside at Skansen, with a beautifull view of the docks and Munkholmen. They focus on good quality ingredients and the meny adapts to the current season, and if you are not hungry you can stop by for a coffee or a snack and just enjoy the view. Opening hours are 11 am to 9 pm Monday to Saturday and 11 am to 19 pm on Sunday. Find the menu: lille-skansen.no/restaurant",
         latLong: {
             latitude: 63.4319527809443,  
             longitude: 10.377866066932768 ,
@@ -724,7 +723,7 @@ export const attractionMarkers = [
         photographer: 'From: GripSluppen',
         info: 'MarkerInfo',
         logo: require("../assets/ExploreTrondheim/Activities/GripSluppen.jpg"),
-        information: "The most popular bouldering center in Trondheim. With different types of routes and difficulties, it is perfect for all skill-levels. Price for students is NOK 110 and you can rent shoes for NOK 50. Opening hours: Monday and Wednesday from 7 am - 10 pm, Tuesday, Thursday, Friday from 8 am - 10 pm, Saturday 9 am - 8 pm and Sunday 9 am - 10 pm. For more bouldering centers in Trondheim, check this link: https://www.google.com/maps/search/buldring/@63.424013,10.4033938,12.71z.",
+        information: "The most popular bouldering center in Trondheim. With different types of routes and difficulties, it is perfect for all skill-levels. Price for students is NOK 110 and you can rent shoes for NOK 50. Opening hours: Monday and Wednesday from 7 am - 10 pm, Tuesday, Thursday, Friday from 8 am - 10 pm, Saturday 9 am - 8 pm and Sunday 9 am - 10 pm. For more bouldering centers in Trondheim, find them here: google.com/maps/search/buldring",
         latLong: {
             latitude:  63.39770171038482,
             longitude:     10.395454330688167 ,
@@ -789,7 +788,7 @@ export const attractionMarkers = [
         photographer: 'From: Havet Arena',
         info: 'MarkerInfo',
         logo: require("../assets/ExploreTrondheim/Activities/HavetSauna.png"),
-        information: "Havet is a sauna located at Lade; go and have a swim in the beatiful fjord of Trondheim! A session of 2.5 hours is NOK 195 for students (NOK 225 for non-students). There's also a bar where you can order a drink while sitting in the sauna with the fjord as your view. You can also book a kajak session trough Havet using this website: https://www.havetarena.no/kajakk-badstu . Opening hours are from 3 pm to 10 pm from Monday to Friday, 12 pm to 11 pm on Saturday and 11 am to 7 pm on Sunday. ",
+        information: "Havet is a sauna located at Lade; go and have a swim in the beatiful fjord of Trondheim! A session of 2.5 hours is NOK 195 for students (NOK 225 for non-students). There's also a bar where you can order a drink while sitting in the sauna with the fjord as your view. You can also book a kajak session trough Havet using this website: havetarena.no/kajakk-badstu. Opening hours are from 3 pm to 10 pm from Monday to Friday, 12 pm to 11 pm on Saturday and 11 am to 7 pm on Sunday. ",
         latLong: {
             latitude:   63.44182323112532, 
             longitude:    10.425089042327956,
@@ -1101,7 +1100,7 @@ export const attractionMarkers = [
         photographer: 'From : A u k i - Official',
         info: 'MarkerInfo',
         logo: require("../assets/ExploreTrondheim/Party/Lokal_bar.jpeg"),
-        information: "Lokal Bar is the perfect place to go with your friends. They have a cocktailbar, beer bar and a stage where you find DJs, bands and other artist that create an amazing vibe. Take a look at their website: https://www.lokal.bar/omoss  to see what events they have, and who's performing on stage. The bars are open from 7 pm - 1:30 am on Monday to Thursday, and 7 pm - 2:30 am on Friday and Saturday. The stage is open on Friday and Saturday from 10 pm - 2:30 am.",
+        information: "Lokal Bar is the perfect place to go with your friends. They have a cocktailbar, beer bar and a stage where you find DJs, bands and other artist that create an amazing vibe. Take a look at their website: lokal.bar/omoss to see what events they have, and who's performing on stage. The bars are open from 7 pm - 1:30 am on Monday to Thursday, and 7 pm - 2:30 am on Friday and Saturday. The stage is open on Friday and Saturday from 10 pm - 2:30 am.",
         latLong: {
             latitude:  63.432285465614, 
             longitude:  10.398527886508063,
