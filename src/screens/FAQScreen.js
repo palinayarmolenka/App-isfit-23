@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
   descriptionText: {
     fontSize: 15,
     margin: 10,
+    fontWeight: '300'
   },
   linkText: {
     fontSize: 15,
@@ -22,16 +23,19 @@ const styles = StyleSheet.create({
     fontSize: 15,
     paddingLeft: 10,
     paddingRight: 4,
-    paddingBottom: 8
+    paddingBottom: 8,
+    fontWeight: '300'
   },
   descriptionTextContainer: {
     backgroundColor: '#FFFFFF'
   },
   dateTitle: {
-    fontSize: 20,
+    fontSize: 18,
     paddingTop: 4,
     paddingBottom: 4,
     paddingHorizontal: 15,
+    color: "#FFFFFF",
+    fontWeight: '500'
   }
 });
 
