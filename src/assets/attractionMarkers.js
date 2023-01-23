@@ -48,9 +48,9 @@ export const attractionMarkers = [
         logo: require("../assets/ExploreTrondheim/Trondheim101/Studentersamfundet.jpg"),
         information: "Studentersamfundet was founded in 1910 and is Norway's third largest student society. It is run by about 1700 volunteers. Studentersamfundet is a place for students to gather. There are restaurant, bars, clubs and stages. Every week Samfundet has many different events for students like political discussions, quizes or conserts. Enterance for non-members are NOK 100. Opening hours are 4 pm to 11 pm Sunday to Tuesday, 4 pm to 1 am Wednesday and Thursday, and 4 pm to 2 am Friday and Saturday.",
         latLong: {
-            latitude: 63.42256260225783,
-            longitude: 10.39498694232773,
-        },   
+            latitude: 63.42249513345197,
+            longitude: 10.39500845683185,
+        },    
     },{
         key: 3,
         filterKey: "Trondheim",
@@ -1024,8 +1024,8 @@ export const attractionMarkers = [
         logo: require("../assets/ExploreTrondheim/Party/Studentersamfundet.png"),
         information: "Studentersamfundet has several bars and nightclubs. If you are looking to have some beers in chill surroundings, you can go to Daglighallen or Edgar. If you wanna have drinks or maybe even some shots you can take a trip to Strossa or Selskapssiden. In Bodegaen and Klubben there are DJs, so this is the perfect place to let loose and have some fun. Storsalen will host a lot of the events during ISFiT, but is also a great place to dance with lots of people. Samfundet is open from 4 pm - 11 pm Sunday-Tuesday, and Wednesday and Thursday 4 pm - 1 am and Saturday it's open until 2 am.",
         latLong: {
-            latitude:  63.42342094018467, 
-            longitude:  10.394720337137839,
+            latitude:  63.42250154814581, 
+            longitude:  10.395013235985678,
         },     
     },{
         key: 78,
