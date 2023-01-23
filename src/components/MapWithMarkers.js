@@ -29,7 +29,7 @@ function renderMarkers(markersArray){
     <Marker
       coordinate={m.latLong}
       title={m.title}
-      description={m.shortDescription}
+      description={m.shortDescription+" - "+m.pressForMoreInfo}
       key={`marker-${i}`}
       //when navigating to new page; key, logo and information parameters are passed with the navigation.
       onCalloutPress={() =>
