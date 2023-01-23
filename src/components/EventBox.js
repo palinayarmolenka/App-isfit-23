@@ -8,7 +8,7 @@ const height = Dimensions.get("screen").height;
 
 const boxSize = () => {
     if (height > 800) {
-        return 0.13;
+        return 0.15;
     }
     else {
         return 0.17;

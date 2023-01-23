@@ -1,7 +1,5 @@
-import { Linking } from "react-native";
-
 export const faqQuestions = [
-  {
+  { 
     key: 1,
     category: "Event",
     questions: [{
@@ -26,7 +24,7 @@ export const faqQuestions = [
     }, 
     {
       title: "Alcohol inside Studentersamfundet",
-      data: "Don’t bring alcohol inside Studentersamfundet\r\rYou can't bring your own alcohol to Studentersamfundet, or any other public place. All alcoholic beverages must be purchased at the location. You can't bring any alcoholic beverage into or out of the bars. It's also illegal to drink in public places like parks and bus stops."
+      data: "Don’t bring alcohol inside Studentersamfundet\n\nYou can't bring your own alcohol to Studentersamfundet, or any other public place. All alcoholic beverages must be purchased at the location. You can't bring any alcoholic beverage into or out of the bars. It's also illegal to drink in public places like parks and bus stops."
     }]
   }, {
     key: 2,
@@ -37,7 +35,7 @@ export const faqQuestions = [
     }, 
     {
       title: "Trafoen",
-      data: "Location: Klæbuveien 1\rPhysical opening hours: 08:00 - 23:00\rPhone number: +47 934 33 141\r\rCall if you need an answer right away, if not, contact us on Slack. The phone is open from 08-22. You can call the same number 24/7, but only in emergencies.\r\rTrafoen is the red square building between Samfundet and Gløshaugen. During the festival Trafoen will serve as your information central, and will be open all day. If you arrive on the 7th or 9th of February, you can check in at Trafoen and get your host information there."
+      data: "Location: Klæbuveien 1\nPhysical opening hours: 08:00 - 23:00\nPhone number: +47 934 33 141\n\nCall if you need an answer right away, if not, contact us on Slack. The phone is open from 08-22. You can call the same number 24/7, but only in emergencies.\n\nTrafoen is the red square building between Samfundet and Gløshaugen. During the festival Trafoen will serve as your information central, and will be open all day. If you arrive on the 7th or 9th of February, you can check in at Trafoen and get your host information there."
     }, 
     {
       title: "Handling the cold weather",
@@ -52,15 +50,15 @@ export const faqQuestions = [
     category: "Ceremonies",
     questions: [{
       title: "The Opening Ceremony",
-      data: "Dress code: Galla/national costume \rThe Opening Ceremony will happen Thursday 9th of February at Studentersamfundet.\r Welcome to Trondheim and ISFiT 2023! The Opening Ceremony kicks off the Festival and gathers all the participants and volunteers for a grand opening! The show takes place at Studentersamfundet where we meet for an evening of music, speeches and dances! We look forward to meeting you!"
+      data: "Dress code: Galla/national costume \nThe Opening Ceremony will happen Thursday 9th of February at Studentersamfundet.\n\nWelcome to Trondheim and ISFiT 2023! The Opening Ceremony kicks off the Festival and gathers all the participants and volunteers for a grand opening! The show takes place at Studentersamfundet where we meet for an evening of music, speeches and dances! We look forward to meeting you!"
     },
     {
       title: "The Student Peace Prize Ceremony",
-      data: "Dress code: Galla/national costume \rSunday 12th of February, we invite you to highlight and celebrate DOXA Magazine, the winner of the Student Peace Prize and their work. The Peace Prize ceremony is held in Olavshallen - Trondheims largest cultural center - and will be a night to remember!"
+      data: "Dress code: Galla/national costume \nSunday 12th of February, we invite you to highlight and celebrate DOXA Magazine, the winner of the Student Peace Prize and their work. The Peace Prize ceremony is held in Olavshallen - Trondheims largest cultural center - and will be a night to remember!"
     },
     {
       title: "The Closing Ceremony",
-      data: "Dress code: Galla/national costume \rSunday 19th of February, as the festival comes to an end, what better way to gather participants and volunteers to honor what we have accomplished together? This evening we will fill Studentersamfundet one last time to celebrate the ISFiT-23!"
+      data: "Dress code: Galla/national costume \nSunday 19th of February, as the festival comes to an end, what better way to gather participants and volunteers to honor what we have accomplished together? This evening we will fill Studentersamfundet one last time to celebrate the ISFiT-23!"
     }]
   }, {
     key: 4,
@@ -94,7 +92,7 @@ export const faqQuestions = [
     category: "Transport",
     questions: [{
       title: "Info",
-      data: "As a participant of ISFiT, you can travel with the line buses, night buses, and the tram for free in Trondheim.\r\rInformation about the bus routes can be found in the AtB Reise app. The app can be downloaded from App Store for iPhone and Googlen Play Store for Android. Your wristband serves as your ticket.\r\rNote that the night buses only run during the weekend. On weekdays the latest buses go around 00:30 am, while on weekends (Friday and Saturday night) the last ones go around 03:00 am from Samfundet. You will be able to view the bus routes in real time in the app."
+      data: "As a participant of ISFiT, you can travel with the line buses, night buses, and the tram for free in Trondheim.\n\nInformation about the bus routes can be found in the AtB Reise app. The app can be downloaded from App Store for iPhone and Googlen Play Store for Android. Your wristband serves as your ticket.\n\nNote that the night buses only run during the weekend. On weekdays the latest buses go around 00:30 am, while on weekends (Friday and Saturday night) the last ones go around 03:00 am from Samfundet. You will be able to view the bus routes in real time in the app."
     }]
   }, {
     key: 6,
@@ -116,6 +114,6 @@ export const faqQuestions = [
     category: "Emergency",
     questions: [{
       title: "Info",
-      data: "If there is an emergency you should call: \r113 for ambulance \r112 for police \r110 for fire department \r116 117 for Emergency Room \rTrafoen: +47 934 33 141\r\rIf you have and emergency, please contact Trafoen as well! \rThe hospital in Trondheim is located across the road from Studentersamfundet. If you have a smaller incident, contact the Emergency Room BEFORE you go there. The Emergency Room is located at the hospital and they don't have drop-in service. If you are in need of a bandaid or something similar, go to Trafoen."
+      data: "If there is an emergency you should call: \n113 for ambulance \n112 for police \n110 for fire department \n116 117 for Emergency Room \nTrafoen: +47 934 33 141\n\nIf you have and emergency, please contact Trafoen as well! \nThe hospital in Trondheim is located across the road from Studentersamfundet. If you have a smaller incident, contact the Emergency Room BEFORE you go there. The Emergency Room is located at the hospital and they don't have drop-in service. If you are in need of a bandaid or something similar, go to Trafoen."
     }
 ]}]
