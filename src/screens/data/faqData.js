@@ -15,7 +15,7 @@ export const faqQuestions = [
       data: "A lot of events are free of charge for you as a participant. Tickets for events with fees can be purchased at samfundet.no. Info about events can also be found at samfundet.no or on the events page right here in the app!"
     }, 
     {
-      title: "Where can I get information about the workshops?",
+      title: "Where can I get information\nabout the workshops?",
       data: "You get all of your workshop information from your workshop group in the slack workspace ISFiT23 - Participants"
     },
     {
@@ -102,7 +102,7 @@ export const faqQuestions = [
       data: "All participants are signed up with a host for the festival, which will be your home for the entire festival. If you have any questions about your host, you can find the host team's phone number on isfit.org. Your host will also provide you with breakfast."
     },
     {
-      title: "What do I do if something happens with my host, or at the place I am staying at?",
+      title: "What do I do if something happens with\nmy host, or at the place I am staying at?",
       data: "You can contact headofhost@isfit.no or call Trafoen"
     },
     {

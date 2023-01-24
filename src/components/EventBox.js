@@ -6,15 +6,6 @@ import { MaterialIcons } from '@expo/vector-icons';
 const width = Dimensions.get("screen").width;
 const height = Dimensions.get("screen").height;
 
-const boxSize = () => {
-    if (height > 800) {
-        return 0.15;
-    }
-    else {
-        return 0.17;
-    }
-}
-
 
 const EventBox = (props) => {
     //makes navigation in EventBox, used to navigate to event information page
@@ -30,7 +21,6 @@ const EventBox = (props) => {
         <TouchableOpacity onPress={() => Linking.openURL(props.link)}>
             <View style={{ backgroundColor: "white" }}>
                 <View style={{
-                    height: height * boxSize(), //0.17 for small phones, 0.12 for large phones.
                     backgroundColor: "#e5e0f0",
                     flexDirection: "row",
                     justifyContent: "space-between",
@@ -73,6 +63,7 @@ const styles = StyleSheet.create({
     },
     info: {
         flexDirection: "column",
+        paddingBottom: 8
     },
     buttons: {
         paddingTop: height * 0.01,

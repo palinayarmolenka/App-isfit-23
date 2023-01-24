@@ -8,7 +8,7 @@ const height = Dimensions.get("screen").height;
 //set correct box size based on height of mobile
 const boxSize = () => {
     if (height > 800) {
-        return 0.13;
+        return 0.14;
     }
     else {
         return 0.17;
@@ -18,10 +18,10 @@ const boxSize = () => {
 //sets correct image height based on height of mobile
 const imageHeight = () => {
     if (height > 800) {
-        return 0.13;
+        return 0.14;
     }
     else {
-        return 0.14;
+        return 0.17;
     }
 }
 
@@ -61,7 +61,7 @@ const ArticleBox = (props) => {
                     </View>
                     <View style={styles.overview}>
                         <Text style={{ fontSize: titleSize(props.title), 
-                            paddingBottom: height * 0.01, fontWeight:'500'}}>{props.title}</Text>
+                            paddingBottom: height * 0.01, paddingRight: 5,fontWeight:'500'}}>{props.title}</Text>
                         <Text style={{fontSize: 15, fontStyle:'italic', fontWeight:'200'}}>{props.shortInfo}</Text>
                     </View>
                 </View>
