@@ -28,9 +28,12 @@ const styles = StyleSheet.create({
     imageContainer: {
         alignContent: 'center',
         paddingTop: height * 0.02,
+        width: width,
+
     },
     textContainer: {
         paddingTop: height * 0.001,
+        width: width,
         textAlign: "center",
     },
     headerContainer: {
