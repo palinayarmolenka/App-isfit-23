@@ -1,8 +1,18 @@
 {
   "expo": {
-    "name": "app-isfit-23",
+    "name": "ISFiT23",
+    "icon": "./src/assets/launch_screen.png",
     "slug": "app-isfit-23",
     "version": "1.0.0",
+    "ios": {
+      "image": "latest",
+      "bundleIdentifier": "com.isfit.isfit23",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.isfit.isfit23",
+      "versionCode": 1
+    },
     "assetBundlePatterns": [
       "**/*"
     ],
