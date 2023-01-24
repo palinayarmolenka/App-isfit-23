@@ -360,9 +360,9 @@ export const attractionMarkers = [
         logo: require("../assets/ExploreTrondheim/Eat/Sabrura.webp"),
         information: "Sushi buffet with a Norwegian twist! There are now multiple sushi restaurants in Trondheim, but the one in Bakklandet is especially cozy. Sabrura is most known for their cheap and very good sushi buffet, but you can also order regular sushi if you prefer that. Their lunch buffet open is untill 1 pm for NOK 199 in weekdays, and their dinner buffet from 1 pm for NOK 239 in the weekends.",
         latLong: {
-            latitude: 63.42944553921505, 
-            longitude: 10.40276538004019,
-        },     
+            latitude: 63.427893964259816, 
+            longitude: 10.402763580922294,
+        },      
     },{
         key: 25,
         filterKey: "Eat",
@@ -1030,7 +1030,7 @@ export const attractionMarkers = [
         photographer: 'From: TripAdvisor',
         info: 'MarkerInfo',
         logo: require("../assets/ExploreTrondheim/Museums/Trondheim_Art_Museum.jpg"),
-        information: "",
+        information: "At Trondheim Art Museum you can experience paintings, photography, sculptures and textiles. Trondheim Art Museum has two premises; TKM Bispegata near Nidaros Cathedral and TKM Gråmølna near Solsiden. Admisson for students is NOK 80. Opening hours are: Wednesday 12 pm - 8 pm, Thursday - Sunday 12 pm - 4 pm.",
         latLong: {
             latitude:   63.42758647485129, 
             longitude:  10.3945689,

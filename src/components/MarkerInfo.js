@@ -6,7 +6,7 @@ const height = Dimensions.get("screen").height;
 
 //component for the marker locations. View title, text and image.
 const MarkerInfo = (props) => {
-    return <View >
+    return <View>
         <View style={styles.headerContainer}>
             <Text style={styles.headerText}>{props.title}</Text> 
         </View>
@@ -21,17 +21,16 @@ const MarkerInfo = (props) => {
 };
 const styles = StyleSheet.create({
     image: {
-        width: width * 0.8,
-        height: width * 0.8,
-        alignSelf: 'center',
-        borderRadius: 5
+        width: '100%',
+        height: '100%',
+        resizeMode: 'contain',
     },
     imageContainer: {
-        justifyContent: 'center',
-        paddingTop: height * 0.04,
+        alignContent: 'center',
+        paddingTop: height * 0.02,
     },
     textContainer: {
-        paddingTop: height * 0.01,
+        paddingTop: height * 0.001,
         textAlign: "center",
     },
     headerContainer: {
@@ -45,7 +44,7 @@ const styles = StyleSheet.create({
         paddingTop: height * 0.02,
         fontSize: 24,
         letterSpacing: 1,
-        fontWeight: '500'
+        fontWeight: '500',
     },
     textStyle: {
         textAlign: 'left',

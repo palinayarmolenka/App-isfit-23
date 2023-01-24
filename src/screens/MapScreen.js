@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Image, ScrollView, StyleSheet, Dimensions, TouchableOpacity, Alert } from 'react-native';
+import { Text, View, ScrollView, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 import { attractionMarkers } from "../assets/attractionMarkers";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import MapWithMarkers from '../components/MapWithMarkers';
