@@ -29,7 +29,7 @@ export default function EventScreen () {
             title: item.title,
             description: item.description,
             date: item.published,
-            link: item.links[0].url,
+            link: englishLink(item.links[0].url),
             image: item.image
           })
         })
@@ -50,6 +50,11 @@ export default function EventScreen () {
       newDateArray.sort((a, b) => {
         return new Date(a.date) - new Date(b.date)
       })
+
+      function englishLink(norwegianLink){
+        var splittedLink = norwegianLink.split("/arrangement/")
+        return splittedLink[0]+"/en/events/"+splittedLink[1]
+      }
 
       const groups = newDateArray.reduce((groups, item) => {
         const date = item.date.toString().substring(0, 16)
