@@ -19,7 +19,7 @@ export const themeInfo = [
     },
     {
         key: "SPP-winner",
-        title: "Student Peace Prize Winner 2022 - Doxa Magazine",
+        title: "Student Peace Prize Winner 2023 - Doxa Magazine",
         logo: require("../assets/ThemePictures/themePic7.png"),
         logoBox: require("../assets/ThemePictures/themePic8.png"),
         information:

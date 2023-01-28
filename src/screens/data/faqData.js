@@ -92,7 +92,7 @@ export const faqQuestions = [
     category: "Transport",
     questions: [{
       title: "Info",
-      data: "As a participant of ISFiT, you can travel with the line buses, night buses, and the tram for free in Trondheim.\n\nInformation about the bus routes can be found in the AtB Reise app. The app can be downloaded from App Store for iPhone and Googlen Play Store for Android. Your wristband serves as your ticket.\n\nNote that the night buses only run during the weekend. On weekdays the latest buses go around 00:30 am, while on weekends (Friday and Saturday night) the last ones go around 03:00 am from Samfundet. You will be able to view the bus routes in real time in the app."
+      data: "As a participant of ISFiT, you can travel with the line buses and the tram for free in Trondheim. Travel with the night busses is not covered by ISFiT.\n\nInformation about the bus routes can be found in the AtB Reise app. The app can be downloaded from App Store for iPhone and Googlen Play Store for Android. Your wristband serves as your ticket.\n\nNote that the night buses only run during the weekend. On weekdays the latest buses go around 00:30 am, while on weekends (Friday and Saturday night) the last ones go around 03:00 am from Samfundet. You will be able to view the bus routes in real time in the app."
     }]
   }, {
     key: 6,
