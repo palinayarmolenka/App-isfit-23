@@ -10,4 +10,10 @@ export const staticEvents = [{
     date: 'Sun, 12 Feb 2023 17:00:00 +0100',
     link: 'https://www.isfit.org/event-details/walk-of-peace',
     image: undefined
+}, {
+    title: 'Presentation and Q&A with DOXA Journal.',
+    description: "The Student Peace Prize welcomes you to meet this year's winner of the Student Peace Prize, DOXA! They receive the award on the basis of their courageous work to expose corruption and sexual harassment at universities, report on the Russian invasion of Ukraine, document state persecution and fight against state propaganda. Despite Putin's persistent attempts to silence all critical voices, Russian independent journalism continues to thrive. The student magazine DOXA has emerged as an important voice for a younger generation of Russians and has played an important role in challenging and criticizing the regime. We invite you to an exciting meeting with the editors of DOXA! What is it like to be a student activist in Russia? How does DOXA continue its work with critical journalism despite a shrinking space? And how do they envision the future for young people in Russia?",
+    date: 'Tue, 14 Feb 2023 16:15:00 +0100',
+    link: 'https://www.isfit.org/event-details/presentation-and-q-a-with-doxa-journal',
+    image: undefined
 }]
