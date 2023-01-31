@@ -71,7 +71,7 @@ const MarkerInfoScreen = ({ route, navigation }) => {
   }, []);
 
   return (
-    <View style={{ flex: 1, backgroundColor: "#f9f5f9" }}>
+    <View style={{ flex: 1, backgroundColor: "#f9f5f9"}}>
       <ScrollView style={{ flexGrow: 1}}>
         <View style={styles.topButtonContainer}>
           <TouchableOpacity onPress={() => navigation.navigate("MapsScreen")}>

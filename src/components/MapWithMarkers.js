@@ -1,47 +1,52 @@
-import React from 'react';
-import { Image, StyleSheet, Dimensions } from 'react-native';
-import MapView, { Marker } from 'react-native-maps';
+import React, { useEffect } from "react";
+import { Image, StyleSheet, Dimensions } from "react-native";
+import MapView, { Marker } from "react-native-maps";
 import { useNavigation } from "@react-navigation/native";
 
 const width = Dimensions.get("screen").width;
 const height = Dimensions.get("screen").height;
 
-export default function MapWithMarkers ({markersArray}) {
+export default function MapWithMarkers({ markersArray }) {
+  const navigationHook = useNavigation();
 
   return (
-      <MapView style={{
+    <MapView
+      style={{
         flex: 1,
       }}
-      initialRegion = {{
+      initialRegion={{
         latitude: 63.421615,
         longitude: 10.395053,
-        latitudeDelta: 0.040,
-        longitudeDelta: 0.05
-      }}> 
-      {renderMarkers(markersArray)}
-      </MapView>
-  )
+        latitudeDelta: 0.04,
+        longitudeDelta: 0.05,
+      }}
+    >
+      {markersArray.map((m, i) => (
+        <Marker
+          coordinate={m.latLong}
+          title={m.title}
+          description={m.shortDescription + " - " + m.pressForMoreInfo}
+          key={`marker-${i}`}
+          //when navigating to new page; key, logo and information parameters are passed with the navigation.
+          onCalloutPress={() =>
+            navigationHook.navigate("MarkerInfoScreen", {
+              itemId: m.key,
+              itemTitle: m.title,
+              itemPicture: m.logo,
+              itemInformation: m.information,
+              itemPhotographer: m.photographer,
+            })
+          }
+        >
+          <Image
+            style={styles.image}
+            source={require("../assets/ExploreTrondheim/ExploreTRDMarkerW.png")}
+          />
+        </Marker>
+      ))}
+    </MapView>
+  );
 }
-
-function renderMarkers(markersArray){
-  const navigation = useNavigation();
-  return markersArray.map((m, i) =>
-    <Marker
-      coordinate={m.latLong}
-      title={m.title}
-      description={m.shortDescription+" - "+m.pressForMoreInfo}
-      key={`marker-${i}`}
-      //when navigating to new page; key, logo and information parameters are passed with the navigation.
-      onCalloutPress={() =>
-        navigation.navigate('MarkerInfoScreen', {
-          itemId: m.key, itemTitle: m.title, itemPicture: m.logo, itemInformation: m.information, itemPhotographer: m.photographer
-        },
-      )}>
-        <Image style={styles.image} source={require("../assets/ExploreTrondheim/ExploreTRDMarkerW.png")} />
-    </Marker>
-  )
-}
-
 
 const styles = StyleSheet.create({
   mapStyle: {
@@ -49,13 +54,13 @@ const styles = StyleSheet.create({
     height: height,
   },
   transparentBox: {
-    position: 'absolute',
+    position: "absolute",
     top: 0,
     bottom: 0,
     right: 0,
     left: width - 30,
-    backgroundColor: 'transparent',
-    resizeMode:'resize',
+    backgroundColor: "transparent",
+    resizeMode: "resize",
   },
   image: {
     resizeMode: "contain",
