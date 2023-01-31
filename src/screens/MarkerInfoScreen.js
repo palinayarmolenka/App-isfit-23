@@ -17,8 +17,8 @@ const height = Dimensions.get("screen").height;
 
 //gets right params from the navigaton in MapScreen and through route prop.
 const MarkerInfoScreen = ({ route, navigation }) => {
-  
-  const { itemId, itemTitle, itemPicture, itemInformation, itemPhotographer } = route.params;
+  const { itemId, itemTitle, itemPicture, itemInformation, itemPhotographer } =
+    route.params;
 
   const [isFavorite, setIsFavorite] = useState(false);
 
@@ -39,13 +39,16 @@ const MarkerInfoScreen = ({ route, navigation }) => {
   const removeFavorites = async (markerKey) => {
     try {
       getStoredFavorites().then((storeFavorites) => {
-        let filtered = storeFavorites.filter(item => item !== markerKey)
-        AsyncStorage.setItem("@ISFiTApp23_FavoriteMarkers", JSON.stringify(filtered)).then(() => {
-          setIsFavorite(false)
-        })
-      })
+        let filtered = storeFavorites.filter((item) => item !== markerKey);
+        AsyncStorage.setItem(
+          "@ISFiTApp23_FavoriteMarkers",
+          JSON.stringify(filtered)
+        ).then(() => {
+          setIsFavorite(false);
+        });
+      });
     } catch (e) {
-      console.log(e)
+      console.log(e);
     }
   };
 
@@ -68,32 +71,32 @@ const MarkerInfoScreen = ({ route, navigation }) => {
   }, []);
 
   return (
-    <View style={{ flex: 1, backgroundColor: "#f9f5f9"}}>
-      <View style={styles.topButtonContainer}>
-        <TouchableOpacity onPress={() => navigation.navigate("MapsScreen")}>
-          <Feather name="arrow-left" size={40} color="#37894e" />
-        </TouchableOpacity>
-        {isFavorite ? (
-          <TouchableOpacity
-            style={{ paddingTop: 4, paddingRight: 4 }}
-            onPress={async () => {
-              await removeFavorites(itemId);
-            }}
-          >
-            <FontAwesome name="heart" size={35} color="#37894e" />
+    <View style={{ flex: 1, backgroundColor: "#f9f5f9" }}>
+      <ScrollView style={{ flexGrow: 1}}>
+        <View style={styles.topButtonContainer}>
+          <TouchableOpacity onPress={() => navigation.navigate("MapsScreen")}>
+            <Feather name="arrow-left" size={40} color="#37894e" />
           </TouchableOpacity>
-        ) : (
-          <TouchableOpacity
-            style={{ paddingTop: 4, paddingRight: 4 }}
-            onPress={async () => {
-              await storeFavorites(itemId);
-            }}
-          >
-            <FontAwesome name="heart-o" size={35} color="#37894e" />
-          </TouchableOpacity>
-        )}
-      </View>
-      <ScrollView>
+          {isFavorite ? (
+            <TouchableOpacity
+              style={{ paddingTop: 4, paddingRight: 4 }}
+              onPress={async () => {
+                await removeFavorites(itemId);
+              }}
+            >
+              <FontAwesome name="heart" size={35} color="#37894e" />
+            </TouchableOpacity>
+          ) : (
+            <TouchableOpacity
+              style={{ paddingTop: 4, paddingRight: 4 }}
+              onPress={async () => {
+                await storeFavorites(itemId);
+              }}
+            >
+              <FontAwesome name="heart-o" size={35} color="#37894e" />
+            </TouchableOpacity>
+          )}
+        </View>
         <Text>
           <MarkerInfo
             key={itemId}

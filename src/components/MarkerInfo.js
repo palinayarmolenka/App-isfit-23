@@ -1,5 +1,6 @@
 import React from "react";
 import { Text, View, StyleSheet, Image, Dimensions } from "react-native";
+import FitImage from 'react-native-fit-image';
 
 const width = Dimensions.get("screen").width;
 const height = Dimensions.get("screen").height;
@@ -22,14 +23,13 @@ const MarkerInfo = (props) => {
 const styles = StyleSheet.create({
     image: {
         width: '100%',
-        height: '100%',
-        resizeMode: 'contain',
+        height: undefined,
+        aspectRatio: 1,
     },
     imageContainer: {
         alignContent: 'center',
         paddingTop: height * 0.02,
         width: width,
-
     },
     textContainer: {
         paddingTop: height * 0.001,
