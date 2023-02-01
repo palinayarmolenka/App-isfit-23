@@ -1,6 +1,5 @@
 import React from "react";
 import { Text, View, StyleSheet, Image, Dimensions } from "react-native";
-import FitImage from 'react-native-fit-image';
 
 const width = Dimensions.get("screen").width;
 const height = Dimensions.get("screen").height;

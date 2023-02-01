@@ -10,6 +10,8 @@ import ThemeScreen from "./src/screens/ThemeScreen";
 import FAQScreen from "./src/screens/FAQScreen";
 import InformationScreen from "./src/screens/InformationScreen";
 import MarkerInfoScreen from "./src/screens/MarkerInfoScreen";
+import AttractionBoxScreen from "./src/screens/AttractionBoxScreen";
+import AttractionBoxInfoScreen from "./src/screens/AttractionBoxInfoScreen";
 
 const width = Dimensions.get("screen").width;
 const height = Dimensions.get("screen").height;
@@ -24,6 +26,18 @@ function MapsStackScreen() {
     </MapsStack.Navigator>
   );
 }
+
+const AttractionStack = createStackNavigator();
+
+function AttractionStackScreen() {
+  return (
+    <AttractionStack.Navigator screenOptions={{ headerShown: false }}>
+      <AttractionStack.Screen name="AttractionBoxScreen" component={AttractionBoxScreen} />
+      <AttractionStack.Screen name="AttractionBoxInfoScreen" component={AttractionBoxInfoScreen} />
+    </AttractionStack.Navigator>
+  );
+}
+
 
 const Tab = createBottomTabNavigator();
 
@@ -62,6 +76,21 @@ function HomeTabs() {
       <Tab.Screen
         name="Explore"
         component={MapsStackScreen}
+        options={{
+          headerTitle: "Explore Trondheim",
+          headerTintColor: "#FFFF",
+          headerStyle: {
+            backgroundColor: "#99499C",
+          },
+          tabBarIcon: ({ color }) => (
+            <Entypo name="globe" size={23} color={color} />
+          ),
+          tabBarActiveTintColor: "#99499C",
+        }}
+      />
+      <Tab.Screen
+        name="AttractionBoxScreen"
+        component={AttractionStackScreen}
         options={{
           headerTitle: "Explore Trondheim",
           headerTintColor: "#FFFF",
@@ -165,4 +194,3 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
   },
 });
-// export default App;

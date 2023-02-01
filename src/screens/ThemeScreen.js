@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import { View, ScrollView } from "react-native";
-import Header from "../components/Header";
 import ArticleBox from "../components/ArticleBox";
 import { themeInfo } from "../assets/themeInfo";
 
