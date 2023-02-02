@@ -1,6 +1,8 @@
 import React from "react";
 import { Text, View, StyleSheet, Image, Dimensions, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import { MaterialIcons } from '@expo/vector-icons';
+
 
 const width = Dimensions.get("screen").width;
 const height = Dimensions.get("screen").height;
@@ -49,20 +51,23 @@ const AttractionMarkerBox = (props) => {
                     marginTop: height * 0.007,
                     marginLeft: width * 0.02,
                     marginRight: width * 0.02,
-                    borderRadius: 5,
+                    borderRadius: 60,
                     elevation: 1,
                 }}>
                     <View style={styles.pictureView}>
                         <Image style={{
                             width: height * imageHeight(),
                             height: height * imageHeight(),
-                            borderRadius: 5,
+                            borderRadius: 60,
                         }} source={props.logo} />
                     </View>
                     <View style={styles.overview}>
                         <Text style={{ fontSize: titleSize(props.title), 
                             paddingBottom: height * 0.01, paddingRight: 5,fontWeight:'500'}}>{props.title}</Text>
                         <Text style={{fontSize: 15, fontStyle:'italic', fontWeight:'200'}}>{props.shortDescription}</Text>
+                    </View>
+                    <View style={styles.icon}>
+                        <MaterialIcons name={'keyboard-arrow-right'} size={30} color="#37894E"/>
                     </View>
                 </View>
             </View>
@@ -90,6 +95,7 @@ const styles = StyleSheet.create({
         paddingTop: height * 0.015,
         flexDirection: "column",
         flex: 1, //To keep text inside window flex 1 has to be set right after the first container
+        paddingLeft: 5
     },
     pictureView: {
         paddingTop: 0,
@@ -97,6 +103,11 @@ const styles = StyleSheet.create({
         paddingRight: width * 0.020,
         paddingBottom: 0,
         alignSelf: "center",
+    },
+    icon: {
+        alignSelf: 'center',
+        paddingRight: 10,
+        paddingLeft: 5
     }
 });
 
