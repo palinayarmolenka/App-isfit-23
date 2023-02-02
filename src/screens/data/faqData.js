@@ -35,7 +35,7 @@ export const faqQuestions = [
     }, 
     {
       title: "Trafoen",
-      data: "Location: Klæbuveien 1\nPhysical opening hours: 08:00 - 23:00\nPhone number: +47 934 33 141\n\nCall if you need an answer right away, if not, contact us on Slack. The phone is open from 08-22. You can call the same number 24/7, but only in emergencies.\n\nTrafoen is the red square building between Samfundet and Gløshaugen. During the festival Trafoen will serve as your information central, and will be open all day. If you arrive on the 7th or 9th of February, you can check in at Trafoen and get your host information there."
+      data: "Location: Klæbuveien 1\nPhysical opening hours: 08:00 - 22:00\nPhone number: +47 458 53 167\n\nCall if you need an answer right away, if not, contact us on Slack. The phone is open from 08-22. You can call the same number 24/7, but only in emergencies.\n\nTrafoen is the red square building between Samfundet and Gløshaugen. During the festival Trafoen will serve as your information central, and will be open all day. If you arrive on the 7th or 9th of February, you can check in at Trafoen and get your host information there."
     }, 
     {
       title: "Handling the cold weather",
@@ -114,6 +114,6 @@ export const faqQuestions = [
     category: "Emergency",
     questions: [{
       title: "Info",
-      data: "If there is an emergency you should call: \n113 for ambulance \n112 for police \n110 for fire department \n116 117 for Emergency Room \nTrafoen: +47 934 33 141\n\nIf you have and emergency, please contact Trafoen as well! \nThe hospital in Trondheim is located across the road from Studentersamfundet. If you have a smaller incident, contact the Emergency Room BEFORE you go there. The Emergency Room is located at the hospital and they don't have drop-in service. If you are in need of a bandaid or something similar, go to Trafoen."
+      data: "If there is an emergency you should call: \n113 for ambulance \n112 for police \n110 for fire department \n116 117 for Emergency Room \nTrafoen: +47 458 53 167\n\nIf you have and emergency, please contact Trafoen as well! \nThe hospital in Trondheim is located across the road from Studentersamfundet. If you have a smaller incident, contact the Emergency Room BEFORE you go there. The Emergency Room is located at the hospital and they don't have drop-in service. If you are in need of a bandaid or something similar, go to Trafoen."
     }
 ]}]
