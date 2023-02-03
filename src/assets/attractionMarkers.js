@@ -190,7 +190,7 @@ export const attractionMarkers = [
         photographer: 'From: Byantikvaren i Trondheim',
         info: 'MarkerInfo',
         logo: require("../assets/ExploreTrondheim/Help/ISFiT-help_Trafon.jpg"),
-        information: "Physical opening times: 08:00-23:00\rYou can always contact us on the phone, 24/7.\rPhome number: +47 934 33 141\r\rTrafon functions as an information centre for participants and volunteers in ISFiT during the festival. Come here to get information if you are lost or wondering where you are supposed to be.",
+        information: "Physical opening times: 08:00-22:00\rYou can always contact us on the phone, 24/7.\rPhome number: +47 458 53 167\r\rTrafon functions as an information centre for participants and volunteers in ISFiT during the festival. Come here to get information if you are lost or wondering where you are supposed to be.",
         latLong: {
             latitude: 63.42103390310999,
             longitude: 10.398810596290305,
