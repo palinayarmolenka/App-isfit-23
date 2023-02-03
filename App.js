@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, StyleSheet, Image, Dimensions } from "react-native";
+import { View, StyleSheet, Image, Dimensions, Platform } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
@@ -73,7 +73,9 @@ function HomeTabs() {
           tabBarActiveTintColor: "#F78D1F",
         }}
       />
-      <Tab.Screen
+      {/* Map is bugged on Android */}
+      {Platform.OS == 'ios' ? (
+        <Tab.Screen
         name="Explore"
         component={MapsStackScreen}
         options={{
@@ -88,7 +90,8 @@ function HomeTabs() {
           tabBarActiveTintColor: "#99499C",
         }}
       />
-      <Tab.Screen
+      ) : (
+        <Tab.Screen
         name="Attractions"
         component={AttractionStackScreen}
         options={{
@@ -103,6 +106,9 @@ function HomeTabs() {
           tabBarActiveTintColor: "#99499C",
         }}
       />
+      )}
+      
+      
       <Tab.Screen
         name="Information"
         component={FAQScreen}

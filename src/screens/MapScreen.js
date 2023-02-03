@@ -27,6 +27,30 @@ export default class MapScreen extends Component {
     };
   }
 
+  onFilterChange(filter) {
+    var filteredMarkersList = [];
+    if (filter == "Favorites") {
+      getStoredFavorites().then((storedFavorites) => {
+        filteredMarkersList = attractionMarkers.filter((x) =>
+          storedFavorites.includes(x.key)
+        );
+        this.setState({
+          activeFilter: filter,
+          activeMarkers: filteredMarkersList,
+        });
+      });
+    } else {
+      filteredMarkersList = attractionMarkers.filter(
+        (x) => x.filterKey == filter
+      );
+      // Close open marker
+      this.setState({
+        activeFilter: filter,
+        activeMarkers: filteredMarkersList,
+      });
+    }
+  }
+
   render() {
     return (
       <View
@@ -119,30 +143,6 @@ export default class MapScreen extends Component {
         ></MapWithMarkers>
       </View>
     );
-  }
-
-  onFilterChange(filter) {
-    var filteredMarkersList = [];
-    if (filter == "Favorites") {
-      getStoredFavorites().then((storedFavorites) => {
-        filteredMarkersList = attractionMarkers.filter((x) =>
-          storedFavorites.includes(x.key)
-        );
-        this.setState({
-          activeFilter: filter,
-          activeMarkers: filteredMarkersList,
-        });
-      });
-    } else {
-      filteredMarkersList = attractionMarkers.filter(
-        (x) => x.filterKey == filter
-      );
-      // Close open marker
-      this.setState({
-        activeFilter: filter,
-        activeMarkers: filteredMarkersList,
-      });
-    }
   }
 }
 
