@@ -26,7 +26,7 @@ const AttractionBoxInfoScreen = ({ route, navigation }) => {
       getStoredFavorites().then((storedFavorites) => {
         storedFavorites.push(markerKey);
         const jsonValue = JSON.stringify(storedFavorites);
-        AsyncStorage.setItem("@ISFiTApp23_FavoriteMarkers", jsonValue).then(
+        AsyncStorage.setItem("@ISFiTApp23_FavoriteAttractionMarkers", jsonValue).then(
           () => setIsFavorite(true)
         );
       });
@@ -40,7 +40,7 @@ const AttractionBoxInfoScreen = ({ route, navigation }) => {
       getStoredFavorites().then((storeFavorites) => {
         let filtered = storeFavorites.filter((item) => item !== markerKey);
         AsyncStorage.setItem(
-          "@ISFiTApp23_FavoriteMarkers",
+          "@ISFiTApp23_FavoriteAttractionMarkers",
           JSON.stringify(filtered)
         ).then(() => {
           setIsFavorite(false);
@@ -100,7 +100,6 @@ const AttractionBoxInfoScreen = ({ route, navigation }) => {
           <MarkerInfo
             key={itemId}
             title={itemTitle}
-            text={itemId}
             bilde={itemPicture}
             information={itemInformation}
             photographer={itemPhotographer}
@@ -111,12 +110,9 @@ const AttractionBoxInfoScreen = ({ route, navigation }) => {
   );
 };
 
-// TODO: refactor to be used to store favorite markers and events
-
-// TODO: refactor to be used to store favorite markers and events
 const getStoredFavorites = async () => {
   try {
-    const jsonValue = await AsyncStorage.getItem("@ISFiTApp23_FavoriteMarkers");
+    const jsonValue = await AsyncStorage.getItem("@ISFiTApp23_FavoriteAttractionMarkers");
     return jsonValue != null ? JSON.parse(jsonValue) : [];
   } catch (e) {
     console.log(e);
