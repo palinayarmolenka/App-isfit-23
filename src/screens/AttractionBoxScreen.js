@@ -145,6 +145,7 @@ export default function AttractionBoxScreen({ navigation }) {
           return (
             <AttractionMarkerBox
               key={i}
+              markerId={i}
               filterKey={m.filterKey}
               title={m.title}
               shortDescription={m.shortDescription}
