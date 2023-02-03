@@ -3,22 +3,22 @@
     "name": "ISFiT23",
     "icon": "./src/assets/launch_screen.png",
     "slug": "app-isfit-23",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "ios": {
       "image": "latest",
       "bundleIdentifier": "com.isfit.isfit23",
-      "buildNumber": "1.0.0"
+      "buildNumber": "1.1.0"
     },
     "android": {
       "package": "com.isfit.isfit23",
-      "versionCode": 1
+      "versionCode": 3
     },
     "assetBundlePatterns": [
       "**/*"
     ],
     "extra": {
       "eas": {
-        "projectId": "b1821435-07dc-489d-883c-ff303bf34e4c"
+        "projectId": "4cec8075-0840-4f37-8cbb-cd18f513a37f"
       }
     }
   }
