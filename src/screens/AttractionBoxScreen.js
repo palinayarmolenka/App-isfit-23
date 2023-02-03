@@ -144,8 +144,8 @@ export default function AttractionBoxScreen({ navigation }) {
         {state.activeMarkers.map((m, i) => {
           return (
             <AttractionMarkerBox
-              key={i}
-              markerId={i}
+              key={`marker-${m.key}`}
+              testyTestId={`marker-${m.key}`}
               filterKey={m.filterKey}
               title={m.title}
               shortDescription={m.shortDescription}
