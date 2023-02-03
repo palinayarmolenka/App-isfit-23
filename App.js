@@ -92,7 +92,7 @@ function HomeTabs() {
       />
       ) : (
         <Tab.Screen
-        name="Attractions"
+        name="Explore"
         component={AttractionStackScreen}
         options={{
           headerTitle: "Explore Trondheim",
