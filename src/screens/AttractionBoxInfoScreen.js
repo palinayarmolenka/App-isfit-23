@@ -55,7 +55,7 @@ const AttractionBoxInfoScreen = ({ route, navigation }) => {
     try {
       await getStoredFavorites().then((storeFavorites) => {
         storeFavorites.map((favorite) => {
-          if (Number(favorite) == Number(markerKey)) {
+          if (favorite == markerKey) {
             setIsFavorite(true);
           }
         });

@@ -35,9 +35,11 @@ export default function AttractionBoxScreen({ navigation }) {
   }, [navigation]);
 
   const onFilterChange = (filter) => {
+    console.log(filter)
     var filteredMarkersList = [];
     if (filter == "Favorites") {
       getStoredFavorites().then((storedFavorites) => {
+        console.log(storedFavorites)
         filteredMarkersList = attractionMarkers.filter((x) =>
           storedFavorites.includes(x.key)
         );
@@ -144,8 +146,8 @@ export default function AttractionBoxScreen({ navigation }) {
         {state.activeMarkers.map((m, i) => {
           return (
             <AttractionMarkerBox
-              key={`marker-${m.key}`}
-              testyTestId={`marker-${m.key}`}
+              key={i}
+              testyTestId={i}
               filterKey={m.filterKey}
               title={m.title}
               shortDescription={m.shortDescription}
